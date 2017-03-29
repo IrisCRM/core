@@ -1,6 +1,6 @@
 {
-    "name": "iriscrm/source-core",
-    "description": "Iris CRM core (source)",
+    "name": "iriscrm/core-build",
+    "description": "Iris CRM core (build)",
     "bin": [
         "iris"
     ],
