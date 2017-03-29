@@ -1,0 +1,178 @@
+/* 	Стили для закладок */
+/* 	*/
+/*	*/
+
+table.tab tr {
+	height			: 20px;
+}
+
+table.tab td {
+	padding			: 0;
+}
+td.tab, td.tab_s, td.tab_h  {
+	margin          : 0;
+	padding         : 0;
+	text-align		: center;
+	vertical-align	: middle;
+	cursor			: pointer;
+	white-space		: nowrap;
+	
+	font-family     : sans-serif, Tahoma, Arial;
+	font-size      	: 11px;
+/*	font-weight     : bold;*/
+}
+
+td.tab {
+	background		: url(../images/tabs/n.bmp) repeat left top;
+	/*width			: 120px;*/
+}
+td.tab_s {
+	background		: url(../images/tabs/s.bmp) repeat left top;
+	/*width			: 120px;*/
+/*	color			: white;*/
+}
+td.tab_h {
+	background		: url(../images/tabs/h.bmp) repeat left top;
+	/*width			: 120px;*/
+}
+
+
+td.tab_fn {
+	background		: url(../images/tabs/fn.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_nn {
+	background		: url(../images/tabs/nn.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_nl {
+	background		: url(../images/tabs/nl.bmp) no-repeat left top;
+	width			: 10px;
+}
+
+/* стили для selected */
+td.tab_fs {
+	background		: url(../images/tabs/fs.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_ns {
+	background		: url(../images/tabs/ns.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_sn {
+	background		: url(../images/tabs/sn.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_sl {
+	background		: url(../images/tabs/sl.bmp) no-repeat left top;
+	width			: 10px;
+}
+
+/* стили для hovered */
+td.tab_nh {
+	background		: url(../images/tabs/nh.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_sh {
+	background		: url(../images/tabs/sh.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_fh {
+	background		: url(../images/tabs/fh.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_hn {
+	background		: url(../images/tabs/hn.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_hs {
+	background		: url(../images/tabs/hs.bmp) no-repeat left top;
+	width			: 10px;
+}
+td.tab_hl {
+	background		: url(../images/tabs/hl.bmp) no-repeat left top;
+	width			: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+	http://exploding-boy.com/images/cssmenus2/menus.html
+*/
+
+.tabs10 {
+	width:100%;
+	line-height:normal;
+}
+.tabs10 ul {
+	margin:0;
+	padding:10px 10px 0 0;
+	list-style:none;
+}
+.tabs10 li {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+.tabs10 a {
+	float:left;
+/*	background:url("tableft10.gif") no-repeat left top;
+	background-position:0% -42px;*/
+	margin:0;
+	padding:0 0 0 4px;
+	text-decoration:none;	
+}
+.tabs10 a span {
+	display:block;
+	float:left;
+/*	background:url("tabright10.gif") no-repeat right top;
+	background-position:100% -42px;*/
+		padding: 5px 15px 4px 6px;
+	color:#202020;	
+}
+
+#tabs10 a:hover span {
+	color:#FFF;
+}
+/*
+.tabs10 a:hover, .tabs10 .selected a  {
+	background-position:0% 0px;
+}
+.tabs10 a:hover span, .tabs10 .selected a span  {
+	background-position:100% 0px;
+}
+*/
+.tabs10 a:hover  {
+	background:url("../images/tableft10.gif") no-repeat left top;
+	background-position:0% -42px;
+}
+.tabs10 a:hover span {
+	background:url("../images/tabright10.gif") no-repeat right top;
+	background-position:100% -42px;
+}
+
+.tabs10 .selected a  {
+	background:url("../images/tableft10.gif") no-repeat right top;
+	background-position:0% 0px;
+}
+.tabs10 .selected a span  {
+	background:url("../images/tabright10.gif") no-repeat right top;
+	background-position:100% 0px;
+}
+
+.panel{
+	border: 1px solid #d0d0d0;
+	padding: 10px;
+/*	height: 200px;*/
+/*	width:90%;*/
+}
+
+
+

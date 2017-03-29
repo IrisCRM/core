@@ -1,0 +1,250 @@
+/* Не прочитанные email */
+tr.grid_newmail {
+	color           : #EE3696;
+}
+
+/* Не прочитанные сообщения */
+tr.grid_newmessage {
+	color           : #EE3696;
+}
+
+
+
+
+
+
+/* ------------- стили для таблицы с данными ------------- */
+.grid.table {
+	margin-bottom: 0;
+}
+th.grid {
+	color           : #404040;
+	padding         : 10px 5px 0px 5px;
+	margin          : 0;
+	text-align      : left;
+	font-weight     : normal;
+	height          : 30px;
+	cursor			: pointer;	
+}
+/*текст заголовка колонки*/
+th.grid td {
+	text-decoration : underline;
+	white-space		: nowrap;
+}
+div[conttype="inner"] > table.grid > tbody > tr:first-child {
+	border: none;
+}
+div[conttype="inner"] > table.grid > tbody > tr:first-child th {
+	height: 0;
+	padding: 0;
+	margin: 0;
+}
+table.grid tr.active td, tr.active:hover {
+	background-color: #428bca;
+	color: #fff;
+}
+table.grid tr.active-multiple td, tr.active-multiple:hover {
+	background-color: #ddd;
+}
+table.grid tr.grid_void td.grid_row {
+	background-color: #fff;
+}
+.grid_void {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+/* измененные стили для ячеек различных типов данных. стили вида grid_row_<тип_данных_row_datatype_в_xml_грида> */
+td.grid_row_string {
+	text-align		: left;
+}
+td.grid_row_int {
+	text-align		: right;
+}
+td.grid_row_decimal {
+	text-align		: right;
+}
+td.grid_row_date {
+	text-align		: center;
+}
+td.grid_row_datetime {
+	text-align		: center;
+}
+
+td.grid_row span, td.grid_row_string span, td.grid_row_int span, td.grid_row_decimal span, td.grid_row_date span, td.grid_row_datetime span {
+	cursor			: default;
+
+    /* многоточие для длинного текста в ячейке */
+    display         : block;
+    overflow        : hidden;
+    white-space     : nowrap;
+    width           : 100%;
+    -o-text-overflow: ellipsis;
+    text-overflow   : ellipsis;
+}
+
+
+
+table.grid_footer_buttons {
+	width			: 100%;
+	background-color: #eaeaea;
+	border-collapse : separate;
+	border-spacing  : 0px;
+	padding         : 5px 5px;
+	border-top      : solid 1px #d0d0d0;
+}
+table.grid_footer_buttons td {
+	width			: 100%;
+	text-align		: right;
+}
+
+
+
+
+
+
+
+/* Поиск в гриде */
+.grid_search {
+}
+.grid_search .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+.grid_search .row div {
+	padding-left: 0;
+	padding-right: 10px;
+}
+.panel.grid_search {
+	margin-bottom: 0;
+}
+.grid_search .panel-body {
+	padding: 0;
+}
+.grid_search .col-sm-2, .grid_search .col-sm-6 {
+	padding-right: 2px;
+	padding-left: 2px;
+}
+.grid_search .col-sm-2.text-right {
+	white-space: nowrap;
+}
+
+
+/* Панель с кнопками в гриде */
+.panel.grid_footer {
+	margin-bottom: 0;
+}
+.grid_footer .panel-body {
+	padding: 0;
+}
+.grid_footer_left {
+	padding-right: 10px;
+}
+.grid_footer_spacer input {
+	margin-right: 4px;
+}
+
+
+
+/* стиль для элемента input поиска в гридах. элементу присваивается стиль edtText и этот(меняется фон)*/
+input.search_value {
+	padding-left		: 25px;
+	background			: white url(../images/search.png) no-repeat scroll 5px center;
+}
+/* он же, когда в нем ввели неверный тип данных*/
+input.search_value_error {
+	background-color	: #ffd799;
+}
+
+
+
+
+
+
+
+/* Пользовательские стили */
+tr.summary {
+	background-color: #eaeaea;
+	font-weight     : bold;
+	text-align      : right;
+}
+tr.summary table {
+	width: 100%;
+}
+tr.summary td {
+	border-bottom   : solid 1px #d0d0d0;
+}
+tr.summary td.grid_row {
+	border-bottom   : solid 0px #d0d0d0;
+	padding         : 5px;
+	height          : 30px;
+}
+
+
+
+
+/* Стиль для указателей сортировки */
+img.sort_image {
+	margin-top	: 2px;
+	margin-left	: 2px;
+	width		: 11px;
+	height		: 11px;
+}
+td.sort_image {
+	width		: 12px;
+}
+
+
+td div.email_star_logo, td div.email_attachment_logo, td div.email_attachment_logo, td div.email_star_logo_loading, td div.email_reply_logo {
+	margin-top: 7px;
+}
+
+table.one-row-value, table.one-row-value tr {
+	table-layout: fixed;
+}
+table.one-row-value tr td {
+	overflow: hidden;
+	white-space: nowrap;
+}
+table.one-row-value tr td span {
+	white-space: nowrap;
+}
+.inner {
+	overflow-y: scroll;
+	height: 190px;
+}
+
+.grid_header {
+	table-layout: fixed;
+}
+
+/* Заголовок таблицы */
+div[conttype="outer"] > table {
+	width: 100%;
+}
+table.grid table {
+	width: 100%;
+	table-layout: fixed;
+}
+table.grid table td:first-child {
+	width: 100%;
+	overflow: hidden;
+}
+.grid_header_right {
+	padding: 0;
+	margin: 0;
+	width: 14px;
+}
+.grid .edit {
+	padding: 0px 5px 0px 5px;
+	vertical-align: middle;
+}
+
+.pager {
+	margin: 0;
+}
+
+#sql_section {
+	width: 100%;
+}

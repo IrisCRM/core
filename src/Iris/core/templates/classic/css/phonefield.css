@@ -1,0 +1,23 @@
+/* стили поля карточки phone */
+
+/* стиль div, выполняющую роль кнопки "позвонить" */
+div.phone_img {
+	background-color	: none;
+	background-image	: url(../images/phonetube.png);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+
+	border				: 0px none;
+	cursor				: pointer;
+	padding-left		: 1px;
+	width				: 17px;
+	height				: 17px;
+}
+
+td.phone_td_phone {
+	width: 1px;
+}
+
+td.phone_td_addl {
+	width: 40px;
+}

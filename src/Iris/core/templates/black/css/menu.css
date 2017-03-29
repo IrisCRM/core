@@ -1,0 +1,40 @@
+/* ------------------- Меню (Не Protofish) ------------------------- */
+/* стиль для картинки обновлялки */
+div.menu_loading {
+	margin-right		: 5px;
+}
+
+table.menu {
+	width              : 100%;
+}
+tr.menu {
+}
+
+td.menu_group {
+	height	           : 20px;
+	width	           : 100%;
+	text-align         : left;
+	font-weight        : bold;
+	padding            : 3px 5px 3px 5px;
+	background		   : url(../images/menu_group.bmp) no-repeat top right;
+	cursor			   : default;
+}
+
+/* --- обычный элемент меню --- */
+td.menu_unactive , td.menu_active{
+	height             : 20px;
+	width              : 100%;
+	text-align         : left;
+	padding            : 3px 5px 3px 10px;
+	color              : #404040;
+	background-color   : none;
+	cursor			   : default;
+}
+
+/* --- выбранный элемент меню --- */
+td.menu_active {
+	padding           : 3px 5px 3px 10px;
+	background-color  : #b1b6e9;
+	color             : #404040;
+	background        : url(../images/menu_section_selected.bmp) no-repeat top right;
+}

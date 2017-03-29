@@ -1,0 +1,3 @@
+<script type="text/template" id="reminder"> 
+<% _.each(data, function(item) { %><span class="reminding<%= item.count > 0 ? ' blink' : '' %>" onclick="<%= item.onclick %>"<%= item.description != '' ? ' title="' + item.description + '"' : '' %>><span class="reminding-cap"><%= item.name %></span><span class="reminding-delimeter">:</span><span class="reminding-value"><%= item.count %></span></span><% }); %>
+</script>

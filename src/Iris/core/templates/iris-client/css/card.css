@@ -1,0 +1,490 @@
+/* Стиль карточки */
+
+input, select, textarea {
+	background-color : #fff;
+	color            : #000;
+	border           : solid 1px #b0b0b0;
+	font-family      : Tahoma, sans-serif, Arial;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+    font-size        : 10pt;
+	border-radius	 : 2px 2px;
+}
+
+select {
+	padding-left     : 0;
+	padding-right    : 0;
+}
+
+
+/* элементы формы: поле ввода, область ввода */
+input.edtText, textarea.edtText {
+	color            : #000;
+	background-color : #fff;
+	border           : solid 1px #b0b0b0;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+}
+/* выпадающий список */
+select.edttext {
+	color            : Black;
+	background-color : White;
+	border           : solid 1px #b0b0b0;
+	margin           : 0px;
+}
+
+/* чекбокс */
+div.checkbox_cont {
+	text-align		 : center;
+	width			 : 100%;
+}
+input.checkbox {
+	cursor			 : pointer;
+}
+
+/* неактивные элементы формы */
+input.edtText:disabled, textarea.edtText:disabled, select.edtText:disabled,
+input.edtText_disabled, textarea.edtText_disabled, select.edtText_disabled {
+	color            : Black;
+	background-color : #f5f5f5;
+	border           : solid 1px #b0b0b0;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+}
+select.edtText:disabled, select.edtText_disabled {
+	padding-left  : 0px;
+	padding-right : 0px;
+}
+
+/* выбранные элементы формы */
+input.edtText_selected, textarea.edtText_selected  {
+	color            : Black;
+	background-color : #e7e8f8;
+	border           : solid 1px #b1b6e9;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+}
+select.edtText_selected {
+	color            : Black;
+	background-color : #e7e8f8;
+	border           : solid 1px #b1b6e9;
+	margin           : 0px;
+}
+
+/* незаполненные обязательные элементы формы */
+input.edtText_empty, textarea.edtText_empty {
+	color            : Black;
+	background-color : #ffc4c4;
+	border           : solid 1px black;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+}
+select.edtText_empty {
+	color            : Black;
+	background-color : #ffc4c4;
+	border           : solid 1px black;
+	margin           : 0px;
+}
+
+/* поля формы, в которых введены некорректные данные (вместо числа - строка, вместо даты - билиберда и тд) */
+input.edtText_invalid_data, textarea.edtText_invalid_data  {
+	color            : Black;
+	background-color : #ffd799;
+	border           : solid 1px black;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+}
+select.edtText_invalid_data {
+	color            : Black;
+	background-color : #ffd799;
+	border           : solid 1px black;
+	margin           : 0px;
+}
+
+
+
+
+
+
+/* ---- форма с данными, которая в окне ---- */
+form {
+    margin          : 0;
+}
+
+
+table.form_table {
+	border          : 0px solid #3e569c;
+	border-spacing  : 0px;
+    border-collapse : separate;
+    padding-top     : 5px; 	
+	background-color: #fff;
+	vertical-align  : middle;
+}
+td.form_table {
+	border          : 0px solid #3e569c;
+	border-spacing  : 0px;
+	border-collapse : collapse;
+	
+	background-color: #fff;
+	vertical-align  : middle;
+}
+
+
+td.form_table {
+	padding         : 0px 5px 0px 5px;
+	border          : 0px;
+	border-collapse : collapse;
+	cursor			: default;	
+}
+
+td.form_table p {
+	padding         : 0px 5px;
+}
+
+
+
+/******* Панель кнопок на форме *******/
+table.form_table_buttons_panel {
+	background-color: #ced1f0; 
+	padding         : 5px;
+	border-collapse : separate;
+	border-spacing  : 0px;
+}
+tr.form_table_buttons_panel {
+	padding         : 0px 5px 0px 5px;
+}
+td.form_table_buttons_panel {
+	padding         : 0px 5px 0px 5px;
+}
+
+/* Строчка на форме с элементами ввода */
+tr.form_row {
+	height          : 22px;
+}
+
+/* стиль горизонтальной полосы-разделителя в форме */
+hr.form_hr {
+	color			: #909090;      /* Для IE */
+	background-color: #909090;      /* Для Opera Mozilla/Gecko */
+	height			: 2px; 			/* если не указывать высоту hr в Opera, то показываются только рамки прижатые друг к другу вплотную без внутренней области */
+	border-width	: 0px; 			/* убрать рамки вокруг элемента */
+}
+
+/* шрифт надписи у разделителя формы */
+div.hr_caption {
+	color			: #909090;
+}
+
+
+
+
+/* стиль для названия поля карточки */
+span.card_elem_caption {
+}
+
+/* стиль для обязательного поля карточки */
+span.card_elem_mandatory {
+    color           : #cc2020;
+}
+
+/* стиль для поля карточки, по которому доступна подсказка */
+span.card_elem_title {
+	border-bottom	: 1px dotted #222;
+	cursor			: pointer;
+}
+
+
+/* Для кнопки "..." */
+td.form_table input.button {
+	padding: 0;
+}
+td.grid_footer_left input.button {
+	padding: 0;
+}
+table.grid_search input.button {
+	padding: 0;
+}
+
+
+
+
+
+/* Вкладки на карточке */
+div.card_tab {
+	color				: #222222;
+	padding				: 3px 0 3px 4px;
+	cursor				: pointer;
+}
+div.card_tab:hover {
+	background-color	: #e5e5ff;
+}
+div.card_tab_selected {
+	background-color	: #d0d0ff;
+	cursor				: default;
+}
+div.card_tab_selected:hover {
+	background-color	: #d0d0ff;
+}
+
+
+
+
+
+/* контейнер, который содержит верхнюю панель карточки */
+div.card_header_div {
+	height				: 60px;
+	background			: url(../images/card_header.png) repeat-x;
+	background-color	: #92a4d0;
+	border-bottom		: 7px solid #92a4d0;
+	margin-bottom		: 0px;
+}
+div.card_header_div table {
+	height				: 60px;
+	background			: url(../images/logo-small.png) no-repeat 15px;
+	table-layout		: fixed;
+}
+td.card_icon_td {
+	width				: 158px;
+	cursor				: default;
+}
+td.card_right_spacer {
+	width				: 15px;
+}
+
+tr.card_header_top_row, tr.card_header_bottom_row {
+	height				: 17px;
+}
+tr.card_header_middle_row {
+	overflow			: hidden;
+}
+tr.card_header_middle_row td {
+	overflow			: hidden;
+	white-space			: nowrap;
+}
+
+
+td.card_top_buttons_panel, td.card_bottom_buttons_panel {
+	text-align			: right;
+}
+
+span.card_caption_window {
+	font-size			: 8.5pt;
+	display             : block;
+	color               : #202020;
+}
+span.card_caption_value {
+	font-size			: 11pt;
+}
+
+div.card_top_buttons_div {
+	padding-top         : 3px;
+	cursor				: default;
+}
+div.card_bottom_buttons_div {
+	cursor				: default;	
+}
+
+span.card_top_panel_button {
+	cursor         : pointer;
+	text-decoration: underline;
+  padding-left   : 5px;
+  padding-right  : 5px;
+}
+span.card_top_panel_button_hover  {
+	color				: #484F9E;
+}
+/*-----------------------------------------------------*/
+
+
+/* столбец таблицы, содержащий список вкладок карточки */
+td.tabs_cont {
+	width				: 150px;
+	background-color	: #f5f5f5;
+}
+/* столбец таблицы, выполняющий функцию разделителя между вкладками карточки и самой карточкой */
+td.tabs_card_divider {
+	width				: 5px;
+	background-color	: white;
+	border-left			: 1px solid #d0d0d0;
+	border-right		: 1px solid #d0d0d0;
+	vertical-align		: middle;
+}
+
+/* Сплиттер в карточке, который отделяет вкладки от полей */
+div.tabs_card_divider_button {
+	height				: 71px;
+	cursor				: pointer;
+}
+div.tabs_card_divider_min {
+	background-image	: url(../images/mini-left.gif);
+}
+div.tabs_card_divider_max {
+	background-image	: url(../images/mini-right.gif);
+}
+/* --------------------------- */
+
+/* контейнер-прокрутка, в котором находится форма карточки*/
+div.form_table_scroll {
+}
+
+
+
+
+/* стиль div, выполняющую роль календаря */
+div.calendar_img {
+	background-color	: none;
+	background-image	: url(../images/calendar.png);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+
+	border				: 0px none;
+	cursor				: pointer;
+	padding-left		: 1px;
+	width				: 20px;
+	height				: 17px;
+}
+
+/* стиль div, выполняющую роль конвертика письма */
+div.email_img {
+	background-color	: none;
+	background-image	: url(../images/mailto.png);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+
+	border				: 0px none;
+	cursor				: pointer;
+	padding-left		: 1px;
+	width				: 20px;
+	height				: 17px;
+}
+
+/* стиль div, выполняющую роль ссылки на url */
+div.url_img {
+	background-color	: none;
+	background-image	: url(../images/url.png);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+
+	border				: 0px none;
+	cursor				: pointer;
+	padding-left		: 1px;
+	width				: 20px;
+	height				: 17px;
+}
+
+
+
+
+
+/* ******************************* стиль элемента выбора файла ************************** */
+.fileinput_originalFileInput {
+	position	: absolute;
+	width		: 219px;
+	margin-left	: -140px;
+	cursor		: default;
+	height		: 21px;
+	z-index		: 2;
+	filter		: alpha(opacity: 0);
+	opacity		: 0;
+	
+	/*position	: relative;*/
+}
+
+.fileinput_fakeButton, .fileinput_fakeButton_hover, .fileinput_fakeButton_empty  {
+	/*position	: absolute;*/
+	z-index		: 1;
+	width		: 85px;
+	height		: 18px;
+	background	: url(../images/fileselect_button.png) no-repeat left top;
+	float		: left;
+
+	/*position	: relative;
+	top			: -20px;*/
+}
+
+.fileinput_fakeButton_hover {
+	background	: url(../images/fileselect_button_active.png) no-repeat left top;
+}
+
+.fileinput_fakeButton_empty {
+	background	: url(../images/fileselect_button_empty.png) no-repeat left top;
+}
+
+.fileinput_blocker {
+	position	: absolute;
+	z-index		: 3;
+	width		: 150px;
+	height		: 21px;
+	background	: url(../images/fileselect_transparent.gif);
+	margin-left	: -155px;
+//	margin-left	: -235px; /*Для IE чтоб нажималась кнопка "Выбрать" */
+	
+	/*position	: relative;
+	top			: -20px;*/
+}
+
+.fileinput_caption  {
+	/*position	: absolute;*/
+	height		: 15px;
+	margin-left	: 90px;
+	font-family	: Verdana;
+	font-size	: 8pt;
+	color		: Gray;
+	margin-top	: 2px;
+	padding-top	: 1px;
+	padding-left: 19px;
+//	margin-left	: 0px;  /* Для IE чтоб убрать лишний отступ */		
+	/*position	: relative;
+	top			: -40px;*/
+}
+.fileinput_caption  table {
+// table-layout: fixed;
+//	width		: 70%; /* Для IE чтоб ширина названия файла не была больше, чем карточка */
+// white-space	: nowrap;
+}
+.fileinput_caption  table td {
+//	width		: 25px;
+}
+
+.fileinput_clearButton  {
+	padding-left: 10px;
+	background	: url(../images/fileselect_clear_button.png) no-repeat right top;
+	width		: 16px;
+	height		: 16px;
+	cursor		: pointer;
+}
+td.fileinput_tdl {
+	width		: 50px;
+//  width		: auto;		
+	white-space : nowrap;
+}
+/* ************************************************************************************** */
+
+.wnd_title {
+}
+
+.card-grid {
+	margin-bottom: 10pt;
+	margin-top: 10pt;
+}
+.form_table .card-grid p {
+	margin: 0;
+	padding: 0;
+}
+
+.multiline.first .form_table {
+	padding-top: 5px;
+	/*border-top: 1px #888 solid;*/
+}
+.multiline.last .form_table {
+	padding-bottom: 5px;
+}
+.form_table.menu {
+	vertical-align: top;
+}

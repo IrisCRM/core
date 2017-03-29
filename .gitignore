@@ -1,0 +1,21 @@
+# ignoring files
+
+# for eclipse
+.settings/*
+.buildpath
+.project
+
+# netbeans files
+nbproject/*
+
+# phpstorm files
+.idea
+
+*.sublime-workspace
+*.sublime-project
+*-test.xml
+*-test.xml~
+
+/vendor/
+
+tests/_output/*

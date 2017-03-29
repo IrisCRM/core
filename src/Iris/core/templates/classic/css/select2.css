@@ -1,0 +1,73 @@
+/* высота элемента */
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  border-radius: 2px;
+  /*height: 20px;*/
+  min-height: 20px;
+}
+
+/* высота текущего значения */
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  color: #000;
+  line-height: 20px;
+}
+
+/* стрелочка выпадающего списка, высота на 2px меньще высоты элемента */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 18px;
+}
+
+/* hovered значение */
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #e7e8f8;
+  background-color: #eeeeff;
+  color: #000;
+}
+
+/* выбранное значение */
+.select2-container--default .select2-results__option[aria-selected="true"] {
+  background-color: #d0d0ff;
+}
+
+/* контейнер выбранных значений в фокусе */
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: solid #b0b0b0 1px;
+  border-radius: 2px 2px 0 0;
+}
+
+/* выбранные значения (теги) */
+.select2-container--default .select2-selection--single .select2-selection__choice,
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #e7e8f8;
+  border: 1px solid #b1b6e9;
+}
+
+/* крестик удаления значения (тега) */
+.select2-container--default .select2-selection--single .select2-selection__choice__remove,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: #b1b6e9;
+}
+
+/* multiple */
+/* контейнер выбранных значений */
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  line-height: 14px;
+}
+/* контейнер выбранного значения */
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  margin-top: 1px;
+}
+/* контейнер input для ввода значения */
+.select2-container--default .select2-search--inline {
+  padding: 0;
+}
+/* input для ввода значения */
+.select2-container--default .select2-search--inline .select2-search__field {
+  margin-top: 2px;
+}
+
+/* увеличиваем z-index для автозавершения, чтобы он не перекрывался окнами */
+.select2-dropdown {
+  z-index: 2051;
+}

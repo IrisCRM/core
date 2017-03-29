@@ -1,0 +1,196 @@
+body {
+	background-color : #ffffff;
+	margin: 0;
+}
+
+table.open0 {
+	text-align: center;
+	vertical-align: middle;
+	height:30%;
+	background-color : #ffffff;
+	margin:0;
+	padding:0;
+	border: 0;
+}
+
+table.open {
+	text-align: center;
+	vertical-align: middle;
+	height:40%;
+	background-color : #ffffff;
+	margin:0;
+	padding:0;
+	border: 0;
+}
+td.open {
+	text-align: center;
+	vertical-align: middle;
+	width: 200;
+}
+
+table.login {
+	width: 200px;
+	/*margin: 5px 5px 5px 5px;*/
+	background-color : #f0f0f0;
+	color: #454545;
+	border-top: 2px solid #A0A0D0;
+	border-bottom: 2px solid #A0A0D0;
+	padding: 5px;
+	border-collapse: collapse;
+	
+}
+td.login {
+	padding: 5px 5px 0px 5px;
+	font-family      : Tahoma;
+	font-size      : 12px;
+}
+
+tr.login_head, tr.login_head td {
+	font-family      : Tahoma;
+	font-size      	: 14px;
+	font-weight		: bold;
+	background-color : #d0d0d0;
+	border-bottom: 2px solid #A0A0D0;
+	text-align: center;
+}
+
+input.edtText_login {
+	color        : #202020;
+	background   : White;
+	border       : 1px solid #a0a0d0;
+	margin       : 0px;
+	padding-left : 3px;
+	padding-right: 3px;
+
+	font-family  : Tahoma;
+	font-size    : 12px;
+}
+
+select.edtText_login {
+	color        : #202020;
+	background   : White;
+	border       : 1px solid #a0a0d0;
+	margin       : 0px;
+
+	font-family  : Tahoma;
+	font-size    : 12px;
+}
+
+input.button_login {
+	font-family        : Tahoma;
+	font-size          : 11px;
+	font-weight        : bold;
+	font-style         : normal;
+
+	background-color   : #e8e8e8;
+	
+	background-image   : url(button.gif);
+	background-position: bottom;
+	
+	background-repeat  : repeat-x;
+
+	border-left        : solid 1px #f0f0f0;
+	border-top         : solid 1px #f0f0f0;
+	border-right       : solid 1px #808080;
+	border-bottom      : solid 1px #808080;
+
+	padding-top        : 0px;
+	padding            : 0px;
+	margin	           : 2px;
+
+	color              : #202020;
+
+	height	           : 18px;
+	text-align         : center;
+	vertical-align     : middle;
+}
+
+input.button_login:hover {
+	font-family     : Tahoma;
+	color           : #ed3694;
+	cursor          : pointer;
+}
+
+
+table.footer {
+	text-align: center;
+	vertical-align: middle;
+	background-image   : url(bg.jpg);
+	background-position: center;
+	height:30%;
+	width: 100%;
+	background-color : #e0e0e0;
+	margin:0;
+	padding:0;
+	border: 0;
+}
+
+td.right {
+	text-align: right;
+	padding-right: 30px;
+	color: #4040a0;
+	font-weight: bold;
+	background: url(line.jpg) no-repeat;
+	background-position: right;
+}
+
+a {
+	font-family     : Tahoma;
+	font-size       : 14px;
+	color           : #2c3394;
+}
+
+table.result {
+	position		: absolute;
+	top				: 100px;
+	width			: 100%;
+}
+table.result td {
+	text-align		: center;
+}
+table.result font {
+	padding			: 2px; 
+	font-size		: 14pt; 
+	font-weight		: bold; 
+	color			: white; 
+	background-color: red;
+}
+
+div.login_logo {
+	background		: url(iriscrm250.jpg) no-repeat scroll 0%;
+	width			: 250px;	
+	height			: 112px;
+}
+
+#horizon {
+	background-color:transparent;
+	color:white;
+	display:block;
+	height:1px;
+	left:0px;
+	overflow:visible;
+	position:absolute;
+	text-align:center;
+	top:50%;
+	visibility:visible;
+	width:100%;
+}
+
+#content {
+	background-color:transparent;
+	font-family:Verdana,Geneva,Arial,sans-serif;
+	height:150px;
+	left:50%;
+	margin-left:-150px;
+	position:absolute;
+	top:-75px;
+	visibility:visible;
+	width:300px;
+}
+
+td.version {
+	font-size: 8px;
+	text-align: right;
+	color: #d0d0d0;
+	vertical-align: bottom;
+}

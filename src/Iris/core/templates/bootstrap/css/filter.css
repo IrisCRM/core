@@ -1,0 +1,28 @@
+div#filter.list-group {
+  border: none;
+  margin: 0;
+  white-space: nowrap;
+  border-bottom: 1px #ddd solid;
+}
+div#filter.list-group a.list-group-item {
+  border-radius: 0;
+  padding: 5pt;
+  margin-bottom: 0;
+  border-bottom: none;
+  border-left: 0;
+  cursor: pointer;  
+}
+div#filter.list-group div.list-group {
+  border: none;
+  margin: 0;
+}
+div#filter.list-group a.section {
+  font-weight: bold;
+}
+div#filter.list-group div.list-group a.list-group-item {
+  padding-left: 10pt;
+}
+#filters_area {
+  overflow-x: hidden; 
+  overflow-y: auto;
+}

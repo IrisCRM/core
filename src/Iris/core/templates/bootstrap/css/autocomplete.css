@@ -1,0 +1,36 @@
+/* ------ стили элемента автозавершения -----*/
+table.AutoComplete {
+	background-color: white;
+	margin			: 0px 0px 0px 0px;
+	padding			: 0;
+	border			: 1px solid #B0B0B0;/*#3366CC;*/
+	border-collapse	: collapse;
+
+	box-shadow		: 2px 2px 4px 0px #B0B0B0;
+	-moz-box-shadow	: 2px 2px 4px 0px #B0B0B0;
+	-webkit-box-shadow : 2px 2px 4px 0px #B0B0B0;
+}
+tr.AutoComplete {
+	text-align      : left;
+	vertical-align	: middle;
+	height          : 22px;
+	cursor			    : pointer;	
+}
+
+td.AutoComplete {
+	vertical-align	: middle;
+	background-color: white;
+	color			      : black;
+  padding         : 0 3px;
+}
+
+td.AutoComplete_hover {
+	vertical-align	: middle;
+	background-color: #b1b6e9;/*#3366CC;*/
+  padding         : 0 3px;
+}
+
+/*стиль для буковок, которые совпали при поиске для списка автозавершения*/
+font.AutoComplete_entry {
+  background-color: #D0D0FF;
+}

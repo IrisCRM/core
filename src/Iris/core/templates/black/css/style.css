@@ -1,0 +1,502 @@
+/*************************************************
+ *
+ * Стиль black.
+ * Версия 1.0.0.
+ *
+ *************************************************/
+ 
+
+/* стиль для всей страницы, который наследуется. задается фон и шрифт */
+body, html {
+	margin          : 0;
+	padding         : 0;
+	background-color: #000;
+	background-image: none;
+	font-family     : Tahoma, sans-serif, Arial;
+	font-size       : 9pt;
+    color           : #b4b7bb
+}
+/* ссылка */
+a {
+    color           : #b4b7bb;
+    font-size       : 9pt;
+}
+/* наведенная ссылка */
+a:hover {
+    color           : #3e569c;
+}
+
+/*стиль для всплывающих подсказок*/
+abbr {
+    border-bottom      : 0px;
+}
+
+
+
+
+
+
+
+
+/* ----- стиль для всех таблиц, который наследуется ------*/
+/* убираются рамки, отступы, устанавливается нужнвй шрифт */
+table {
+    font-family     : Tahoma, sans-serif, Arial;
+	border-collapse : collapse;
+	margin          : 0;
+	padding         : 0;
+	width           : 100%;
+	font-size       : 10pt;
+}
+tr {
+	vertical-align  : top;
+	border          : solid 0px #3e569c;
+	border-collapse : collapse;
+	margin          : 0;
+	padding         : 0;
+}
+th {
+	border          : solid 0px #3e569c;
+	border-collapse : collapse;
+	margin          : 0;
+	padding         : 0;
+	background-color: #222;
+}
+td {
+	vertical-align  : top;
+	border          : solid 0px #3e569c;
+	border-collapse : collapse;
+	margin          : 0;
+	padding         : 0;
+	background-color: #000;
+	color           : #eee;
+	font-size       : 10pt;
+}
+/* -------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/**************** Заголовок ****************/
+/*
+-header------------------------------------------
+ header_1      | header_2   <span>...<span>      |
+ IRIS Картинка |---------------------------------
+               | header_3               градиент |
+-------------------------------------------------
+*/
+
+table.header {
+	width			: 100%;
+}
+tr.header {
+	width			: 100%;
+	background		: #222;
+}
+table.header table.header table td {
+	background		: #222;
+}
+
+td.header_1 {
+	width			: 201px;
+	background		: #222 url(../images/logo.png) no-repeat 20px 10px;
+}
+td.header_2 {
+	background		: #222;
+	height			: 22px;
+	border-bottom	: 0px solid #313aab;
+	padding-top		: 2px;
+	text-align		: right;
+	vertical-align  : middle;
+	color           : white;
+}
+
+td.header_3 {
+	background		: #222;
+	height			: 68px;
+	white-space		: nowrap;
+}
+
+
+
+
+
+/*стиль колонки горизонтального разделителя (клетка)*/
+td.hor_div {
+	background-color   : #000;
+}
+
+/*стиль колонки вертикального разделителя (клетка)*/
+td.vert_div {
+	background-color   : #000;
+}
+
+
+
+
+
+
+
+/************ Напоминания ************/
+span.reminding {
+	display			: block;
+	float			: left;
+	
+	width			: 70px;
+	height			: 50px;
+	margin-top		: 5px;
+	padding			: 10px 5px 10px 5px;
+	border-radius	: 5px;
+	
+	margin-left		: 10px;
+	padding			: 0px 3px;
+	cursor		    : default;
+	color           : #808080;	
+}
+span.blink {
+	background-color: #eaa0a0;
+	cursor			: pointer;
+	font-weight		: bold;
+	color           : #404040;
+}
+span.blinking {
+	background-color: #eaa0a0;
+	cursor			: pointer;
+	color           : #404040;
+}
+
+span.reminding span {
+	width			: 100%;
+	padding-top		: 5px;
+	text-align		: center;
+}
+
+span.reminding-cap {
+	display: block;
+	font-size       : 8pt;
+	font-weight     : normal;	
+}
+span.reminding-delimeter {
+	display			: none;
+}
+span.reminding-value {
+	display			: block;
+	clear           : left;
+	font-size       : 16pt;
+}
+/************ Приветствие ************/
+
+/* Время */
+span#current_time_area {
+	cursor			: default;
+	display         : none;
+}
+
+span#user_welcome_area {
+	cursor			: default;
+}
+
+/* Выход */
+a#user_welcome_area_exitform_link {
+    color               : #f0f0f0;
+    text-decoration     : underline;
+    cursor              : pointer;
+    padding             : 1px 0 1px 18px;
+    background          : url(../images/session-logout-small.png) no-repeat left bottom;
+}
+
+/* Имя пользователя */
+span#user_welcome_area_username {
+	padding-right	: 5px;
+}
+/* Пользователь */
+span#user_welcome_area_usercap  {
+	display: none;
+}
+span#user_welcome_area_usercap span {
+}
+/* Пользователь : */
+span#user_welcome_area span[type=bracket]{
+	display: none;
+}
+
+/* Выбор стиля */
+span#user_styleselect_area {
+    margin-left         : 10px;
+    display             : none;
+}
+select#user_styleselect_area_select {
+	color				: blue;
+	cursor				: pointer;
+}
+
+/* Создать */
+span#quickadd_area {
+    margin-left         : 10px;
+}
+
+
+/* **************************************************************************************** */
+
+td#menu_panel {
+	background: transparent url(../images/menu/bg-nav.png) repeat-x 0 0px;
+}
+
+
+/* кнопка */
+input.button, input.button:disabled {
+	font-style         : normal;
+    font-size          : 10pt;
+
+	background         : #e8e8e8 url(../images/button-bg.png) repeat-x;
+
+	border-left        : solid 1px #ddd;
+	border-top         : solid 1px #ddd;
+	border-right       : solid 1px #444;
+	border-bottom      : solid 1px #444;
+
+	padding            : 0px 10px;
+	margin	           : 2px;
+
+	color              : #000;
+
+	height	           : 20px;
+	text-align         : center;
+	vertical-align     : middle;
+}
+/* наведенная кнопка */
+input.button:hover {
+	color              : #222;
+	cursor             : pointer;
+}
+/* утопленная кнопка */
+input.button:active {
+	background-image   : url(../images/button-bg-on.png);
+	color              : #222;
+	cursor             : pointer;
+	border-left        : solid 1px #444;
+	border-top         : solid 1px #444;
+	border-right       : solid 1px #ddd;
+	border-bottom      : solid 1px #ddd;
+	padding-top        : 1px;
+}
+/* неактивная кнопка */
+input.button:disabled {
+	background-image   : url(../images/button-bg-ds.png);
+	border-color       : #aaa;
+	border-width       : 1px;
+	color              : #222;
+}
+
+
+/* кнопка */
+input.button_add, input.button_edit, input.button_delete, input.button_ok, input.button_cancel {
+  min-width       : 70px;
+}
+
+input.button_lookup {
+  width : 20px;
+  margin: 0px 0px 0px 1px;
+}
+
+
+img {
+	border: 0;
+}
+
+img.status {
+	padding-left: 5px;
+}
+
+
+
+
+
+
+
+/* Кнопки в гриде */
+/* кнопка перерисовки */
+input.button_refresh {
+	width				: 21px;
+	background			: url(../images/grid_buttons/grid_refresh_green.gif);
+}
+
+/* кнопка предыдущей записи */
+input.button_prev, input.button_prev:active {
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_prev_b.gif);
+}
+
+/*
+если кнопка неактивна, то ее class="button button_next button_next_disabled"
+достаточно только button_next и определенить класс button_next:disabled, но explorer не понимет
+также в FF и Chome есть баг, что при указании class="button button_next_disabled" рисуется не от фон
+поэтому надо указывать оба класса и прописывать их в CSS
+ */
+input.button_prev_disabled, input.button_prev:disabled {
+/*input.button_prev:disabled {*/
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_prev_d.gif);
+	cursor				: default;
+}
+
+
+/* кнопка следующей записи */
+input.button_next, input.button_next:active {
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_next_b.gif);
+}
+input.button_next_disabled, input.button_next:disabled {
+/*input.button_next:disabled {*/
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_next_d.gif);
+	cursor				: default;
+}
+
+
+
+
+/* --------------- стили для горизонтальных вкладок  --------------- */
+
+/* табличка, в которой находятся закладки */
+#tabs_area {
+    height          : 20px;
+}
+table.tab {
+    width           : auto;
+    margin-top      : 15px;
+}
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Информационное сообщение */
+tr.info {
+	background-color: #ffffdd;
+}
+td.info {
+	padding: 10px;
+}
+
+/* Сообщение об ошибке */
+tr.error {
+	background-color: #ffdddd;
+}
+td.error {
+	padding: 10px;
+}
+
+/* ----------------------------------------- */
+
+
+
+/*****************************************/
+
+/* стиль затенения для грида, когда он перерисовывается */
+div.grid_shadow {
+	/* прозрачность фиксированная - 0.5 */
+	background-color	: white;
+	background-image	: url(../images/grid_loading.gif);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+}
+
+/* стиль затенения для реестра и закладок, когда перерисовывается раздел меню */
+div.grids_area_shadow {
+	/* прозрачность фиксированная - 0.5 */
+	background: none;
+}
+
+
+/* --------------------------- */
+/* miv 30.11.2009 стиль затенения для карточки, когда перерисовываются вкладки */
+div.card_shadow {
+	/* прозрачность фиксированная - 0.5 */
+	background-color	: Transparent;
+	background-image	: url(../images/grid_loading.gif);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+	background-color	: white;
+	/*background: none;*/
+}
+
+
+
+
+
+
+
+/* стили для сообщения при смене ответсвенного */
+table.chown_table td {
+	padding-left	: 10px;
+}
+
+div.chown_div {
+	padding-left	: 10px;
+}
+
+ul.chown_ul {
+}
+
+li.chown_li {
+	list-style-type	: circle;
+}
+li.chown_li_now {
+	list-style-type	: square;
+	color			: #ffcc66;
+	/*list-style-image: url(../images/li_now.gif);*/
+	
+}
+li.chown_li_ok {
+	list-style-type	: disc;
+	color			: #339933;
+}
+
+
+
+
+div.duplicate_message {
+	text-align		: left; 
+}
+div.duplicate_message  div {
+	background-image: url(../images/twopapers.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-left		: 8px;	
+	padding-left	: 72px;	
+}
+
+.hidden {
+	display: none;
+}
+
+
+.iris-drag-container {
+	position: absolute;
+	background: url(../../images/upload-file.png) center center no-repeat;
+	background-color: #888;
+	opacity: 0.3;
+	margin: 0;
+	padding: 0;
+}
+
+
+.fc-event-container .fc-event, a.fc-draggable {
+	font-size: 10pt;
+	padding: 2pt
+}
+
+.fc .fc-view .fc-axis {
+	white-space: normal;
+}

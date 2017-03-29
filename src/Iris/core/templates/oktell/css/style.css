@@ -1,0 +1,1420 @@
+/*************************************************
+ *
+ * Стиль Oktell.
+ * Версия 1.0.1.
+ *
+ *************************************************/
+ 
+ 
+/* *************************стили для шапки и плавающих элементов ************************* */
+/*
+-------------------------------------------------
+miv_h_1        | miv_h_2   <span>...<span>      |
+ IRIS Картинка |---------------------------------
+               | miv_h_3               градиент |
+-------------------------------------------------
+*/
+
+td.menu-spcae {
+	height: 9px;
+	background: #f5f4eb url(../images/menu-spacer.png) no-repeat;
+}
+
+table.header {
+	width			: 100%;
+}
+tr.header {
+	width			: 100%;
+	background		: url(../images/bg.jpg) no-repeat;
+	background-position: left top;
+}
+
+td.miv_h_1 {
+	width			: 201px;
+}
+td.miv_h_2 {
+	height			: 22px;
+	padding-top		: 2px;
+	text-align		: right;
+	color 			: #222222;
+}
+
+td.miv_h_3 {
+	height			: 64px;
+/*	background		: url(../images/bg.jpg) no-repeat;
+	background-position: left;*/
+}
+
+/* ------------- напоминания ------------- */
+span.reminding {
+	display			: block;
+	float			: left;
+	
+	width			: 70px;
+	height			: 50px;
+	margin-top		: 5px;
+	padding			: 10px 5px 10px 5px;
+	border-radius	: 5px;
+	
+	margin-left		: 10px;
+	padding			: 0px 3px;
+	cursor		    : default;
+	color           : #808080;	
+}
+span.blink {
+	background-color: #e7c5c6;
+	cursor			: pointer;
+	font-weight		: bold;
+	color           : #404040;
+}
+span.blinking {
+	background-color: #e7c5c6;
+	cursor			: pointer;
+	color           : #404040;
+}
+
+span.reminding span {
+	width			: 100%;
+	padding-top		: 5px;
+	text-align		: center;
+}
+
+span.reminding-cap {
+	display: block;
+	font-size       : 8pt;
+	font-weight     : normal;	
+}
+span.reminding-delimeter {
+	display			: none;
+}
+span.reminding-value {
+	display			: block;
+	clear           : left;
+	font-size       : 16pt;
+}
+/* ------------------------------------- */
+
+span#current_time_area {
+	cursor			: default;
+}
+
+a#user_welcome_area_exitform_link {
+	color				: #222222;
+	text-decoration		: underline;
+	cursor				: pointer;
+}
+
+select#user_styleselect_area_select {
+	color				: blue;
+	cursor				: pointer;
+}
+
+span#user_welcome_area {
+	cursor			: default;
+}
+span#user_welcome_area_usercap  {
+	display: none;
+}
+
+/* **************************************************************************************** */
+
+td#menu_panel {
+	background: transparent url(../images/menu/bg-nav.png) repeat-x 0 0px;
+}
+
+/* стиль для всей страницы, который наследуется. задается фон и шрифт */
+body, html {
+	margin          : 0;
+	padding         : 0;
+	background-color: #ffffff;
+	background-image: none;
+	font-family     : Tahoma, sans-serif, Arial;
+	font-size       : 12px;
+}
+/* ссылка */
+a {
+	color    : #3e569c;
+	font-size: 12px;
+}
+/* наведенная ссылка */
+a:hover {
+	color: #3e569c;
+}
+
+/*стиль для всплывающих подсказок*/
+abbr {
+	border-bottom		: 0px;
+}
+
+input.button, input.button:disabled {
+	font-family        : Tahoma, sans-serif, Arial;
+	font-size          : 12px;
+	font-weight        : normal;
+	font-style         : normal;
+
+	background-color   : #e8e8e8;
+	
+	background-image   : url(../images/ButtonBg.gif);
+	
+	background-repeat  : repeat-x;
+
+	border-left        : solid 1px #f0f0f0;
+	border-top         : solid 1px #f0f0f0;
+	border-right       : solid 1px #808080;
+	border-bottom      : solid 1px #808080;
+
+	padding-top        : 0px;
+	padding            : 0px 10px;
+	margin	           : 2px;
+
+	color              : #222222;
+
+	height	           : 18px;
+	text-align         : center;
+	vertical-align     : middle;
+}
+/* наведенная кнопка */
+input.button:hover {
+	font-family        : Tahoma, sans-serif, Arial;
+	font-size          : 12px;
+	padding-top        : 0px;
+
+	color              : #3e569c;
+	cursor             : pointer;
+}
+/* утопленная кнопка */
+input.button:active {
+	font-family        : Tahoma, sans-serif, Arial;
+	font-size          : 12px;
+
+	background-image   : url(../images/ButtonBgOn.gif);
+	color              : #3e569c;
+	cursor             : pointer;
+	border-left        : solid 1px #808080;
+	border-top         : solid 1px #808080;
+	border-right       : solid 1px #f0f0f0;
+	border-bottom      : solid 1px #f0f0f0;
+
+	padding-top        : 1px;
+}
+/* неактивная кнопка */
+input.button:disabled {
+	background-image   : url(../images/ButtonBgDs.gif);
+	border-color       : #a0a0a0;
+	border-width       : 1px;
+	color              : #888888;
+}
+
+/* кнопка */
+input.button_add, input.button_edit, input.button_delete, input.button_ok, input.button_cancel {
+  min-width       : 70px;
+}
+
+input.button_lookup {
+  width : 20px;
+  margin: 0px 0px 0px 1px;
+}
+
+
+/* Для кнопки "..." */
+td.form_table input.button {
+	padding: 0;
+}
+td.grid_footer_left input.button {
+	padding: 0;
+}
+table.grid_search input.button {
+	padding: 0;
+}
+
+
+/* элементы формы: поле ввода, область ввода */
+input.edtText, textarea.edtText {
+	color            : Black;
+	background-color : White;
+	border           : solid 1px #b0b0b0;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+/* выпадающий список */
+select.edttext {
+	color            : Black;
+	background-color : White;
+	border           : solid 1px #b0b0b0;
+	margin           : 0px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+
+/* чекбокс */
+div.checkbox_cont {
+	text-align		 : center;
+	width			 : 100%;
+}
+input.checkbox {
+	cursor			 : pointer;
+}
+
+/* неактивные элементы формы */
+input.edtText:disabled, textarea.edtText:disabled, select.edtText:disabled,
+input.edtText_disabled, textarea.edtText_disabled, select.edtText_disabled {
+	color            : Black;
+	background-color : #f5f5f5;
+	border           : solid 1px #b0b0b0;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+
+	font-family	     : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+select.edtText:disabled, select.edtText_disabled {
+	padding-left  : 0px;
+	padding-right : 0px;
+}
+
+/* выбранные элементы формы */
+input.edtText_selected, textarea.edtText_selected  {
+	color            : Black;
+	background-color : #e7e8f8;
+	border           : solid 1px #b1b6e9;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+select.edtText_selected {
+	color            : Black;
+	background-color : #e7e8f8;
+	border           : solid 1px #b1b6e9;
+	margin           : 0px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+
+/* незаполненные обязательные элементы формы */
+input.edtText_empty, textarea.edtText_empty {
+	color            : Black;
+	background-color : #fceeee;
+	border           : solid 1px #2c3394;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+select.edtText_empty {
+	color            : Black;
+	background-color : #fceeee;
+	border           : solid 1px #2c3394;
+	margin           : 0px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+
+/* поля формы, в которых введены некорректные данные (вместо числа - строка, вместо даты - билиберда и тд) */
+input.edtText_invalid_data, textarea.edtText_invalid_data  {
+	color            : Black;
+	background-color : #fceeee;
+	border           : solid 1px #2c3394;
+	margin           : 0px;
+	padding-left     : 3px;
+	padding-right    : 3px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+select.edtText_invalid_data {
+	color            : Black;
+	background-color : #fceeee;
+	border           : solid 1px #2c3394;
+	margin           : 0px;
+
+	font-family      : Tahoma, sans-serif, Arial;
+	font-size        : 12px;
+}
+
+img {
+	border: 0;
+}
+
+img.status {
+	padding-left: 5px;
+}
+
+/* --- стили для маркированных списков, использующихся в панели фильтров --- */
+/* (по типу: клиенты, партнеры; по категории: A B С ...) */
+/* стиль маркированного списка (по типу)*/
+ul {
+  margin           : 0px;
+  padding-left     : 0px;
+  list-style-type  : none;
+  line-height      : 21px;
+}
+/* стиль отдельного элемента списка (клиенты)*/
+li {
+  padding-left     : 5px;
+  padding-top      : 0;
+  padding-bottom   : 3px;
+}
+ul ul li {
+  padding-left     : 15px;
+}
+ul ul ul li {
+  padding-left     : 25px;
+}
+/* стиль для таблицы, в которой находятся фильтры [возможно не используется!] */
+table.group {
+	border-bottom: solid 2px #3e569c;
+	margin-top   : 5px;
+	padding-left     : 0px;
+}
+/* стиль для не выбранного фильтра*/
+ul.filter_unselected {
+	padding-left: 0px;
+	width       : 150px;
+	overflow    : hidden;
+	white-space : nowrap;
+}
+li.filter_unselected {
+	cursor			: pointer;	
+}
+/*стиль для выбранного фильтра*/
+li.filter_selected {
+	background      : url(../images/filter-selected.png) no-repeat;
+	cursor			: pointer;	
+}
+/* ---------------------------- */
+
+
+/* ----- стиль для всех таблиц, который наследуется ------*/
+/* убираются рамки, отступы, устанавливается нужнвй шрифт */
+table {
+	font-family    : Tahoma, sans-serif, Arial;
+/*	border         : solid 1px #3e569c;*/
+	border-collapse: collapse;
+	margin         : 0;
+	padding        : 0;
+	width          : 100%;
+	font-size      : 12px;
+}
+tr {
+	vertical-align : top;
+	border         : solid 0px #3e569c;
+	border-collapse: collapse;
+	margin         : 0;
+	padding        : 0;
+}
+td {
+	vertical-align : top;
+	border         : solid 0px #3e569c;
+	border-collapse: collapse;
+	margin         : 0;
+	padding        : 0;
+}
+th {
+	border         : solid 0px #3e569c;
+	border-collapse: collapse;
+	margin         : 0;
+	padding        : 0;
+}
+/* -------------------------- */
+
+/* --- -------------------- шапка системы (заголовок) -------------------- --- */
+/*левая часть - с фоновой картинкой*/
+tr.header_left {
+	height: 65px;
+}
+td.header_left {
+	width: 680px;
+	background-image   : url(../images/bg.gif);
+	background-position: left;
+	background-repeat  : no-repeat;
+	
+	background-color: #ffffff;
+}
+
+table.header {
+	background-image   : none;
+	background-position: top;
+	background-repeat  : repeat-x;
+}
+
+/*правая часть - с табличкой приветсвия*/
+td.header_right {
+/*	background-image   : url(../images/head_r.jpg);
+	background-position: center;
+	background-repeat  : repeat-x;
+*/
+	background-color  : #ffffff;
+}
+
+/*стиль колонки горизонтального разделителя (клетка)*/
+td.hor_div {
+	background-color   : #ffffff;
+}
+
+/*стиль колонки вертикального разделителя (клетка)*/
+td.vert_div {
+	background   : #ffffff url(../images/search-bg.png) repeat-x;
+}
+
+
+/* --- -------------------- меню ------------------------- --- */
+/* стиль для картинки обновлялки */
+div.menu_loading {
+	margin-right		: 5px;
+}
+
+table.menu {
+/*	background-image   : url(../images/head.bmp);
+	background-position: center;
+	background-repeat  : repeat-x;*/
+	width              : 100%;
+}
+tr.menu {
+/*	font-weight	: bold;*/
+}
+
+td.menu_group {
+	height	           : 20px;
+	width	           : 100%;
+	text-align         : left;
+	font-size	       : 12px;
+	font-weight        : bold;
+	padding            : 3px 5px 3px 5px;
+	background		   : url(../images/menu_group.bmp) no-repeat top right;
+	cursor			   : default;
+}
+
+/* --- обычный элемент меню --- */
+td.menu_unactive , td.menu_active{
+	height             : 20px;
+	width              : 100%;
+	text-align         : left;
+	font-size	       : 12px;
+	padding            : 3px 5px 3px 10px;
+	color              : #404040;
+	/*background-color   : #f5f5f5;
+	background		   : url(../images/menu_section_4.bmp) no-repeat top right;*/
+	background-color   : none;
+	cursor			   : default;
+}
+
+/* --- выбранный элемент меню --- */
+td.menu_active {
+	padding           : 3px 5px 3px 10px;
+	background-color  : #b1b6e9;
+	color             : #404040;
+	background		   : url(../images/menu_section_selected.bmp) no-repeat top right;
+/*	background-image  : url(../images/menu_bg_4_s.bmp);
+	border-right      : solid 1px #b159d0; */
+}
+
+/* Область приветствия */
+table.invite 
+{
+}
+td.invite {
+	vertical-align: middle;
+	width         : 185px;
+	padding       : 5px 5px 5px 10px;
+}
+td.logo {
+	height        : 64px;
+	vertical-align: bottom;
+	width         : 115px;
+}
+
+
+/* Табличка слева (меню, фильтры) */
+table.left {
+	background		: #eeeff1 url(../images/filters-bg.png) no-repeat;
+	width           : 159px;
+}
+td.left {
+	width: 150px;
+}
+
+table.status {
+	border-bottom: solid 2px #3e569c;
+}
+td.status {
+	padding: 5px 10px 5px 5px;
+}
+
+table.report {
+	line-height  : 15px;
+	border-bottom: solid 2px #3e569c;
+	margin-top   : 5px;
+}
+td.report {
+	padding: 3px 10px 4px 10px;
+}
+
+table.icon {
+}
+
+table.footer 
+{
+	margin     : 10px 10px 10px 10px;
+	text-align : center;
+	font-size  : 10px;
+}
+
+table.search {
+	margin: 10px 0px 0px 0px;
+}
+td.search {
+	padding: 3px 10px 3px 10px;
+}
+td.search_input {
+	padding: 3px 10px 3px 0px;
+}
+
+table.update {
+	margin: 10px 0px 0px 0px;
+}
+td.update {
+	padding: 3px 10px 3px 10px;
+}
+td.update_input {
+	padding: 3px 10px 3px 0px;
+}
+
+/* ------------- стили для таблицы с данными ------------- */
+table#grid {
+}
+table.grid {
+	border-spacing     : 0px;
+	border-collapse    : collapse;
+
+	font-family        : Tahoma, sans-serif, Arial;
+	background-color   : #ffffff;
+/*	border-bottom-width: 1px;*/
+/*	border-bottom      : solid 1px #f0f0f0;*/
+	margin             : 0;
+	padding            : 0;
+	border-left        : solid 0px #d0d0d0;
+	border-right       : solid 0px #d0d0d0;
+	border-bottom      : solid 0px #d0d0d0;
+	border-top         : solid 0px #d0d0d0;
+
+	-moz-user-select   : none;
+	-khtml-user-select : none;
+	user-select		   : none;
+}
+tr.grid {
+/*	border-top:    : solid 1px #d0d0d0;*/
+}
+
+th.grid {
+	/*background-image: url(../images/table-head.bmp);*/
+	/*background-color: #eaeaea;*/
+	
+	color           : #404040;
+	padding         : 10px 5px 5px 5px;
+	margin          : 0;
+	text-align      : left;
+	font-weight		: normal;
+	height          : 30px;
+	cursor			: pointer;
+	-moz-box-sizing : border-box;
+	box-sizing      : border-box;
+}
+th.grid td {
+	text-decoration : underline;
+}
+
+tr.grid_even {
+	/*background-color: #e7e8f8;*/
+/*	background      : url(../images/row_even.png) repeat-x;*/
+	padding         : 3px 5px 3px 5px;
+	height          : 30px;
+}
+tr.grid_odd, tr.grid_void {
+	padding         : 8x 5px 5px 5px;
+	height          : 30px;
+}
+tr.grid_odd:hover, tr.grid_even:hover {
+	/*background-color: #b1b6e9;*/
+	/*background      : url(../images/row_hover.png) repeat-x;*/
+	height          : 30px;
+	background      : #f8f8f8;
+}
+tr.grid_selected, tr.grid_selected:hover {
+	/*background-color: #313AAB;*/ /*#b1b6e9;*/
+	background      : #e0e0e0;/* url(../images/row_selected.png) repeat-x;*/
+/*	color           : White;*/
+	padding         : 8px 5px 5px 5px;
+	height          : 30px;
+}
+tr.grid_selected-multiple, tr.grid_selected-multiple:hover {
+	background      : transparent;
+	background      : #f0f0f0;
+}
+
+/* измененные стили для ячеек различных типов данных. стили вида grid_row_<тип_данных_row_datatype_в_xml_грида> */
+td.grid_row, td.grid_row_string, td.grid_row_int, td.grid_row_decimal, td.grid_row_date, td.grid_row_datetime {
+	padding         : 8px 5px 5px 5px;
+	margin          : 0px;
+	border-right    : solid 0px #d0d0d0;
+}
+td.grid_row_string {
+	text-align		: left;
+}
+td.grid_row_int {
+	text-align		: right;
+}
+td.grid_row_decimal {
+	text-align		: right;
+}
+td.grid_row_date {
+	text-align		: center;
+}
+td.grid_row_datetime {
+	text-align		: center;
+}
+/* стиль редактируемой ячейки грида */
+td.grid_row_editing {
+	padding         : 0px 5px 0px 5px;
+}
+
+td.grid_row span, td.grid_row_string span, td.grid_row_int span, td.grid_row_decimal span, td.grid_row_date span, td.grid_row_datetime span {
+	cursor			: default;
+
+    /* многоточие для длинного текста в ячейке */
+    display         : block;
+    overflow        : hidden;
+    white-space     : nowrap;
+    width           : 100%;
+    -o-text-overflow:ellipsis;
+    text-overflow   :ellipsis;
+}
+
+/* Панель кнопок в гриде */
+table.grid_footer {
+	height          : 40px;
+	margin          : 0;
+	padding         : 0;
+	vertical-align	: middle;
+	border-top      : solid 1px #d0d0d0;
+}
+td.grid_footer {
+	vertical-align	: middle;
+}
+td.grid_footer_left {
+	text-align      : left;
+	white-space     : nowrap;
+	padding-right   : 10px;
+}
+td.grid_footer_right {
+	text-align      : right;
+	white-space     : nowrap;
+}
+td.grid_footer_spacer_after {
+	width           : 100%;
+}
+
+/* пользовательские кнопки в таблице */
+td #grid_user_buttons, td #grid_user_buttons1, td #grid_user_buttons2, td #grid_user_buttons3 {
+	padding-left    : 10px;
+	white-space     : nowrap;
+}
+table.grid_footer_buttons {
+	width			: 100%;
+	background		: url(../images/card-btn-panel.bmp);
+}
+table.grid_footer_buttons td {
+	width			: 100%;
+	text-align		: right;
+}
+
+
+
+
+
+/* Кнопки в гриде */
+/* кнопка перерисовки */
+input.button_refresh {
+	width				: 21px;
+	background			: url(../images/grid_buttons/grid_refresh_green.gif);
+}
+
+/* кнопка предыдущей записи */
+input.button_prev, input.button_prev:active {
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_prev_b.gif);
+}
+
+/*
+если кнопка неактивна, то ее class="button button_next button_next_disabled"
+достаточно только button_next и определенить класс button_next:disabled, но explorer не понимет
+также в FF и Chome есть баг, что при указании class="button button_next_disabled" рисуется не от фон
+поэтому надо указывать оба класса и прописывать их в CSS
+ */
+input.button_prev_disabled, input.button_prev:disabled {
+/*input.button_prev:disabled {*/
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_prev_d.gif);
+	cursor				: default;
+}
+
+
+/* кнопка следующей записи */
+input.button_next, input.button_next:active {
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_next_b.gif);
+}
+input.button_next_disabled, input.button_next:disabled {
+/*input.button_next:disabled {*/
+	width				: 20px;
+	background			: url(../images/grid_buttons/grid_next_d.gif);
+	cursor				: default;
+}
+
+
+
+
+/* Поиск в гриде */
+table.grid_search {
+	background		: #ffffff url(../images/search-bg.png) repeat-x;
+	margin          : 0;
+	padding         : 0;
+}
+table.grid_search td {
+	padding         : 6px 10px 25px 0;
+}
+td.grid_search {
+}
+td.grid_search_buttons_cont {
+	width			: 135px;
+	vertical-align	: middle;
+}
+input.grid_search_button_find {
+	margin			: 0px 0px 0px 5px;
+	width			: 60px;
+}
+input.grid_search_button_clear {
+	margin			: 0px 0px 0px 2px;
+	width			: 60px;
+}
+
+
+
+
+
+table.grid_buttons {
+	width : auto;
+	margin: 2px 0px 3px 0px;
+}
+td.grid_buttons {
+	padding     : 0px 5px 0px 5px;
+	margin      : 0;
+	white-space : nowrap;
+}
+
+table.grid_navigation {
+	width : auto;
+	margin: 2px 0px 3px 0px;
+	white-space : nowrap;
+}
+/* ------------------------------------------------------- */
+
+
+/* ----------------- стили для закладок  ----------------- */
+
+/* табличка, в которой находятся закладки */
+#tabs_area {
+	height: 20px;
+}
+table.tab {
+	width : auto;
+	margin-top		: 15px;
+}
+
+
+/* обычная и активная закладка */
+/*
+td.tab, td.tab_active {
+	padding     	: 2px 5px 2px 5px;
+	white-space 	: nowrap;
+	padding     	: 0px 3px 0px 3px;
+}
+
+td.tab_active {
+	font-weight     : bold;
+	background-color: #313AAB;
+	color			: white;
+}
+*/
+/* надпись внутри закладки (для закладок вместо ссылок, взамен стилей a.tab_link и a.tab_link:hover - эти более не используются)*/
+/*
+font.tab_caption {
+	cursor				: pointer;
+	text-decoration		: none;	
+	padding     		: 0px 5px 0px 5px;
+}
+font.tab_caption:hover {
+	color				: EE3696;
+}
+*/
+
+/* ------------------------------------------------------- */
+
+/* ---- форма с данными, которая в окне ---- */
+form {
+	margin: 0px 0px 0px 0px;
+}
+
+
+table.form_table {
+	border          : 0px solid #3e569c;
+	border-spacing  : 0px;
+	border-collapse: separate;
+	padding-top		: 5px; 	
+	background-color: #ffffff;
+	font            : 12px sans-serif;
+	vertical-align  : middle;
+}
+td.form_table {
+	border          : 0px solid #3e569c;
+	border-spacing  : 0px;
+	/*border-collapse : separate;*/
+	border-collapse : collapse;
+	
+	background-color: #ffffff;
+	font            : 12px sans-serif;
+	vertical-align  : middle;
+}
+
+
+td.form_table {
+	padding         : 0px 5px 0px 5px;
+	border          : 0px;
+	border-collapse : collapse;
+	cursor			: default;	
+}
+
+td.form_table p {
+	padding         : 0px 5px;
+}
+
+
+/******* Панель кнопок на форме *******/
+table.form_table_buttons_panel {
+	/*margin-top: 5px;*/
+	background-color : #CED1F0; 
+	background-image: url(../images/card-btn-panel.png);
+	padding-top: 1px;
+	padding-right: 3px;
+	border-collapse: separate;
+	border-spacing: 0px;
+	height: 20px;
+}
+table.form_table_buttons_panel table tr {
+	font            : 11px sans-serif;
+	padding         : 0px 5px 0px 5px;
+}
+table.form_table_buttons_panel td {
+	vertical-align	: middle;
+}
+
+/* Строчка на форме с элементами ввода */
+tr.form_row {
+	height          : 21px;
+}
+
+/* стиль горизонтальной полосы-разделителя в форме */
+hr.form_hr {
+	color			: #909090;       /* Для IE */
+	background-color: #909090;       /* Для Opera Mozilla/Gecko */
+	height			: 2px; 			/* если не указывать высоту hr в Opera, то показываются только рамки прижатые друг к другу вплотную без внутренней области */
+	border-width	: 0px; 			/* убрать рамки вокруг элемента */
+}
+
+/* шрифт надписи у разделителя формы */
+div.hr_caption {
+	font-weight		: bold;
+	color			: #909090;
+}
+
+
+/* Информационное сообщение */
+tr.info {
+	background-color: #ffffdd;
+}
+td.info {
+	padding: 10px;
+}
+
+/* Сообщение об ошибке */
+tr.error {
+	background-color: #ffdddd;
+}
+td.error {
+	padding: 10px;
+}
+
+/* ----------------------------------------- */
+
+
+
+/* Пользовательские стили */
+tr.summary {
+	background-color: #eaeaea;
+	font-weight     : bold;
+	text-align      : right;
+/*	border-bottom   : solid 1px #d0d0d0;*/
+}
+
+/*****************************************/
+
+/* стиль затенения для грида, когда он перерисовывается */
+div.grid_shadow {
+	/* прозрачность фиксированная - 0.5 */
+	background-color	: white;
+	background-image	: url(../images/grid_loading.gif);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+/*	background: none;*
+/*	miv
+	background-color : white;
+*/	
+}
+
+/* стиль затенения для реестра и закладок, когда перерисовывается раздел меню */
+div.grids_area_shadow {
+	/* прозрачность фиксированная - 0.5 */
+/*	background-color	: Transparent;
+	background-image	: url(../images/razdel_loading.gif);
+	background-position	: center;
+	background-repeat	: no-repeat;	*/
+	background: none;
+/* miv	
+background-color : Transparent;
+ background-image : url(../images/grid_loading.gif);
+ background-position : center;
+ background-repeat : no-repeat; 
+ background-color : white;
+*/
+}
+
+
+/* --------------------------- */
+/* miv 30.11.2009 стиль затенения для карточки, когда перерисовываются вкладки */
+div.card_shadow {
+	/* прозрачность фиксированная - 0.5 */
+	background-color	: Transparent;
+	background-image	: url(../images/grid_loading.gif);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+	background-color	: white;
+	/*background: none;*/
+}
+
+div.card_tab {
+	color				: #222222;
+	padding				: 3px 0 3px 4px;
+	cursor				: pointer;
+}
+div.card_tab:hover {
+}
+div.card_tab_selected {
+	background          : #b4b7bc url(../images/tab-selected.png) no-repeat;
+	cursor				: default;
+}
+
+/* контейнер, который содержит верхнюю панель карточки */
+div.card_header_div {
+	height				: 69px;
+	background			: url(../images/card-header.png) repeat-x;
+	border-bottom		: 0px solid #484F9E;
+	margin-bottom		: 0px;
+}
+
+div.card_header_div table {
+	height				: 69px;
+	table-layout		: fixed;
+}
+
+td.card_icon_td {
+	width				: 158px;
+	cursor				: default;
+	background			: url(../images/card-header-icon.png) no-repeat;
+}
+
+td.card_right_spacer {
+	width				: 15px;
+}
+
+tr.card_header_top_row, tr.card_header_bottom_row {
+	height				: 17px;
+}
+tr.card_header_middle_row {
+	overflow			: hidden;
+}
+tr.card_header_middle_row td {
+	overflow			: hidden;
+	white-space			: nowrap;
+}
+
+td.card_caption_div {
+	vertical-align		: middle;
+	cursor				: default;
+}
+
+td.card_top_buttons_panel, td.card_bottom_buttons_panel {
+	text-align			: right;
+}
+
+span.card_caption_window {
+	font-size			: 10px;
+	display             : block;
+	color               : #717171;
+}
+span.card_caption_value {
+	font-size			: 14px;
+	padding-left		: 0px;
+	display             : block;
+}
+div.card_top_buttons_div {
+	cursor				: default;
+	padding-top         : 5px;
+/*	position			: relative;
+	left				: 200px;
+	top					: -40px;
+	width				: 100px;*/
+}
+div.card_bottom_buttons_div {
+	cursor				: default;	
+/*	position			: relative;
+	left				: 300px;
+	top					: -40px;
+	width				: 100px;*/
+}
+
+span.card_header_separator {
+	margin				: 0px 10px 0px 10px;
+	cursor				: default;	
+}
+span.card_top_panel_button {
+	cursor				: pointer;
+	text-decoration		: underline;
+}
+span.card_top_panel_button_hover  {
+	color				: #484F9E;
+	/*border-bottom		: 1px solid #484F9E;*/
+}
+/*-----------------------------------------------------*/
+
+
+/* столбец таблицы, содержащий список вкладок карточки */
+td.tabs_cont {
+	width				: 150px;
+	background-color	: #F9F9F9;	
+	background          : url(../images/tabs-bg.png) repeat-y;
+}
+/* столбец таблицы, выполняющий функцию разделителя между вкладками карточки и самой карточкой */
+td.tabs_card_divider {
+	/*width				: 2px;
+	background-color	: #f9f9f9;*/
+	
+	width				: 5px;
+	background-color	: white;
+
+/*	border-left			: 1px solid #909090;*/
+	border-left			: 1px solid #d0d0d0;
+	border-right		: 1px solid #d0d0d0;
+	
+	vertical-align		: middle;
+}
+
+div.tabs_card_divider_button {
+	height				: 71px;
+	cursor				: pointer;
+}
+div.tabs_card_divider_min {
+	background-image	: url(../images/mini-left.gif);
+}
+div.tabs_card_divider_max {
+	background-image	: url(../images/mini-right.gif);
+}
+/* --------------------------- */
+
+/* контейнер-прокрутка, в котором находится форма карточки*/
+div.form_table_scroll {
+	background-color: #fff;
+}
+
+
+/* стиль надписи элемента фильтра в li */
+font.filter_elem {
+	font-family     : Tahoma, sans-serif, Arial;
+	font-size       : 12px;
+}
+
+/* стиль div, выполняющую роль календаря */
+div.calendar_img {
+	background-color	: none;
+	background-image	: url(../images/calendar.png);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+
+	border				: 0px none;
+	cursor				: pointer;
+	padding-left		: 1px;
+	width				: 20px;
+	height				: 17px;
+}
+
+/* стиль div, выполняющую роль конвертика письма */
+div.email_img {
+	background-color	: none;
+	background-image	: url(../images/mailto.png);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+
+	border				: 0px none;
+	cursor				: pointer;
+	padding-left		: 1px;
+	width				: 20px;
+	height				: 17px;
+}
+
+/* стиль div, выполняющую роль ссылки на url */
+div.url_img {
+	background-color	: none;
+	background-image	: url(../images/url.png);
+	background-position	: center;
+	background-repeat	: no-repeat;	
+
+	border				: 0px none;
+	cursor				: pointer;
+	padding-left		: 1px;
+	width				: 20px;
+	height				: 17px;
+}
+
+/* стиль для элемента input поиска в гридах. элементу присваивается стиль edtText и этот(меняется фон)*/
+input.search_value {
+	padding-left		: 17px;
+	background			: white url(../images/search.bmp) no-repeat scroll 2px 2px;
+}
+/* он же, когда в нем ввели неверный тип данных*/
+input.search_value_error {
+	background			: #ffcc00 url(../images/search.bmp) no-repeat scroll 2px 2px;
+}
+
+/* ******************************* стиль элемента выбора файла ************************** */
+.fileinput_originalFileInput {
+	position	: absolute;
+	width		: 219px;
+	margin-left	: -140px;
+	cursor		: default;
+	height		: 21px;
+	z-index		: 2;
+	filter		: alpha(opacity: 0);
+	opacity		: 0;
+	
+	/*position	: relative;*/
+}
+
+.fileinput_fakeButton, .fileinput_fakeButton_hover, .fileinput_fakeButton_empty  {
+	/*position	: absolute;*/
+	z-index		: 1;
+	width		: 85px;
+	height		: 18px;
+	background	: url(../images/fileselect_button.png) no-repeat left top;
+	float		: left;
+
+	/*position	: relative;
+	top			: -20px;*/
+}
+
+.fileinput_fakeButton_hover {
+	background	: url(../images/fileselect_button_active.png) no-repeat left top;
+}
+
+.fileinput_fakeButton_empty {
+	background	: url(../images/fileselect_button_empty.png) no-repeat left top;
+}
+
+.fileinput_blocker {
+	position	: absolute;
+	z-index		: 3;
+	width		: 150px;
+	height		: 21px;
+	background	: url(../images/fileselect_transparent.gif);
+	margin-left	: -155px;
+//	margin-left	: -235px; /*Для IE чтоб нажималась кнопка "Выбрать" */
+	
+	/*position	: relative;
+	top			: -20px;*/
+}
+
+.fileinput_caption  {
+	/*position	: absolute;*/
+	height		: 15px;
+	margin-left	: 90px;
+	font-family	: Verdana;
+	font-size	: 8pt;
+	color		: Gray;
+	margin-top	: 2px;
+	padding-top	: 1px;
+	padding-left: 19px;
+//	margin-left	: 0px;  /* Для IE чтоб убрать лишний отступ */		
+	/*position	: relative;
+	top			: -40px;*/
+}
+.fileinput_caption  table {
+// table-layout: fixed;
+//	width		: 70%; /* Для IE чтоб ширина названия файла не была больше, чем карточка */
+// white-space	: nowrap;
+}
+.fileinput_caption  table td {
+//	width		: 25px;
+}
+
+.fileinput_clearButton  {
+	padding-left: 10px;
+	background	: url(../images/fileselect_clear_button.png) no-repeat right top;
+	width		: 16px;
+	height		: 16px;
+	cursor		: pointer;
+}
+td.fileinput_tdl {
+	width		: 50px;
+//  width		: auto;		
+	white-space : nowrap;
+}
+/* ************************************************************************************** */
+
+
+/*** Стиль строки "Новая запись" в гриде ***/
+span.newrecord {
+/*	color: #2c3394;*/
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+	height: 20px;
+}
+span.record {
+/*	color: white;*/
+	font-weight: normal;
+	white-space: nowrap;
+	height: 20px;
+}
+
+/* Стиль для указателей сортировки */
+img.sort_image {
+	margin-top	: 2px;
+	margin-left	: 2px;
+	width		: 11px;
+	height		: 11px;
+}
+td.sort_image {
+	width		: 12px;
+}
+
+/* стили для сообщения при смене ответсвенного */
+table.chown_table td {
+	padding-left	: 10px;
+}
+
+div.chown_div {
+	padding-left	: 10px;
+}
+
+ul.chown_ul {
+}
+
+li.chown_li {
+	list-style-type	: circle;
+}
+li.chown_li_now {
+	list-style-type	: square;
+	color			: #ffcc66;
+	/*list-style-image: url(../images/li_now.gif);*/
+	
+}
+li.chown_li_ok {
+	list-style-type	: disc;
+	color			: #339933;
+}
+
+/* стиль для названия поля карточки */
+span.card_elem_caption {
+}
+
+/* стиль для обязательного поля карточки */
+span.card_elem_mandatory {
+	font-weight		: bold;
+}
+
+/* стиль для поля карточки, по которому доступна подсказка */
+span.card_elem_title {
+	border-bottom	: 1px dotted black;
+	cursor			: pointer;
+}
+
+div.duplicate_message {
+	text-align		: left; 
+}
+div.duplicate_message  div {
+	background-image: url(../images/twopapers.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-left		: 8px;	
+	padding-left	: 72px;	
+}
+
+
+/* В карточках тоже отделяем заголовок таблицы */
+table.grid th.grid {
+	border-bottom   : solid 1px #d0d0d0;
+}
+
+.hidden {
+	display: none;
+}
+
+
+.card-grid {
+	margin-bottom: 10pt;
+	margin-top: 10pt;
+}
+.form_table .card-grid p {
+	margin: 0;
+	padding: 0;
+}
+
+
+.iris-drag-container {
+	position: absolute;
+	background: url(../images/upload-file.png) center center no-repeat;
+	background-color: #888;
+	opacity: 0.3;
+	margin: 0;
+	padding: 0;
+}
+
+
+.fc-event-container .fc-event, a.fc-draggable {
+	font-size: 10pt;
+	padding: 2pt
+}
+
+.fc .fc-view .fc-axis {
+	white-space: normal;
+}

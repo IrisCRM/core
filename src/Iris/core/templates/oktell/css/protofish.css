@@ -1,0 +1,247 @@
+/*
+	navigation bar - horizontal dropdown
+	--------------------------------------------------
+*/
+
+/* first level */
+ul.menu {
+	float: left;
+	height: 100%;
+	/*margin: 20px 0;*/
+	margin: 0;
+	padding: 0;
+	border-left: 0px solid #d7d7d7;
+	border-right: 0px solid #d7d7d7;
+	list-style: none;
+	background: transparent url(../images/menu/bg-nav.png) repeat-x 0 0;
+	
+	font-family: Tahoma, sans-serif, Arial; /* miv: это для правильной высоты */
+	font-size:12px;
+}
+
+ul.menu li {
+	position: relative;
+	float: left;
+	line-height: 1.1;
+	padding: 0px;
+}
+
+ul.menu li a {
+	display: block;
+	width: auto;
+	padding: 9px;
+	text-decoration: none;
+	color: #f0f0f0;
+	background: transparent url(../images/menu/bg-nav-sep.png) no-repeat right 2px;
+	
+	font-family: Tahoma, sans-serif, Arial; /* miv: это для правильной высоты */
+	font-size:14px;	
+}
+
+ul.menu li.last a {
+	background: transparent;
+}
+
+ul.menu li a.sub {
+	padding-right: 20px;
+	background: transparent url(../images/menu/bg-nav-sep.png) no-repeat right -30px;
+}
+ul.menu li.active a.sub {
+	background: transparent url(../images/menu/bg-nav-sep-active.png) no-repeat right -30px;
+}
+ul.menu li:hover a.sub {
+	background: transparent url(../images/menu/bg-nav-sep-active.png) no-repeat right -30px;
+}
+
+ul.menu li:hover,
+ul.menu li.hover /* protofish */ {
+	background: transparent url(../images/menu/bg-nav.png) repeat-x 0 -32px;
+}
+
+ul.menu li:hover a,
+ul.menu li.hover /* protofish */ a {
+	color: #444;
+}
+
+ul.menu li.active a {
+	color: #444;
+}
+ul.menu li.active:hover a {
+	color: #444;
+}
+ul.menu li.active /* protofish */ {
+	background: transparent url(../images/menu/bg-nav.png) repeat-x 0 -32px;
+}
+
+/* second level */
+ul.menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	top: 32px;
+	width: 168px;
+	border-top: 0px solid #969696;
+}
+
+/* resetting first level */
+ul.menu ul ul {
+}
+
+ul.menu li:hover li,
+ul.menu li:hover li a,
+ul.menu li.hover /* protofish */ li,
+ul.menu li.hover /* protofish */ li a {
+	background: #dcdde0;
+	color: #444;
+}
+
+/* submenu markup */
+ul.menu li li {
+	width: 100%;
+	border-left: 1px solid #969696;
+	border-right: 1px solid #969696;
+}
+
+ul.menu li li.last {
+	border-bottom: 1px solid #969696;
+}
+
+ul.menu li li a {
+	padding: 5px 5px 5px 10px;
+}
+
+ul.menu li:hover li:hover a,
+ul.menu li.hover li.hover /* protofish */ a {
+	background: #f3f4f6;
+	color: #222;
+}
+
+/* miv 28.12.2009: новый стиль для инцикации загрузки */
+div.menu_item_loading {
+	position: absolute;
+	right: 4px;
+	top: 6px;
+	background-image: url(../images/menu/menu-loader.gif);
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 11px;
+}
+
+ul.menu li:hover li.active a,
+ul.menu li.hover /* protofish */ li.active a {
+	background-color: #fff;
+	color: #222;
+}
+
+ul.menu li li a.sub {
+	padding-right: 15px;
+	background: url(../images/menu/arrow-r.png) no-repeat 95% 50%;
+}
+
+ul.menu li:hover li:hover a.sub,
+ul.menu li.hover li.hover /* protofish */ a.sub {
+	background: #f6f6f6 url(../images/menu/arrow-r.png) no-repeat 95% 50%;
+}
+
+/* third level */
+/* resetting second level */
+ul.menu ul ul{
+	top: -1px;
+	margin-left: 169px;
+	background: #fff;
+}
+
+ul.menu li:hover li:hover li,
+ul.menu li:hover li:hover li a,
+ul.menu li.hover li.hover /* protofish */ li,
+ul.menu li.hover li.hover /* protofish */ li a {
+	color: #7c7c7c;
+}
+
+/* subsubmenu markup */
+ul.menu li:hover li:hover li:hover a,
+ul.menu li.hover li.hover li.hover /* protofish */ a {
+	background: #e6e6e6;
+	color: #000;
+}
+
+ul.menu li:hover li:hover li.active a,
+ul.menu li.hover li.hover /* protofish */ li.active a {
+	color: #f15c30;
+}
+
+ul.menu li:hover li:hover li:hover a.sub,
+ul.menu li.hover li.hover li.hover /* protofish */ a.sub {
+	background: #e6e6e6 url(../images/menu/arrow-r.png) no-repeat 95% 50%;
+}
+
+/* fourth level */
+/* resetting second level */
+ul.menu li:hover li:hover li:hover li,
+ul.menu li:hover li:hover li:hover li a,
+ul.menu li.hover li.hover li.hover /* protofish */ li,
+ul.menu li.hover li.hover li.hover /* protofish */ li a {
+	color: #7c7c7c;
+}
+
+/* subsubmenu markup */
+ul.menu li:hover li:hover li:hover li:hover a,
+ul.menu li.hover li.hover li.hover li.hover /* protofish */ a {
+	background: #ccc;
+	color: #000;
+}
+
+ul.menu li:hover li:hover li:hover li.active a,
+ul.menu li.hover li.hover li.hover /* protofish */ li.active a {
+	color: #f15c30;
+}
+
+ul.menu li:hover li:hover li:hover li a.sub,
+ul.menu li.hover li.hover li.hover /* protofish */ li a.sub {
+	background: #e6e6e6;
+}
+
+ul.menu li:hover li:hover li:hover li:hover a.sub,
+ul.menu li.hover li.hover li.hover li.hover /* protofish */ a.sub {
+	background: #ccc;
+}
+
+/* hiding fifth level */
+div#nav ul ul ul ul ul {
+	display: none;
+}
+
+/* show hide behaviour */
+ul.menu ul,
+ul.menu li:hover ul ul,
+ul.menu ul ul,
+ul.menu li:hover ul ul ul,
+ul.menu ul ul ul,
+ul.menu li:hover ul ul ul ul {
+	position: absolute;
+	left: -999em;
+}
+
+ul.menu li:hover ul,
+ul.menu li li:hover ul,
+ul.menu li li li:hover ul,
+ul.menu li li li li:hover ul {
+	left: -1px;
+	z-index: 999;
+}
+
+/* show hide behaviour with protofish */
+ul.menu li.hover ul ul,
+ul.menu li.hover ul ul ul,
+ul.menu li.hover ul ul ul ul {
+	position: absolute;
+	left: -999em;
+}
+
+ul.menu li.hover ul,
+ul.menu li li.hover ul,
+ul.menu li li li.hover ul,
+ul.menu li li li li.hover ul {
+	left: -1px;
+	z-index: 999;
+}

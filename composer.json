@@ -1,0 +1,34 @@
+{
+    "name": "iriscrm/source-core",
+    "description": "Iris CRM core (source)",
+    "bin": [
+        "iris"
+    ],
+    "require": {
+        "php": ">=5.5.9",
+
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-gettext": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-mbstring": "*",
+        "ext-PDO": "*",
+        "ext-pdo_pgsql": "*",
+        "ext-session": "*",
+
+        "monolog/monolog": "^1.22",
+        "sentry/sentry": "^1.6",
+        "symfony/dependency-injection": "^3.2",
+        "symfony/console": "^3.2",
+        "doctrine/migrations": "^1.5"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/* стили для элемента radiobutton карточки */
+
+/*
+rbelem-f – первый, нормальный(не выбран)
+rbelem-m - средний, нормальный(не выбран)
+rbelem-l - последний, нормальный(не выбран)
+rb-selected-f - первый, выбран
+rb-selected-m - средний, выбран
+rb-selected-l — последний, выбран
+*/
+
+table.rb-table {
+    width           : auto;
+    display         : inline;
+}
+
+div.radiobtn-cont {
+	text-align		: center;
+}
+
+div.rb_empty table {
+    color: #D12951;
+}
+
+div.radiobtn-values span.rb-caption {
+    background      : url("../images/radiobutton/buttons.png");
+    background-repeat: no-repeat;
+
+    padding			: 2px 8px;
+	cursor			: pointer;
+    text-align      : center;
+
+    display         : block;
+	font-size		: 9pt;
+	color			: #EEE;
+}
+
+span.rbelem-f, span.rbelem-m, span.rbelem-l {
+    background      : url("../images/radiobutton/buttons.png");
+    background-repeat: no-repeat;
+
+    /*padding			: 3px 0px;*/
+
+    display         : block;
+}
+
+/* первый */
+span.rbelem-f {
+    background-position: 0 -72px;
+}
+span.rbelem-f span.rb-caption {
+    background-position: 0 -90px;
+	color: #000;	
+}
+/* средний */
+span.rbelem-m {
+    border-left: 1px solid #d0d0d0;
+    background-position: -5px -72px;
+}
+span.rbelem-m span.rb-caption {
+    background-position: -5px -72px;
+	color: #000;	
+}
+/* последний */
+span.rbelem-l {
+    border-left: 1px solid #d0d0d0;
+    background-position: -5px -72px;
+}
+span.rbelem-l span.rb-caption {
+    background-position: 100% -91px;
+	color: #000;	
+}
+
+
+/* выделенные элементы */
+
+/* первый */
+span.rb-selected-f {
+    background-position: 0 0px;
+}
+span.rb-selected-f span.rb-caption {
+    background-position: 100% -36px;
+	color: #EEE;
+}
+
+/* средний */
+span.rb-selected-m {
+    background-position: 0 -18px;
+}
+span.rb-selected-m span.rb-caption {
+    background-position: 100% -36px;
+	color: #EEE;	
+}
+
+/* последний */
+span.rb-selected-l {
+    background-position: 0 -18px;
+}
+span.rb-selected-l span.rb-caption {
+    background-position: 100% -54px;
+	color: #EEE;	
+}

@@ -1,0 +1,263 @@
+/* Не прочитанные email */
+tr.grid_newmail, tr.grid_newmail td, 
+/* Не прочитанные сообщения */
+tr.grid_newmessage, tr.grid_newmessage td {
+	color           : #eaa0a0;
+}
+
+
+
+
+
+
+/* ------------- стили для таблицы с данными ------------- */
+table#grid {
+}
+table.grid {
+	border-spacing     : 0px;
+	border-collapse    : collapse;
+
+	margin             : 0;
+	padding            : 0;
+	border-left        : solid 0px #d0d0d0;
+	border-right       : solid 0px #d0d0d0;
+	border-bottom      : solid 0px #d0d0d0;
+	border-top         : solid 0px #d0d0d0;
+
+	-moz-user-select   : none;
+	-khtml-user-select : none;
+	user-select		   : none;
+}
+tr.grid td {
+	background-color: #222;
+	margin          : 0;
+	padding         : 0;
+}
+
+th.grid:first-letter {
+}
+th.grid {
+	background-color: #222;
+	color           : #404040;
+	padding         : 10px 5px 5px 5px;
+	margin          : 0;
+	text-align      : left;
+	font-weight     : normal;
+	height          : 30px;
+	cursor			: pointer;	
+	-moz-box-sizing : border-box;
+	box-sizing      : border-box;
+}
+/*текст заголовка колонки*/
+th.grid td {
+	background-color: #222;
+	text-decoration : underline;
+	white-space		: nowrap;
+}
+
+tr.grid_even {
+	padding         : 3px 5px 3px 5px;
+	height          : 30px;
+}
+tr.grid_odd, tr.grid_void {
+	padding         : 3px 5px 3px 5px;
+	height          : 30px;
+}
+tr.grid_odd:hover td, tr.grid_even:hover td {
+	background-color: #444;
+}
+tr.grid_selected td, tr.grid_selected:hover td {
+	background-color: #888;
+}
+tr.grid_selected-multiple td, tr.grid_selected-multiple:hover td {
+	background-color: #666;
+}
+
+/* измененные стили для ячеек различных типов данных. стили вида grid_row_<тип_данных_row_datatype_в_xml_грида> */
+td.grid_row, td.grid_row_string, td.grid_row_int, td.grid_row_decimal, td.grid_row_date, td.grid_row_datetime {
+	padding         : 3px 5px;
+	margin          : 0px;
+    vertical-align  : middle;
+	background-color: #222;
+}
+td.grid_row_string {
+	text-align		: left;
+}
+td.grid_row_int {
+	text-align		: right;
+}
+td.grid_row_decimal {
+	text-align		: right;
+}
+td.grid_row_date {
+	text-align		: center;
+}
+td.grid_row_datetime {
+	text-align		: center;
+}
+/* стиль редактируемой ячейки грида */
+td.grid_row_editing {
+	padding         : 0px 5px 0px 5px;
+}
+
+td.grid_row span, td.grid_row_string span, td.grid_row_int span, td.grid_row_decimal span, td.grid_row_date span, td.grid_row_datetime span {
+	cursor			: default;
+
+    /* многоточие для длинного текста в ячейке */
+    display         : block;
+    overflow        : hidden;
+    white-space     : nowrap;
+    width           : 100%;
+    -o-text-overflow: ellipsis;
+    text-overflow   : ellipsis;
+}
+
+/* Панель кнопок в гриде */
+table.grid_footer {
+	background-color: #444;
+	border-collapse : separate;
+	border-spacing  : 0px;
+	
+	margin          : 0;
+	padding         : 5px;
+	vertical-align	: middle;
+}
+table.grid_footer td {
+	background-color: #444;
+}
+td.grid_footer {
+	background-color: #444;
+	vertical-align	: middle;
+}
+td.grid_footer_left {
+	text-align      : left;
+	white-space     : nowrap;
+	padding-right   : 10px;
+}
+td.grid_footer_right {
+	text-align      : right;
+	white-space     : nowrap;
+}
+td.grid_footer_spacer_after {
+	width           : 100%;
+}
+
+/* пользовательские кнопки в таблице */
+td#grid_user_buttons, td#grid_user_buttons1, td#grid_user_buttons2, td#grid_user_buttons3 {
+	padding-left    : 10px;
+	white-space     : nowrap;
+}
+
+table.grid_footer_buttons {
+	width			: 100%;
+	background-color: #666;
+	border-collapse : separate;
+	border-spacing  : 0px;
+	padding         : 5px 5px;
+	border-top      : solid 1px #d0d0d0;
+}
+table.grid_footer_buttons td {
+	width			: 100%;
+	text-align		: right;
+	background-color: #666;
+}
+
+
+
+
+
+
+
+/* Поиск в гриде */
+table.grid_search {
+	margin          : 0;
+	padding         : 0;
+}
+table.grid_search td:first-child {
+	border-radius   : 10px 0 0 0;
+}
+div.iris_win_content table.grid_search td:first-child {
+	border-radius   : 0;
+}
+
+table.grid_search td {
+	background-color: #666;
+	padding         : 10px 5px;
+	vertical-align	: middle;
+}
+td.grid_search_buttons_cont {
+	width			: 135px;
+	vertical-align	: middle;
+}
+input.grid_search_button_find {
+	width			: 60px;
+}
+input.grid_search_button_clear {
+	width			: 60px;
+}
+
+
+
+/* стиль для элемента input поиска в гридах. элементу присваивается стиль edtText и этот(меняется фон)*/
+input.search_value {
+	padding-left	: 17px;
+	background		: #000 url(../images/search.png) no-repeat scroll 2px 2px;
+}
+/* он же, когда в нем ввели неверный тип данных*/
+input.search_value_error {
+	background-color: #ffd799;
+}
+
+
+
+
+/* В карточках тоже отделяем заголовок таблицы */
+table.grid th.grid {
+	border-bottom   : solid 1px #d0d0d0;
+}
+
+
+
+
+
+/* Пользовательские стили */
+tr.summary {
+	background-color: #666;
+	font-weight     : bold;
+	text-align      : right;
+}
+tr.summary td {
+	border-bottom   : solid 1px #d0d0d0;
+}
+tr.summary td.grid_row {
+	border-bottom   : solid 0px #d0d0d0;
+	padding         : 5px;
+	height          : 30px;
+}
+
+
+
+
+/* Стиль для указателей сортировки */
+img.sort_image {
+	margin-top	: 2px;
+	margin-left	: 2px;
+	width		: 11px;
+	height		: 11px;
+}
+td.sort_image {
+	width		: 12px;
+}
+
+
+/*Страница X из Y*/
+/*Страница */
+.grid_page_title {
+}
+/*X из Y*/
+.grid_page_number {
+}
+.grid .edit {
+	padding: 0px 5px 0px 5px;
+	vertical-align: middle;
+}

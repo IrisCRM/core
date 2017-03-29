@@ -1,0 +1,71 @@
+#!/usr/bin/env php
+<?php
+
+$coreDir = dirname(__FILE__) . '/src/Iris/';
+require_once $coreDir . 'core/engine/autoload.php';
+
+use Doctrine\DBAL\Migrations\Tools\Console\Command;
+use Iris\Iris;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Input\InputOption;
+
+// Get environment
+$input = new ArgvInput();
+$env = $input->getParameterOption(['--env', '-e'], getenv('IRIS_ENV'));
+putenv('IRIS_ENV=' . $env);
+
+require_once $coreDir . 'core/engine/includes.php';
+
+$cli = new Application();
+$cli->getDefinition()->addOption(new InputOption('--env', '-e', InputOption::VALUE_NONE, 'The Environment name'));
+$cli->setName('Iris CRM Console Tool');
+
+// Register all commands
+$hierarchy = array_merge([
+       [
+           'namespace' => '\\Iris',
+           'directory' => $coreDir,
+           'postfix' => '',
+       ]
+    ],
+    Loader::getLoader()->getHierarchy()
+);
+foreach ($hierarchy as $item) {
+    $directory = $item['directory'] . 'Command/';
+    if (is_dir($directory)) {
+        foreach (new \DirectoryIterator($directory) as $fileInfo) {
+            if (is_file($directory . $fileInfo->getFilename()) && substr($fileInfo->getFilename(), -11) === 'Command.php') {
+                $command = $item['namespace'] . '\\Command\\' . substr($fileInfo->getFilename(), 0, -4);
+                if (class_exists($command)) {
+                    $cli->add(new $command);
+                }
+            }
+        }
+    }
+}
+
+// Register Doctrine Migrations commands
+$config = new \Doctrine\DBAL\Configuration();
+$connectionParams = array(
+    'dbname' => Iris::$app->config('db.db_name'),
+    'user' => Iris::$app->config('db.username'),
+    'password' => Iris::$app->config('db.password'),
+    'host' => Iris::$app->config('db.host'),
+    'driver' => 'pdo_' . Iris::$app->config('db.conn_type'),
+);
+$db = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
+$helperSet = $cli->getHelperSet();
+$helperSet->set(new \Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper($db), 'db');
+$helperSet->set(new \Symfony\Component\Console\Helper\QuestionHelper(), 'dialog');
+
+$cli->addCommands([
+    //new Command\DiffCommand(),
+    new Command\ExecuteCommand(),
+    new Command\GenerateCommand(),
+    new Command\MigrateCommand(),
+    new Command\StatusCommand(),
+    new Command\VersionCommand(),
+]);
+
+$cli->run();

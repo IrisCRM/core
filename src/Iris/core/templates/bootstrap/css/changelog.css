@@ -1,0 +1,23 @@
+table.changelog_control {
+	white-space     : nowrap;
+}
+
+table.changelog_control td.changelog_cb {
+	width			: 25px;
+}
+
+table.changelog_control td.changelog_cb  input {
+	cursor			: pointer;
+}
+
+table.changelog_control td.changelog_label {
+	padding-top		: 3px;
+}
+
+table.changelog_control td.changelog_label label {
+	cursor			: pointer;
+}
+
+tr.grid_newchangelog {
+	color           : #EE3696;
+}

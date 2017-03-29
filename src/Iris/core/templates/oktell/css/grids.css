@@ -1,0 +1,22 @@
+/* Не прочитанные email */
+tr.grid_newmail {
+	color           : #EE3696;
+}
+
+/* Не прочитанные сообщения */
+tr.grid_newmessage {
+	color           : #EE3696;
+}
+
+
+/*Страница X из Y*/
+/*Страница */
+.grid_page_title {
+}
+/*X из Y*/
+.grid_page_number {
+}
+.grid .edit {
+	padding: 0px 5px 0px 5px;
+	vertical-align: middle;
+}

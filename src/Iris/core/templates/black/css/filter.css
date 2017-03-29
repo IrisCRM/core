@@ -1,0 +1,56 @@
+/* Фильтры */
+
+
+/* Табличка слева (меню, фильтры) */
+table.left {
+}
+td.left {
+    background-color: #222;
+    color           : #eee;
+    width           : 150px;
+    border-radius   : 0 10px 0 0;
+}
+/* стиль надписи элемента фильтра в li */
+font.filter_elem {
+}
+
+
+/* --- стили для маркированных списков, использующихся в панели фильтров --- */
+/* (по типу: клиенты, партнеры; по категории: A B С ...) */
+/* стиль маркированного списка (по типу)*/
+ul {
+  margin           : 0px;
+  padding-left     : 0px;
+  list-style-type  : none;
+  border-radius    : 0 10px 0 0;
+}
+/* стиль отдельного элемента списка (клиенты)*/
+li {
+  padding          : 4px 3px 4px 5px;
+}
+/* Отступы для дочерних фильтров */
+ul ul li {
+  padding-left     : 15px;
+}
+ul ul ul li {
+  padding-left     : 25px;
+}
+
+/* стиль для не выбранного фильтра*/
+ul.filter_unselected {
+	width       : 150px;
+	overflow    : hidden;
+	white-space : nowrap;
+}
+li.filter_unselected {
+	cursor			: pointer;	
+}
+li.filter_unselected:hover {
+	background-color: #444;
+}
+/*стиль для выбранного фильтра*/
+li.filter_selected {
+	background-color: #666;
+	cursor			: pointer;	
+}
+/* ---------------------------- */
