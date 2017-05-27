@@ -37,7 +37,7 @@
   }
 ?>
   <div id="<?php echo $data['item_id']; 
-  ?>_caption" class="fileinput_caption" style="background: url('<?php echo $data['template_path']; 
+  ?>_caption" class="fileinput_caption" style="background: url('<?php echo url($data['template_path']);
   ?>images/fileselect_icons.png') no-repeat 0 -<?php echo $pos; ?>px">
     <table>
       <tbody>

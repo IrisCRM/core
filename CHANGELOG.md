@@ -14,11 +14,11 @@
 * Добавлен механизм консольных команд, пакет [symfony/console](https://github.com/symfony/console)
 * Добавлена консольная утилита `iris`
 * С объектами теперь можно работать через сервис-контейнер, в систему встроен компонент [Dependency Injection](https://github.com/symfony/dependency-injection), классы можно регистрировать в сервис-провайдере 
-* [Логирование сообщений](https://github.com/IrisCRM/iriscrm-project/tree/master/docs/guides/ru/logger.md) реализовано через [Monolog](https://github.com/Seldaek/monolog)
+* [Логирование сообщений](docs/guides/ru/logger.md) реализовано через [Monolog](https://github.com/Seldaek/monolog)
 * Добавлена интеграция с системой мониторинга ошибок [Sentry](https://sentry.io)
 * Добавлена возможность переопределять переводы в конфигурации
 * Добавлена возможность переопределять темы оформления в конфигурации
-* Добавлена возможность [переопределять страницу логина](https://github.com/IrisCRM/iriscrm-project/tree/master/docs/guides/ru/login-form.md) в конфигурации
-* Добавлена возможность управления [окружениями](https://github.com/IrisCRM/iriscrm-project/tree/master/docs/guides/ru/environments.md)
-* Обновление системы теперь [выполняется из консоли](https://github.com/IrisCRM/iriscrm-project/tree/master/docs/guides/ru/update.md)
+* Добавлена возможность [переопределять страницу логина](docs/guides/ru/login-form.md) в конфигурации
+* Добавлена возможность управления [окружениями](docs/guides/ru/environments.md)
+* Обновление системы теперь [выполняется из консоли](docs/guides/ru/update.md)
 * В качестве фреймворка для тестирования используется [Codeception](http://codeception.com/)

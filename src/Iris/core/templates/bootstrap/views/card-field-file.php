@@ -52,7 +52,7 @@
       ?>
       <div id="<?php echo $data['item_id']; 
         ?>_caption" class="fileinput_caption" style="background: url('<?php 
-        echo $data['template_path']; 
+        echo url($data['template_path']);
         ?>images/fileselect_icons.png') no-repeat 0 -<?php echo $pos; ?>px">
         <a target="_blank" class="fileinput_link" href="<?php 
           echo $data['link']; ?>"><?php 

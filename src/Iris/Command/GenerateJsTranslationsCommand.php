@@ -27,7 +27,7 @@ class GenerateJsTranslationsCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->loader = Iris::$app->getContainer()->get('Loader');
+        $this->loader = Iris::$app->getContainer()->get('loader');
 
         $languages = $this->getListOfLanguages();
 

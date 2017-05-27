@@ -30,8 +30,8 @@
                 <td><span class="grid-th-span"><?php 
                     echo $field['caption'];
                 ?></span></td><?php if ($field['sort']) : ?>
-                  <td class="sort_image"><img src="build/themes/<?php echo $_SESSION['style_name'];
-                  ?>/images/sort_<?php echo $field['sort']; ?>.gif" class="sort_image"></td>
+                      <td class="sort_image"><img src="<?php echo url('build/themes/' . $_SESSION['style_name']
+                              . '/images/sort_' . $field['sort'] . '.gif'); ?>" class="sort_image"></td>
                 <?php endif; ?>
               </tr>
             </table>

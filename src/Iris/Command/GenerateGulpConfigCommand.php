@@ -20,7 +20,7 @@ class GenerateGulpConfigCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $directories = [];
-        foreach (Iris::$app->getContainer()->get('Loader')->getHierarchy() as $item) {
+        foreach (Iris::$app->getContainer()->get('loader')->getHierarchy() as $item) {
             $directories[] = $item['directory'];
         }
 

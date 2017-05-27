@@ -68,4 +68,9 @@ $cli->addCommands([
     new Command\VersionCommand(),
 ]);
 
+$cli->add(new \Bernard\Command\ConsumeCommand(
+    Iris::$app->getContainer()->get('queue.consumer'),
+    Iris::$app->getContainer()->get('queue.factory')
+));
+
 $cli->run();

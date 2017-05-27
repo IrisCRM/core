@@ -5,7 +5,7 @@
 ?>
 
 <?php if ($data['have_files']) { ?>
-<form name="<?php echo $data['form_name']; ?>" target="upload_iframe" action="web.php" method="post" enctype="multipart/form-data">
+<form name="<?php echo $data['form_name']; ?>" target="upload_iframe" action="<?php echo url('web.php') ?>" method="post" enctype="multipart/form-data">
 <iframe id="upload_iframe" name="upload_iframe" style="display: none"></iframe>
 <?php }
 else { ?>

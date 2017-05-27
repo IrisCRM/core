@@ -33,7 +33,7 @@ class VersionCommand extends Command
         $coreXml = simplexml_load_file($rootDir . 'core/version.xml');
         $output->writeln('Core: ' . $coreXml->CURRENT_VERSION);
 
-        $loader = Iris::$app->getContainer()->get('Loader');
+        $loader = Iris::$app->getContainer()->get('loader');
         foreach (array_reverse($loader->getHierarchy()) as $item) {
             if (is_file($rootDir . $item['directory'] . 'version.xml')) {
                 $configXml = simplexml_load_file($rootDir . $item['directory'] . 'version.xml');

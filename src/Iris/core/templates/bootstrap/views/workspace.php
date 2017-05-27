@@ -14,19 +14,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <?php echo $data['javascript']; ?>
-  <script type="text/javascript" src="build/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="<?php echo url('build/bootstrap/js/bootstrap.min.js'); ?>"></script>
 <?php 
 /* HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries */ 
 /* Для выравнивания в IE8 это решение пока что не помогло */
 ?>
 <!--[if lt IE 9]>
-  <script type="text/javascript" src="build/js/ie9.min.js"></script>
+  <script type="text/javascript" src="<?php echo url('build/js/ie9.min.js'); ?>"></script>
 <![endif]-->
 
-  <link href="build/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo url('build/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
   <?php echo $data['css']; ?>
 
-  <link rel="SHORTCUT ICON" href="build/templates/<?php echo $data['name']; ?>/images/favicon.png" type="image/png">
+  <link rel="SHORTCUT ICON" href="<?php echo url('build/templates/' . $data['name'] . '/images/favicon.png'); ?>" type="image/png">
 </head>
 
 <body onkeyup="ActivateHotKeys(event)">

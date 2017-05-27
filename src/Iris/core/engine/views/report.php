@@ -15,7 +15,7 @@
   
   <?php echo $data['css']; ?>
 
-  <link rel="SHORTCUT ICON" href="<?php echo $data['template_path']; ?>images/favicon.png" type="image/png">
+  <link rel="SHORTCUT ICON" href="<?php echo url($data['template_path'] . 'images/favicon.png'); ?>" type="image/png">
 </head>
 <body class="report" onkeyup="ActivateHotKeys(event)">
 

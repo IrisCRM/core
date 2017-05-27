@@ -34,6 +34,11 @@ class Application
      */
     protected $buildDir;
 
+    /**
+     * @var string Directory for temporary files
+     */
+    protected $tempDir;
+
     /** @var string Current environment */
     protected $env;
 
@@ -51,15 +56,17 @@ class Application
      * @param string $logDir Directory for logs
      * @param string $srcDir Directory for sources of project
      * @param string $buildDir Directory for built files
+     * @param string $tempDir Directory for temporary files
      * @param string $env Current environment
      * @throws IrisException
      */
-    public function __construct($rootDir, $logDir, $srcDir, $buildDir, $env = '')
+    public function __construct($rootDir, $logDir, $srcDir, $buildDir, $tempDir, $env = '')
     {
         $this->rootDir = $rootDir;
         $this->logDir = $logDir;
         $this->srcDir = $srcDir;
         $this->buildDir = $buildDir;
+        $this->tempDir = $tempDir;
         $this->env = $env;
 
         $this->container = new ContainerBuilder();
@@ -106,6 +113,14 @@ class Application
     public function getBuildDir()
     {
         return $this->buildDir;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTempDir()
+    {
+        return $this->tempDir;
     }
 
     /**

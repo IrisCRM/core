@@ -15,7 +15,7 @@
   
   <?php echo $data['css']; ?>
 
-  <link rel="SHORTCUT ICON" href="build/themes/<?php echo $data['name']; ?>/images/favicon.png" type="image/png">
+  <link rel="SHORTCUT ICON" href="<?php echo url('build/themes/' . $data['name'] . '/images/favicon.png'); ?>" type="image/png">
 </head>
 <body onkeyup="ActivateHotKeys(event)">
 

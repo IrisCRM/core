@@ -2,6 +2,7 @@
 
 namespace Iris\Model\Service;
 
+use Iris;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\RavenHandler;
 use Monolog\Handler\StreamHandler;
@@ -45,22 +46,29 @@ class LoggerFactory
      * Get needed logger instance
      * @param string $name File name for log
      * @param string $channel The logging channel
-     * @param null|string|int $level
      * @return Logger
      */
-    public function get($name = 'iriscrm', $channel = 'Default', $level = null)
+    public function get($name = 'iriscrm', $channel = 'Default')
     {
         if (!isset($this->instances[$name])) {
             $log = new Logger($channel);
 
+            $logLevel = Iris\Iris::$app->config('logger.log_level');
+            $logLevelInt = Logger::getLevels()[strtoupper($logLevel)] ?? Logger::INFO;
+
             // Log into file
-            $log->pushHandler(new StreamHandler($this->logDir . $name . '.log'));
+            $stream = new StreamHandler($this->logDir . $name . '.log', $logLevelInt);
+            $stream->setFormatter(new LineFormatter("[%datetime%] %level_name%: %message% %context% %extra%\n", null, true, true));
+            $log->pushHandler($stream);
 
             // Log into Sentry
             $client = $this->getRavenClient();
             if ($client) {
                 // В Sentry логируем все, что имеет уровень не ниже Warning
-                $handler = new RavenHandler($client, $level ? $level : Logger::WARNING);
+                $alertLevel = Iris\Iris::$app->config('logger.alert_level');
+                $alertLevelInt = Logger::getLevels()[strtoupper($alertLevel)] ?? Logger::WARNING;
+
+                $handler = new RavenHandler($client, $alertLevelInt);
                 $handler->setFormatter(new LineFormatter("%message% %context% %extra%\n"));
                 $log->pushHandler($handler);
             }

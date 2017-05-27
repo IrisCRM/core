@@ -1,7 +1,7 @@
 <html>
 <title>Iris CRM</title>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=#charset#">
-<link rel="SHORTCUT ICON" href="build/images/login/favicon.png" type="image/png">
+<link rel="SHORTCUT ICON" href="<?php echo url('build/images/login/favicon.png'); ?>" type="image/png">
 
 <script type="text/javascript" src="<?php echo asset_path('build/js/login.min.js'); ?>"></script>
 <script src="<?php echo asset_path('build/js/jquery.min.js'); ?>" type="text/javascript"></script>

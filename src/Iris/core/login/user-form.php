@@ -7,7 +7,7 @@ use Iris\Iris;
 
     <title>Iris CRM</title>
 
-    <link rel="SHORTCUT ICON" href="build/images/login/favicon.png" type="image/png">
+    <link rel="SHORTCUT ICON" href="<?php echo url('build/images/login/favicon.png'); ?>" type="image/png">
 
     <link href="<?php echo asset_path('build/css/login.min.css') ?>" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="<?php echo asset_path('build/js/login.min.js'); ?>"></script>

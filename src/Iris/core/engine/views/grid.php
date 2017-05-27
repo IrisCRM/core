@@ -14,7 +14,7 @@
     getView('grid-search', $data['search']); 
   } 
 ?>
-<div conttype="outer">
+<div conttype="outer" class="source_name_<?php echo $data['source_name']; ?>">
   <?php /* Заголовок */ ?>
   <table class="grid-header" style="width: 100%;">
   <tbody>
@@ -30,8 +30,8 @@
                 <td style="width: 100%; overflow: hidden;"><span class="grid-th-span"><?php 
                     echo $field['caption'];
                 ?></span></td><?php if ($field['sort']) : ?>
-                  <td class="sort_image"><img src="build/themes/<?php echo $_SESSION['style_name'];
-                    ?>/images/sort_<?php echo $field['sort']; ?>.gif" class="sort_image"></td>
+                  <td class="sort_image"><img src="<?php echo url('build/themes/' . $_SESSION['style_name']
+                    . '/images/sort_' . $field['sort'] . '.gif'); ?>" class="sort_image"></td>
                 <?php endif; ?>
               </tr>
             </table>
@@ -66,7 +66,8 @@
       <?php $rowstyle = $unselected = ''; ?>
       <?php if (array_key_exists('rows', $data)) : ?>
         <?php foreach ($data['rows'] as $rownum => $row) : 
-          $rowstyle = (($rownum + 1) % 2 == 0) ? 'grid_odd' : 'grid_even'; 
+          $rowstyle = (($rownum + 1) % 2 == 0) ? 'grid_odd' : 'grid_even';
+          $rowstyle = 'grid_row_js ' . $rowstyle;
           $unselected = $rowstyle;
           if ($rownum+1 == $data['selected_row_number']) {
             // если указали show_rec_id, то выберем эту запись

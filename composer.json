@@ -1,6 +1,6 @@
 {
     "name": "iriscrm/core",
-    "description": "Iris CRM core (build)",
+    "description": "Iris CRM core",
     "bin": [
         "iris"
     ],
@@ -21,7 +21,9 @@
         "sentry/sentry": "^1.6",
         "symfony/dependency-injection": "^3.2",
         "symfony/console": "^3.2",
-        "doctrine/migrations": "^1.5"
+        "doctrine/migrations": "^1.5",
+        "bernard/bernard": "^1.0@alpha",
+        "symfony/http-foundation": "^3.2"
     },
     "require-dev": {
         "codeception/codeception": "^2.2"
