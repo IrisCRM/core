@@ -30,7 +30,7 @@ class VersionCommand extends Command
 
         $rootDir = Iris::$app->getRootDir();
 
-        $coreXml = simplexml_load_file($rootDir . 'core/version.xml');
+        $coreXml = simplexml_load_file(Iris::$app->getCoreDir() . 'core/version.xml');
         $output->writeln('Core: ' . $coreXml->CURRENT_VERSION);
 
         $loader = Iris::$app->getContainer()->get('loader');
