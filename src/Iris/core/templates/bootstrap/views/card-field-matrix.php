@@ -38,7 +38,7 @@
           echo $j == count($data['grid']) - 1 ? ' hidden'  : '';
           echo $i == 0 ? ' first' : '';
           echo $i == count($tab['rows']) - 1 ? ' last' : '';
-          ?>" rec_id="<?php echo $card['fields']['id_temp']; ?>">
+          ?> flexbox-container flexbox-align-center horizontal-gutter" rec_id="<?php echo $card['fields']['id_temp']; ?>">
           <?php /* ID записи */ ?>
           <?php if ($i == 0) : ?>
             <div class="hidden">
@@ -59,18 +59,22 @@
             $cnt = count($tab['rows'][$i]['fields']);
             $k = 0;
             $s = 0;
-            foreach ($tab['rows'][$i]['fields'] as &$field) : ?>
-            <div class="form_table col-sm-<?php echo (int)((11 - $s) / ($cnt - $k)); ?>"><?php
+            foreach ($tab['rows'][$i]['fields'] as $index => &$field) : ?>
+            <div class="form_table flexbox-item-wide"><?php
               /* Поле карточки */
               $s += (int)((11 - $s) / ($cnt - $k));
               //$field['code'] = '_' . $field['code'];
               $field['colwidth'] = 12 - 2 * $multiline;
               $field['hide_label'] = !$multiline;
+              $field['fieldwidth'] = 12;
+              $field['labelwidth'] = $multiline ? 6 : 0;
+              $field['controlwidth'] = $multiline ? 6 : 12;
+              $field['controlindex'] = $index;
               getView('card-field-' . $field['type'], $field);
               $k++;
             ?></div>
           <?php endforeach; ?>
-          <div class="form_table menu col-sm-1">
+          <div class="form_table menu matrix-delete-button-container">
             <?php if ($i == 0) : ?>
               <button class="btn btn-default btn-sm button button_lookup button_matrix_delete" onclick="deleteCardRow(this);" ><span class="glyphicon glyphicon-remove"></span></input>
             <?php endif; ?>

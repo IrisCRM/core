@@ -21,6 +21,15 @@
       . ' sort_direction="' . $item['sort_direction'] . '"' : '';
     ?>><?php echo $item['caption']; ?>
     <?php if (!empty($item['field'])) : 
+      $item['field']['colwidth'] = 0;
+      $item['field']['fieldwidth'] = 0;
+      $item['field']['labelwidth'] = 0;
+      $item['field']['controlwidth'] = 0;
+      $item['field']['controlindex'] = 0;
+      $item['field']['hide_label'] = 1;
+      if ($item['field']['type']) {
+        $item['field']['hide_button'] = 1;
+      }
       echo '<br>'; 
       getView('card-field-' . $item['field']['type'], $item['field']); 
       endif; ?>

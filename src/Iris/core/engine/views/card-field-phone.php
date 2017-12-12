@@ -11,7 +11,7 @@
           <tbody>
             <tr>
               <td>
-                <input class="edtText" style="width: 100%" type="text" <?php echo $data['template_prefix']; ?> id="<?php echo $data['code']; 
+                <input class="edtText" style="width: 100%" type="text" <?php echo $data['template_prefix']; ?>id="<?php echo $data['code']; 
                   ?>" value="<?php echo $data['value']; 
                   ?>" <?php echo $data['attributes']; 
                   ?> onFocus="this.className = 'edtText_selected';" onBlur="this.className = 'edtText'; FormatPhoneNumber(this);"/><?php
@@ -23,7 +23,7 @@
                   echo $data['mandatory_ext'] ? ' card_elem_mandatory': ''; 
                 ?>"><?php echo $T->t('доб', null, 'Card'); ?></span></td>                
                 <td class="phone_td_addl">
-                  <input class="edtText" style="width: 100%" type="text" <?php echo $data['template_prefix']; ?> id="<?php echo $data['code_ext']; 
+                  <input class="edtText" style="width: 100%" type="text" <?php echo $data['template_prefix']; ?>id="<?php echo $data['code_ext']; 
                   ?>" value="<?php echo $data['value_ext']; 
                   ?>" <?php echo $data['attributes_ext']; 
                   ?> onFocus="this.className = 'edtText_selected';" onBlur="this.className = 'edtText'; FormatPhoneNumber(this);"/><?php 

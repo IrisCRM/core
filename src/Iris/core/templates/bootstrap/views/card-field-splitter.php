@@ -4,10 +4,14 @@
  */
 ?>
 <div class="form-group">
-  <div class="col-sm-<?php echo 2+$data['colwidth']; ?>">
-  <h4 <?php 
-    if (!empty($data['code'])) : ?> id="<?php echo $data['code']; ?>"<?php 
-    endif; ?> class="col-sm-<?php echo 2+$data['colwidth']; ?>"><?php 
-    echo $data['caption']; ?></h4>
+  <div class="col-sm-<?php echo $data['fieldwidth']; ?> flexbox-container flexbox-align-center">
+    <div class="splitter-start-container"><hr class="splitter"></div>
+    <div>
+      <span <?php 
+      if (!empty($data['code'])) : ?> id="<?php echo $data['code']; ?>"<?php 
+      endif; ?> class="splitter-caption"><?php 
+      echo $data['caption']; ?></span>
     </div>
+    <div class="flexbox-item-wide splitter-end-container"><hr class="splitter"></div>
+  </div>
 </div>

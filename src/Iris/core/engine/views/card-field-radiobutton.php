@@ -5,7 +5,7 @@
 ?>
 <div class="radiobtn-cont">
   <div class="radiobtn-values" <?php echo $data['attributes_radio']; 
-  ?> onclick="selectRadioButton(event)">
+  ?>>
     <table class="rb-table">
       <tr>
         <?php for ($i = 0, $items = count($data['items']); $i < $items; $i++) : ?>
@@ -19,7 +19,7 @@
             }
             $data['items'][$i]['selected'] ? $rbselectedclass = ' rb-selected-' . $rbclass : $rbselectedclass = '';
           ?>
-          <td><span class="rbelem-<?php echo $rbclass.$rbselectedclass; 
+          <td><span onclick="selectRadioButton(this)" class="rbelem-<?php echo $rbclass.$rbselectedclass; 
             ?>" <?php echo $data['items'][$i]['attributes']; 
             ?> value="<?php echo $data['items'][$i]['value']; 
             ?>" selected="<?php echo $data['items'][$i]['selected'] ? 'yes' : 'no'; 

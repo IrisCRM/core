@@ -601,7 +601,7 @@ Window.prototype = {
     var maxDiv = this.options.maximizable ? "<div class='"+ className + "_maximize' id='"+ id +"_maximize' onclick='Windows.maximize(\""+ id +"\", event)'> </div>" : "";
     var seAttributes = this.options.resizable ? "class='" + className + "_sizer' id='" + id + "_sizer'" : "class='"  + className + "_se'";
     var blank = "../themes/default/blank.gif";
-    
+/*
     win.innerHTML = closeDiv + minDiv + maxDiv + "\
       <table id='"+ id +"_row1' class=\"top table_window\">\
         <tr>\
@@ -624,6 +624,24 @@ Window.prototype = {
             <td " + seAttributes + "></td>\
         </tr>\
       </table>\
+    ";
+*/
+    win.innerHTML = closeDiv + minDiv + maxDiv + "\
+      <div id='"+ id +"_row1' class=\"top table_window\">\
+        <div class='"+ className +"_nw'></div>\
+        <div class='"+ className +"_n'><div id='"+ id +"_top' class='"+ className +"_title title_window'>"+ this.options.title +"</div></div>\
+        <div class='"+ className +"_ne'></div>\
+      </div>\
+      <div id='"+ id +"_row2' class=\"mid table_window\">\
+        <div class='"+ className +"_w'></div>\
+        <div id='"+ id +"_table_content' class='"+ className +"_content' valign='top'>" + content + "</div>\
+        <div class='"+ className +"_e'></div>\
+      </div>\
+      <div id='"+ id +"_row3' class=\"bot table_window\">\
+        <div class='"+ className +"_sw'></div>\
+        <div class='"+ className +"_s'><div id='"+ id +"_bottom' class='status_bar'><span style='float:left; width:1px; height:1px'></span></div></div>\
+        <div " + seAttributes + "></div>\
+      </div>\
     ";
     Element.hide_(win);
     this.options.parent.insertBefore(win, this.options.parent.firstChild);
@@ -987,8 +1005,8 @@ Window.prototype = {
       }
       else {
         this.setSize(width, height);
-        this.element.setStyle(this.useLeft ? {left: left} : {right: left});
-        this.element.setStyle(this.useTop ? {top: top} : {bottom: top});
+        this.element.setStyle(this.useLeft ? {left: left + 'px'} : {right: left + 'px'});
+        this.element.setStyle(this.useTop ? {top: top + 'px'} : {bottom: top + 'px'});
       }
         
       this.toFront();

@@ -3,8 +3,8 @@
  * Поле-разделитель
  */
 ?>
-<div class="form-group">
-  <div class="col-sm-<?php echo 2 + $data['colwidth']; ?> iris-column-spacer">
+<div class="form-group col-sm-<?php echo $data['fieldwidth']; ?> no-horizontal-padding">
+  <div class="col-sm-12 iris-column-spacer">
     <div class="input-group input-group-sm">
       <span class="spacer"<?php 
         if (!empty($data['code'])) : ?> id="<?php echo $data['code']; ?>"<?php 

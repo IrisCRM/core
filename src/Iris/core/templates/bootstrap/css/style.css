@@ -220,30 +220,84 @@ div.duplicate_message  div {
 }
 
 
-
-.container {
-	height: 100%;
-	width: auto;
-	padding: 0;
-}
+/* TODO: remove */
 nav.navbar {
 	margin: 0;
 }
 #menu_panel {
 	margin: 0 0 11px 0;
 }
-#maintable > .row {
-	margin-left: 0;
-	margin-right: 0;
+
+/* padding and margin reset styles */
+.no-padding {
+	padding: 0;
 }
-#maintable > .row > .col-sm-2 {
+.no-horizontal-padding {
 	padding-left: 0;
 	padding-right: 0;
 }
-#maintable > .row > .col-sm-10 {
+.no-top-padding {
+	padding-top: 0;
+}
+.no-right-padding {
 	padding-right: 0;
 }
+.no-bottom-padding {
+	padding-bottom: 0;
+}
+.no-left-padding {
+	padding-left: 0;
+}
+.no-margin {
+	margin: 0;
+}
+.no-horizontal-margin {
+	margin-left: 0;
+	margin-right: 0;
+}
+.no-top-margin {
+	margin-top: 0;
+}
+.no-right-margin {
+	margin-right: 0;
+}
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+.no-left-margin {
+	margin-left: 0;
+}
+.static-position {
+	position: static;
+}
 
+/* gutter setters (bootstrap grid system) */
+.horizontal-gutter {
+	padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* flexbox layout */
+.flexbox-container {
+	display: flex;
+}
+.flexbox-item-wide {
+  /*flex-grow: 2;*/
+  flex: 1 1 0;
+}
+.flexbox-item-gap {
+	width: 0.5em;
+}
+.flexbox-justify-center {
+  justify-content: center;
+}
+.flexbox-align-center {
+  align-items: center;
+}
+
+.position-static {
+	position: static;
+}
 
 .iris-drag-container {
 	position: absolute;

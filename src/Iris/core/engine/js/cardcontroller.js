@@ -1,1 +1,1183 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8 4e=36.37({35:j(){},38:{},1y:u,p:j(b,k){5(k==e){h 6.$I.q(\'#\'+b)}5(k.R!=e){8 1K=k.R.b;8 O=1K.E(1).21(\'X\');8 1k=O[1];8 1d=O[2];h 6.$I.q(\'#w\'+b+\'X\'+1k+\'X\'+1d)}},3l:j(1d,b){8 1A=6.$I.q(\'.3t[32="\'+1d+\'"]\');8 2s=1A.q(\'.3s, .3r, .3q, .3p, .1T, .b\');8 1r={};2s.P(j(){8 1M=1t(6);5(1M.f(\'b\')){8 O=1M.f(\'b\').E(1).21(\'X\');8 1p=O[0];8 2i=O[1];5(1p==b){1r[2i]=1M}}});h 1r},r:j(b,a,k){5(k==e&&a!=e&&a.R!=e){h 6.r(b,e,a)}5(k==e){8 9=6.p(b);5(!9){h e}8 F=9.f(\'1Q\');5(9.f(\'3n\')==\'1O\'){5(a!=e){2c.2f[9.f(\'2d\')].39(a);6.Z(9);h 6}l{5(2c.2f[9.f(\'2d\')].3k()==u){h 2c.2f[9.f(\'2d\')].3i()}l{h 9.G()}}}5(F==\'3h\'){5(a!=e){h 6.30(9,a)}l{h 9.f(\'2F\')}}l 5(F==\'1B\'){5(a!==e){5(a==u||a==\'1\'||a==1){9.f(\'1F\',a)}l{9.1w(\'1F\')}6.Z(9);h 6}l{8 28=14.1G(9.f(\'28\'));8 25=3f(9.f(\'3d\'),10);8 26=0;5((!9.f(\'1F\')&&25==0)||(9.f(\'1F\')&&25==1)){26=1}h 28.3c[26]}}l 5(F==\'1n\'){5(a!==e){5(a&&a.16!==e){9.G(a.2N);9.f(\'20\',a.2N);9.f(\'23\',a.16)}l{9.f(\'23\',a);5(a==1z){9.G(1z);9.f(\'20\',1z)}}6.Z(9);h 6}l{h 9.f(\'23\')}}l{5(a!=e){9.G(a);5(9.f(\'3e\')==\'1O\'){3g($(b))}6.Z(9);h 6}l{h 9.G()}}}8 1K=k.R.b;8 O=1K.E(1).21(\'X\');8 1k=O[1];8 1d=O[2];h 6.r(\'w\'+b+\'X\'+1k+\'X\'+1d,a)},2V:j(b,K,k){5(k==e&&K!=e&&K.R!=e){h 6.2V(b,e,K)}8 9=6.p(b,k);8 F=9.f(\'1Q\');5(F==\'1n\'){5(K==e){h 9.G()}l{9.G(K);9.f(\'20\',K);h 6}}5(F==\'1Y\'){8 9=6.p(b);5(K==e){h 9.q(\':18\').2Y()}l{9.q(\':18\').2Y(K);h 6}}h 6.r(b,K)},30:j(9,a){8 1j=a.3j(/\\D/g,"");9.f(\'2F\',1j);5(9.f(\'3b\')==\'Y\'){9.G(1j);6.Z(9);h 6}8 W=\'\';8 1b=0;2M(8 i=1j.V-1;i>=0;i--){5(i<1j.V-1){5((1b==2)||(1b==4)){W=\'-\'+W}5((1b==7)||(1b==10)){W=\' \'+W}}1b++;W=1j.3m(i)+W}9.G(W);6.Z(9);h 6},2Z:j(b,a,k){h 6.r(\'w\'+b,a,k)},2n:j(b,a,k){5(k==e&&a!=e&&a.R!=e){h 6.2n(b,e,a)}8 9=6.p(b,k);5(29.1u==\'2a\'){8 1e=6.1e(b,k);5(1e==\'1B\'){5(a!=e){9.1f(\'1P\').J(a);h 9}l{h 9.1f(\'1P\').J()}}l{5(a!=e){9.12(\'.B-1X\').17(\'1P\').J(a);h 9}l{h 9.12(\'.B-1X\').17(\'1P\').J()}}}l{5(a!=e){9.12(\'.1N\').1f().q(\'1m\').J(a);h 9}l{h 9.12(\'.1N\').3o().q(\'1m\').J()}}},1c:j(b,z,a,k){5(k==e&&a!=e&&a.R!=e){h 6.1c(b,z,e,a)}5(z==\'2D\'){h 6.1c(b,\'2w\',a)}8 9=6.p(b,k);5(a==e){h 9.f(z)}l{5(z==\'2w\'){8 1q;8 t=\'3a\';5(29.1u==\'2a\'){t=\'2D\';1q=9.12(\'.B-1X\')}l{1q=9.12(\'N.1N\').1f().q(\'1m\')}5(a==\'1O\'||a==u||a==\'u\'||a==1){a=\'1O\';1q.34(t)}l{a=\'3u\';1q.3w(t)}}l 5(z==\'3L\'){8 F=9.f(\'1Q\');5(F==\'1n\'){5(a==u){6.p(b+\'2I\').f(\'1i\',u)}l{6.p(b+\'2I\').1w(\'1i\')}}l 5(F==\'1B\'){5(a==u){6.p(b).f(\'1i\',\'1i\')}l{6.p(b).1w(\'1i\')}}l{5(a==u){6.p(b).f(z,z)}l{6.p(b).1w(z)}}}5(F==\'1Y\'||F==\'1T\'){9.f(\'1i\',a)}l{9.f(z,a)}h 6}},2t:j(b,z,k){6.p(b,k).1w(z)},H:j(b,z,a,k){h 6.1c(b,\'m-\'+z,a,k)},1e:j(b,k){h 6.p(b,k).f(\'1Q\')},43:j(y,A,1g){8 31=6.1e(y);5(31==\'1n\'){6.33(y,A,1g)}l{6.2q(y,A)}},33:j(y,A,1g){5(1g==e){1g=y}8 15=6.r(y);5(15==\'\'){6.2t(A,\'2E\')}l{6.1c(A,\'2E\',"44."+1g+" = \'"+15+"\'")}},2q:j(y,A){8 C=6.p(A);8 1C=6.p(y);5(!6.H(A,\'S\')){8 S=[];C.q(\'x\').P(j(){8 x=1t(6);8 1I=[];8 2y=x.45(0).1I;w.P(2y,j(f){5(f.2A.1Z()!=\'18\'){1I.1J([f.2A,f.46])}});S.1J([x.f(y.1Z()),x.J(),x.G(),1I])});6.H(A,\'S\',14.24(S))}5(!6.H(y,\'C\')){6.H(y,\'C\',14.24([A]))}l{8 m=14.1G(6.H(y,\'C\'));5(w.47(m,A)==-1){m.1J(A);6.H(y,\'C\',14.24(m))}}8 v=6;1C.1R(\'9:2H\',j(){v.2C(y)});6.Z(1C)},2C:j(15){8 1C=6.p(15);8 2u=6.r(15);8 2z=14.1G(6.H(15,\'C\'));8 v=6;w.P(2z,j(1l){8 C=v.p(1l);8 2h=v.r(1l);8 S=14.1G(v.H(1l,\'S\'));C.48();w.P(S,j(x){5((!x[0])||(x[0]==2u.1Z())){8 n=\'\';w.P(x[3],j(f){n+=\' \'+f[0]+\'="\'+f[1]+\'"\'});8 2r=C.49(1t(\'<x a="\'+x[2]+\'"\'+n+\'>\'+x[1]+\'</x>\'));w.P(x[3],j(f){2r.f(f[0],f[1])})}});5(!v.H(1l,\'2l\')){C.q(\'[a=\'+2h+\']\').f(\'18\',\'18\');v.H(1l,\'2l\',u)}l{C.q(\'x:2x\').f(\'18\',\'18\')}});h},4a:j(k,n){5(n==e){n={}}8 o=w.2L(n);5(o){5(o.11==e){o.11=u}5(o.13==e){o.13=u}}6.2o(\'4b\',k.R.b,o)},2o:j(2R,1p,n){8 v=6;8 t=6.4c;5(t==e){t=6.p(\'4d\').G()}5(t.E(0,1)==\'c\'||t.E(0,1)==\'g\'){t=\'s\'+t.E(1)}l 5(t.E(0,2)==\'4i\'||t.E(0,1)==\'4k\'){t=t.E(0,1)+\'s\'+t.E(2)}8 L=6.L;5(L==e){L=6.2Z(\'4j\')}5(t&&t.E(0,1)==\'d\'){5(L&&L.2W(\'w\')){L=L.E(0,L.2W(\'w\'))}}6.1h();8 1r=6.4h({4g:L,\'4f\':t,3v:2R+1p,42:{41:6.2b(),40:6.2b([1p])},3Z:j(2P){8 22=2P.3y.3z();5(22==1z){h Q}v.2g(22.m,n);v.1L()}});5(!1r){6.1L()}},2g:j(m,n,k){8 v=6;8 o=w.2L(n);5(o==e){o={}}5(o.11==e){o.11=Q}5(o.13==e){o.13=Q}5(o.1s==e){o.1s=Q}8 2K=6.1y;5(o.1s){6.1y=Q}5(m&&m.1H){w.P(m.1H,j(r){8 19=v.r(r.1v,k);8 1E=v.1e(r.1v,k);5(1E==\'1n\'){5(19==\'\'||(o.11&&r.16!=\'\')||(o.13&&19==\'\')){v.r(r.1v,r,k)}}l{5((19==\'\')||(19==e)||(o.11&&r.16!=\'\')||(o.13&&r.16==\'\')||(1E==\'1B\'&&19==0)||(1E==\'1Y\'&&19==\'1z\')){v.r(r.1v,r.16,k)}}})}5(m&&m.2k){w.P(m.2k,j(1D){v.1c(1D.3A,1D.3B,1D.3C,k)})}5(o.2J){o.2J(m)}5(o.1s){v.1y=2K}},2b:j(1a){5(1a==e){1a=[]}8 1o=3D($(6.I.b).3E(\'B\'));8 2e={1H:[]};2M(8 i=0;i<1o.V;i++){5(1a.V==0||(1a.V>0&&1o[i][0]3F 1a)){2e.1H.1J({1v:1o[i][0],16:1o[i][1]})}}h 2e},2S:j(b,U,k){5(U==e){U=u}8 N=6.p(b,k).12(\'N.1N\');8 1S=N.T();5(U){N.U();N.1f().U();1S.U()}l{N.1W();N.1f().1W();5(1S.q(\'N:3G\').V==0){1S.1W()}}},3H:j(b,k){6.2S(b,Q,k)},2X:j(1x,1V){5(3I(1V)==\'e\'){1V=u}5(1V){6.$I.q(2T+\':2U(\'+1x+\')\').U()}l{6.$I.q(2T+\':2U(\'+1x+\')\').1W()}},3J:j(1x){6.2X(1x,Q)},Z:j(9){5(6.1y){9.3x(\'9:2H\')}},1h:j(1R){5(1R==u||1R==e){8 B=6.$I.q(\'B\');8 M=B.m(\'1h\');5(2G(M)){M=0}M++;B.m(\'1h\',M)}l{1L()}},1L:j(){8 B=6.$I.q(\'B\');8 M=B.m(\'1h\');5(2G(M)){M=0}M--;B.m(\'1h\',M)},3K:j(m){8 9=6.p(m.2m);5(29.1u==\'2a\'){m.9=9.T().J();8 1U=w.1u(1t(\'#9-2p-1T\').J(),{m:m});9.T().J(1U);9=6.p(m.2m);5(9.T().17(\'1m\').V>1){9.3M().17().3N(9.T().17().2j(\'1m\').17());9.T().17().2j(\'1m\').2v();9.T().3O()}}l{8 1U=w.1u(1t(\'#9-2p-1T\').J(),{m:m});9.T().3P(1U)}},3Q:j(b){6.$I.q(\'[1k="\'+b+\'"]\').2v()},3R:j(b){8 2B=6.$I.q(\'[1k="\'+b+\'"]\').q(\'.3S\')[0];3T(2B)},3U:j(n){5(n==e||n.27==e){h Q}5(n.b==e){n.b=6.3V()}8 1A=6.$I.q(\'[32="\'+n.27+\'"]\');5(1A.V==0){h Q}3W(1A.2x().q(\'.3X\')[0],n.b);8 k={R:{b:\'3Y\'+n.b+\'X\'+n.27}};5(n.2Q!=e){6.2g(n.2Q,{11:u,13:u,1s:u},k)}5(n.2O){n.2O(k)}h u}});',62,269,'|||||if|this||var|field|value|id|||undefined|attr||return||function|event|else|data|params|_params|getField|find|fieldValue||className|true|self|_|option|masterFieldName|property|dependentFieldName|form|dependent||substring|type|val|fieldData|el|html|displayValue|sectionName|lockLevel|td|parts|each|false|target|options|parent|show|length|formattedNumber|__||triggerAutoEditEvents||rewriteValues|parents|letClearValues|JSON|masterId|Value|children|selected|currentValue|fieldNames|nn|fieldProperty|detailCode|fieldType|prev|parentFieldName|lock|disabled|cleanDigits|rec_id|dependentId|span|lookup|fieldValuesArray|fieldName|caption|result|disableEvents|jQuery|template|Name|removeAttr|p_tabnumber|autoEditEventsEnabled|null|detail|checkbox|master|fieldAttribute|currentType|checked|parse|FieldValues|attributes|push|field_id|unlock|elem|form_table|yes|label|elem_type|on|tr|button|view|p_visible|hide|group|select|toLowerCase|original_value|split|res|lookup_value|stringify|on_index|value_index|code|domain_json|g_vars|bootstrap|_getFieldValues|CKEDITOR|actualelement|fieldValues|instances|setFields|dependentValue|record_id|last|Attributes|inited|fieldId|fieldLabel|serverEvent|ext|_bindSelectFields|selectOption|fields|fieldRemoveProperty|masterValue|remove|mandatory|first|attrs|dependents|nodeName|item|_filterDependentSelect|required|filter_where|phone_value|isNaN|edited|_btn|onApply|enableStatus|clone|for|Caption|onAppend|transport|values|eventName|showField|card_tab_selector|eq|fieldDisplayValue|lastIndexOf|showTab|text|parameter|setPhoneFieldValue|master_type|detail_code|_bindLookupFields|addClass|render|IrisController|extend|events|setData|card_elem_mandatory|is_addl|domain_values|checked_index|is_radio|parseInt|refreshRadioButtonValue|phone|getData|replace|checkDirty|getFields|charAt|is_wysiwyg|previous|edtText_invalid_data|edtText_empty|edtText_selected|edtText|matrix|no|method|removeClass|trigger|responseText|evalJSON|FieldName|AttributeName|AttributeValue|GetFieldValues|down|in|visible|hideField|typeof|hideTab|addButtonForField|readonly|next|before|unwrap|after|removeMatrixRow|deleteMatrixRow|button_matrix_delete|deleteCardRow|appendMatrixRow|guid|addCardRow|button_matrix_append|_f__|onSuccess|new_data|old_data|parameters|bindFields|T0|get|nodeValue|indexOf|empty|append|onChangeEvent|onBeforePost|baseClassName|_code|IrisCardController|class|section|request|dc|source_name|dg'.split('|'),0,{}))
+/**
+ * Родительский "класс" для карточек.
+ * На каждую карточку (для каждой записи) должен создаваться отдельный 
+ * экземпляр контроллера.
+ */
+var IrisCardController = IrisController.extend({
+
+  render: function() {},
+
+  /**
+   * Обработчики в формате 'event selector': 'handlerName'
+   *
+   * @example <caption>Обычное поле</caption>
+   * events: {
+   *   'field:edit #Name': 'onChangeName'
+   * }
+   *
+   * @example <caption>Поле matrix</caption>
+   * events: {
+   *   'field:edit #Date__d_Contact_Date_Matrix': 'onChangeDateMatrix'
+   * }
+   */
+  events: {},
+
+  /**
+   * Включены ли обработчики изменения поля в случае изменения поля программно
+   */
+  autoEditEventsEnabled: true,
+
+  /**
+   * Получить поле по названию поля
+   *
+   * @param {string} id Код поля
+   *
+   * @param {Object} [event] Событие. Этот параметр необходимо заполнять
+   * только в случае получения поля matrix.
+   *
+   * @return {jQuery} Найденное поле
+   *
+   * @example <caption>Обычное поле</caption>
+   * var code = this.getField('TaskStateID')
+   *     .find('[value=' + this.fieldValue('TaskStateID') + ']').attr('code');
+   *
+   * @example <caption>Поле matrix</caption>
+   * irisControllers.classes.c_Contact = IrisCardController.extend({
+   *   events: {
+   *     'field:edit #Date__d_Contact_Date_Matrix': 'myEvent'
+   *   },
+   *  
+   *   myEvent: function(event) {
+   *     console.log(this.getField('Date', event).val());
+   *   }
+   * });
+   *
+   */
+  getField: function(id, event) {
+    if (event == undefined) {
+      return this.$el.find('#' + id);
+    }
+    // Для полей matrix
+    if (event.target != undefined) {
+      var field_id = event.target.id;
+      var parts = field_id.substring(1).split('__');
+      var rec_id = parts[1];
+      var detailCode = parts[2];
+      return this.$el.find('#_' + id + '__' + rec_id + '__' + detailCode);
+    }
+    //if (event.code != undefined && event.id != undefined) {
+      //return this.$el.find('#_' + id + '__' + event.id + '__' + event.code);
+    //}
+  },
+
+  /**
+   * Получить поля matrix
+   *
+   * По коду вкладки и названию поля возвращает массив найденных полей.
+   * Количество элементов равно количеству строк в matrix. Поля возвращаются
+   * в порядке их следования на форме.
+   *
+   * @param {string} detailCode Код вкладки
+   *
+   * @param {string} id Код поля
+   *
+   * @return {jQuery[]} Поля
+   *
+   * @example
+   * var fields = this.getFields('d_Contact_Date_Matrix', 'Date');
+   * _.each(fields, function(elem) {
+   *   console.log(elem.val());
+   * });
+   */
+  getFields: function(detailCode, id) {
+    var detail = this.$el.find('.matrix[detail_code="' + detailCode + '"]');
+    var fields = detail.find('.edtText, .edtText_selected, .edtText_empty, .edtText_invalid_data, .button, .id');
+    var result = {};
+
+    fields.each(function() {
+      var elem = jQuery(this);
+      if (elem.attr('id')) {
+        var parts = elem.attr('id').substring(1).split('__');
+        var fieldName = parts[0];
+        var record_id = parts[1];
+        if (fieldName == id) {
+          result[record_id] = elem;
+        }
+      }
+    });
+
+    return result;
+  },
+
+  /**
+   * Получить или установить значение поля по названию поля
+   *
+   * @param {string} id Код поля
+   *
+   * @param {string} [value] Значение поля. Если параметр
+   * не передан, то метод вернет текущее значение поля.
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для поля matrix. Если метод вызывается для matrix, то
+   * можно аргумент event передавать вторым по счету, вместо value.
+   *
+   * @return {string|this} Значение поля, если метод используется
+   * для получения значения поля. this, если присваивается знаечние.
+   *
+   * @example <caption>Для обычного поля</caption>
+   * // Поле Name = Иванов Иван
+   * this.fieldValue('Name', 'Иванов Иван');
+   * // Вывод: Иванов Иван
+   * console.log(this.fieldValue('Name'));
+   *
+   * @example <caption>Для matrix</caption>
+   * events: {
+   *   'field:edit #Date__d_Contact_Date_Matrix': 'myEvent'
+   * },
+   * myEvent: function(event) {
+   *   console.log(this.fieldValue('Date', event));
+   * }
+   */
+  fieldValue: function(id, value, event) {
+    if (event == undefined && value != undefined && value.target != undefined) {
+      return this.fieldValue(id, undefined, value);
+    }
+
+    if (event == undefined) {
+      var field = this.getField(id);
+      if (!field) {
+        return undefined;
+      }
+
+      var type = field.attr('elem_type');
+      // Wysiwyg редактор
+      if (field.attr('is_wysiwyg') == 'yes') {
+        if (value != undefined) {
+          CKEDITOR.instances[field.attr('actualelement')].setData(value);
+          this.triggerAutoEditEvents(field);
+          return this;
+        }
+        else {
+          if (CKEDITOR.instances[field.attr('actualelement')].checkDirty() == true) {
+            // значение из ckeditor
+            return CKEDITOR.instances[field.attr('actualelement')].getData();
+          }
+          else {
+            // Если значение не менялось, то возьмем его из textarea    
+            return field.val();
+          }
+        }
+      }
+      // Поле с номером телефона
+      if (type == 'phone') {
+        if (value != undefined) {
+          return this.setPhoneFieldValue(field, value);
+        }
+        else {
+          return field.attr('phone_value');
+        }
+      }
+      // Для чекбокса возвращаем значение домена
+      else if (type == 'checkbox') {
+        if (value !== undefined) {
+          if (value == true || value == '1' || value == 1) {
+            field.attr('checked', value);
+          }
+          else {
+            field.removeAttr('checked');
+          }
+          this.triggerAutoEditEvents(field);
+          return this;
+        }
+        else {
+          var domain_json = JSON.parse(field.attr('domain_json'));
+          var on_index = parseInt(field.attr('checked_index'), 10);
+          var value_index = 0;
+          if ((!field.attr('checked') && on_index == 0) || (field.attr('checked') && on_index == 1)) {
+            value_index = 1;
+          }
+          return domain_json.domain_values[value_index];
+        }
+      }
+      // Для lookup поля значение в атрибуте lookup_value
+      else if (type == 'lookup') {
+        if (value !== undefined) {
+          if (value && value.Value !== undefined) {
+            field.val(value.Caption);
+            field.attr('original_value', value.Caption);
+            field.attr('lookup_value', value.Value);
+          }
+          else {
+            field.attr('lookup_value', value);
+            if (value == null) {
+              field.val(null);
+              field.attr('original_value', null);
+            }
+          }
+          this.triggerAutoEditEvents(field);
+          return this;
+        }
+        else {
+          return field.attr('lookup_value');
+        }
+      }
+      // Для остальных полей
+      else {
+        if (value != undefined) {
+          field.val(value);
+          if (field.attr('is_radio') == 'yes') {
+            // TODO: переписать на jQuery (встроить в этот объект)
+            refreshRadioButtonValue(field);
+          }
+          this.triggerAutoEditEvents(field);
+          return this;
+        }
+        else {
+          return field.val();
+        }
+      }
+    }
+
+    // Для полей matrix
+    var field_id = event.target.id;
+    var parts = field_id.substring(1).split('__');
+    var rec_id = parts[1];
+    var detailCode = parts[2];
+    //return this.$el.find('#_' + id + '__' + rec_id + '__' + detailCode);
+    return this.fieldValue('_' + id + '__' + rec_id + '__' + detailCode, value);
+  },
+
+  /**
+   * Получить или установить отображаемое значение поля. Имеет смысл для
+   * lookup-полей.
+   *
+   * @param {string} id Код поля
+   *
+   * @param {string} [displayValue] Отображаемое значение поля. Если параметр
+   * не передан, то метод вернет текущее значение поля.
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для поля matrix. Если метод вызывается для matrix, то
+   * можно аргумент event передавать вторым по счету, вместо value.
+   *
+   * @return {string|this} Отображаемое значение поля, если метод используется
+   * для получения значения поля. this, если присваивается знаечние.
+   *
+   * @example <caption>Для обычного поля</caption>
+   * // Поле Name = Иванов Иван
+   * this.fieldDisplayValue('OwnerID', 'Иванов Иван');
+   * // Вывод: Иванов Иван
+   * console.log(this.fieldDisplayValue('OwnerID'));
+   *
+   * @example <caption>Для matrix</caption>
+   * events: {
+   *   'field:edit #Date__d_Contact_Date_Matrix': 'myEvent'
+   * },
+   * myEvent: function(event) {
+   *   console.log(this.fieldDisplayValue('ProductID', event));
+   * }
+   */
+  fieldDisplayValue: function(id, displayValue, event) {
+    if (event == undefined && displayValue != undefined && 
+        displayValue.target != undefined) {
+      return this.fieldDisplayValue(id, undefined, displayValue);
+    }
+
+    var field = this.getField(id, event);
+    var type = field.attr('elem_type');
+    if (type == 'lookup') {
+      if (displayValue == undefined) {
+        return field.val();
+      }
+      else {
+        field.val(displayValue);
+        field.attr('original_value', displayValue);
+        return this;
+      }
+    }
+    if (type == 'select') {
+      var field = this.getField(id);
+      if (displayValue == undefined) {
+        return field.find(':selected').text();
+      }
+      else {
+        field.find(':selected').text(displayValue);
+        return this;
+      }
+    }
+    return this.fieldValue(id, displayValue);
+  },
+
+  /**
+   * Присвоить значение полю с телефонным номером. При присваивании выполняется
+   * форматирование номера к формату "xx xxx xxx-xx-xx". Если присваивается
+   * значение полю с дополнительным номером, формат номера будет "xxxx".
+   *
+   * @param {jQuery} field Поле
+   *
+   * @param {string} value Телефонный номер
+   *
+   * @return {this}
+   *
+   * @example
+   * // Поле Phone1 = 7 925 555-55-55
+   * this.setPhoneFieldValue(this.getField('Phone1'), '+79255555555');
+   */
+  setPhoneFieldValue: function(field, value) {
+    var cleanDigits = value.replace(/\D/g, "");
+    field.attr('phone_value', cleanDigits);
+    
+    if (field.attr('is_addl') == 'Y') {
+      field.val(cleanDigits);
+      this.triggerAutoEditEvents(field);
+      return this; // для добавочного не форматируем
+    }
+
+    var formattedNumber = '';
+    var nn = 0;
+    for (var i = cleanDigits.length - 1; i >= 0; i--) {
+      if (i < cleanDigits.length - 1) {
+        if ((nn == 2) || (nn == 4)) {
+          formattedNumber = '-' + formattedNumber;
+        }
+        if ((nn == 7) || (nn == 10)) {
+          formattedNumber = ' ' + formattedNumber;
+        }
+      }
+      nn++;
+      formattedNumber = cleanDigits.charAt(i) + formattedNumber;
+    }
+    field.val(formattedNumber);
+    this.triggerAutoEditEvents(field);
+    return this;
+  },
+
+  /**
+   * Получить или установить значение параметра карточки
+   *
+   * @param {string} id Код параметра
+   *
+   * @param {string} [value] Значение параметра. Если
+   * не указан, то метод вернет текущее значение параметра.
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для matrix. Если метод вызывается для параметра matrix,
+   * то можно аргумент event передавать вторым по счету, вместо value.
+   *
+   * @return {string|this} Значение параметра, если метод используется
+   * для получения значения. this, если присваивается знаечние.
+   *
+   * @example
+   * // Если карточку открыли не в режиме добавления новой записи
+   * if (this.parameter('mode') != 'insert') {
+   *   // ..
+   * }
+   */
+  parameter: function(id, value, event) {
+    return this.fieldValue('_' + id, value, event);
+  },
+
+  /**
+   * Получить или установить название поля
+   *
+   * @param {string} id Код поля
+   *
+   * @param {string} [value] Значение поля. Если параметр
+   * не передан, то метод вернет текущее значение поля.
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для поля matrix. Если метод вызывается для matrix, то
+   * можно аргумент event передавать вторым по счету, вместо value.
+   *
+   * @return {string|this} Значение поля, если метод используется
+   * для получения названия поля. this, если присваивается название.
+   */
+  fieldLabel: function(id, value, event) {
+    if (event == undefined && value != undefined && 
+        value.target != undefined) {
+      return this.fieldLabel(id, undefined, value);
+    }
+
+    var label = this.getFieldLabel(id, event);
+
+    if (value !== undefined) {
+      return label.html(value);
+    } else {
+      return label.html();
+    }
+  },
+
+  /**
+   * Получить элемент надпись (label) поля по названию поля
+   *
+   * @param {string} id Код поля
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для поля matrix. Если метод вызывается для matrix, то
+   * можно аргумент event передавать вторым по счету, вместо value.
+   *
+   * @return {this}
+   */
+  getFieldLabel: function(id, event) {
+    if (g_vars.template == 'bootstrap') {
+      return this._getFieldLabelBootstrap(id, event);
+    }
+
+    return this._getFieldLabelLegacy(id, event);
+  },
+
+  _getFieldLabelBootstrap: function(id, event) {
+    var field = this.getField(id, event);
+
+    if (this.fieldType(id, event) == 'checkbox') {
+      return field.prev('label');
+    } else {
+      return field.parents('.form-group').children('label');
+    }
+  },
+
+  _getFieldLabelLegacy: function(id, event) {
+    return this.getField(id, event).
+      parents('.form_table').prev().find('span');
+  },
+
+  /**
+   * Получить или установить значение атрибута поля.
+   *
+   * Некоторые особенности
+   * * В случае изменения атрибута required (или mandatory), изменяется
+   * и css-класс заголовка поля.
+   * * В случае изменения readonly для lookup-поля, меняется доступ к 
+   * кнопке "...".
+   * * В случае установки readonly для select-поля, поле становится disabled.
+   *
+   * @param {string} id Код поля
+   *
+   * @param {string} property Название атрибута
+   *
+   * @param {string} [value] Значение атрибута поля. Если параметр
+   * не передан, то метод вернет текущее значение поля.
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для поля matrix. Если метод вызывается для получения значения matrix, то
+   * можно аргумент event передавать третьим по счету, вместо value.
+   *
+   * @return {string|this} Значение атрибута, если метод используется
+   * для получения значения. this, если присваивается знаечние.
+   *
+   * @example
+   * // Делаем поле CreateID недоступным для изменения
+   * this.fieldProperty('CreateID', 'readonly', true);
+   */
+  fieldProperty: function(id, property, value, event) {
+    if (event == undefined && value != undefined && 
+        value.target != undefined) {
+      return this.fieldProperty(id, property, undefined, value);
+    }
+
+    if (property == 'required') {
+      return this.fieldProperty(id, 'mandatory', value);
+    }
+
+    var field = this.getField(id, event);
+    if (value == undefined) {
+      return field.attr(property);
+    }
+    else {
+      if (property == 'mandatory') {
+        var caption;
+        var className = 'card_elem_mandatory';
+        if (g_vars.template == 'bootstrap') {
+          className = 'required';
+          caption = field.parents('.form-group');
+        }
+        else {
+          caption = field.parents('td.form_table').prev().find('span');
+        }
+        if (value == 'yes' || value == true || value == 'true' || value == 1) {
+          value = 'yes';
+          caption.addClass(className);
+        }
+        else {
+          value = 'no';
+          caption.removeClass(className);
+        }
+      }
+      else if (property == 'readonly') {
+        var type = field.attr('elem_type');
+        if (type == 'lookup') {
+          if (value == true) {
+            this.getField(id + '_btn').attr('disabled', true);
+          }
+          else {
+            this.getField(id + '_btn').removeAttr('disabled');
+          }
+        }
+        else if (type == 'checkbox') {
+            if (value == true) {
+                this.getField(id).attr('disabled', 'disabled');
+            }
+            else {
+                this.getField(id).removeAttr('disabled');
+            }
+        } else {
+          if (value == true) {
+            this.getField(id).attr(property, property);
+          }
+          else {
+            this.getField(id).removeAttr(property);
+          }
+        }
+      }
+      if (type == 'select' || type == 'button') {
+        field.attr('disabled', value);
+      }
+      else {
+        field.attr(property, value);
+      }
+      return this;
+    }
+  },
+
+  /**
+   * Удалить атрибут у поля
+   *
+   * @param {string} id Код поля
+   *
+   * @param {string} property Название атрибута
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для поля matrix.
+   */
+  fieldRemoveProperty: function(id, property, event) {
+    this.getField(id, event).removeAttr(property);
+  },
+
+  /**
+   * Получить или установить значение атрибута вида data-<атрибут>.
+   *
+   * @param {string} id Код поля
+   *
+   * @param {string} property Название атрибута
+   *
+   * @param {string} [value] Значение атрибута поля. Если параметр
+   * не передан, то метод вернет текущее значение поля.
+   *
+   * @param {Object} [event] Событие. Его необходимо передавать только 
+   * для поля matrix. Если метод вызывается для получения значения matrix, то
+   * можно аргумент event передавать третьим по счету, вместо value.
+   *
+   * @return {string|this} Значение атрибута, если метод используется
+   * для получения значения. this, если присваивается знаечние.
+   *
+   * @example
+   * // Для поля Name значение атрибута data-mydata = myvalue.
+   * this.fieldData('Name', 'mydata', 'myvalue');
+   */
+  fieldData: function(id, property, value, event) {
+    return this.fieldProperty(id, 'data-' + property, value, event);
+  },
+
+  /**
+   * Получить тип поля
+   *
+   * @param {string} id Код поля
+   *
+   * @param {Object} [event] Событие. Этот параметр необходимо заполнять
+   * только в случае получения поля matrix.
+   *
+   * @return {string} Тип поля (значение атрибута elem_type).
+   */
+  fieldType: function(id, event) {
+    return this.getField(id, event).attr('elem_type');
+  },
+
+  /**
+   * Зависимость полей-справочников
+   *
+   * Работает только для lookup-lookup и select-select.
+   * В случае select-select может быть немколько зависимых полей 
+   * для одного master.
+   *
+   * TODO: Реализовать также связи для lookup-select, select-lookup
+   *
+   * TODO: Реализация с filter_where нецелесообразна
+   *
+   * @param masterFieldName Код основного поля
+   *
+   * @param dependentFieldName Код поля, значение в котором надо фильтровать
+   *
+   * @param [parentFieldName] Название поля в таблице, по которому 
+   * надо фильтровать значения.
+   *
+   * @example
+   * onChangeAccountID: function () {
+   *   this.updateName(); 
+   *   // Поле Контакт зависит от поля Компания
+   *   this.bindFields('AccountID', 'ContactID');
+   * },
+   * onOpen: function () {
+   *   this.getField('Number').attr('readonly', 'readonly');
+   *   // Поле Контакт зависит от поля Компания
+   *   this.bindFields('AccountID', 'ContactID');
+   *   this.onChangePaymentTypeID();
+   * }
+   */
+  bindFields: function(masterFieldName, dependentFieldName, parentFieldName) {
+    var master_type = this.fieldType(masterFieldName);
+    if (master_type == 'lookup') {
+      this._bindLookupFields(masterFieldName, dependentFieldName, parentFieldName);
+    }
+    else {
+      this._bindSelectFields(masterFieldName, dependentFieldName);
+    }
+  },
+
+  // Связать lookup-поля
+  _bindLookupFields: function(masterFieldName, dependentFieldName, parentFieldName) {
+    if (parentFieldName == undefined) {
+      parentFieldName = masterFieldName;
+    }
+    var masterId = this.fieldValue(masterFieldName);
+    if (masterId == '') {
+      this.fieldRemoveProperty(dependentFieldName, 'filter_where');
+    }
+    else {
+      this.fieldProperty(dependentFieldName, 'filter_where', 
+          "T0." + parentFieldName + " = '" + masterId + "'");
+    }
+  },
+
+  // Связать select-поля
+  _bindSelectFields: function(masterFieldName, dependentFieldName) {
+    var dependent = this.getField(dependentFieldName);
+    var master = this.getField(masterFieldName);
+
+    // Создаем json из option, если еще не сделали это
+    if (!this.fieldData(dependentFieldName, 'options')) {
+      var options = [];
+      dependent.find('option').each(function() {
+        var option = jQuery(this);
+        var attributes = [];
+        var attrs = option.get(0).attributes;
+        _.each(attrs, function (attr) {
+          if (attr.nodeName.toLowerCase() != 'selected') {
+            attributes.push([attr.nodeName, attr.nodeValue]);
+          }
+        });
+        options.push([option.attr(masterFieldName.toLowerCase()), option.html(), 
+            option.val(), attributes]);
+      });
+      this.fieldData(dependentFieldName, 'options', JSON.stringify(options));
+    }
+
+    if (!this.fieldData(masterFieldName, 'dependent')) {
+      this.fieldData(masterFieldName, 'dependent', 
+          JSON.stringify([dependentFieldName]));
+    }
+    else {
+      var data = JSON.parse(this.fieldData(masterFieldName, 'dependent'));
+      if (_.indexOf(data, dependentFieldName) == -1) {
+        data.push(dependentFieldName);
+        this.fieldData(masterFieldName, 'dependent', JSON.stringify(data));
+      }
+    }
+
+    var self = this;
+    master.on('field:edited', function () {
+      self._filterDependentSelect(masterFieldName);
+    });
+    this.triggerAutoEditEvents(master);
+  },
+
+  // Фильтрация зависимого select
+  _filterDependentSelect: function(masterId) {
+    var master = this.getField(masterId);
+    var masterValue = this.fieldValue(masterId);
+
+    var dependents = JSON.parse(this.fieldData(masterId, 'dependent'));
+    var self = this;
+
+    // По всем зависимым полям
+    _.each(dependents, function(dependentId) {
+      var dependent = self.getField(dependentId);
+      var dependentValue = self.fieldValue(dependentId);
+      var options = JSON.parse(self.fieldData(dependentId, 'options'));
+      // Удаляем список option
+      dependent.empty();
+      // Добавляем option для выбранного master
+      _.each(options, function(option) {
+        if ((!option[0]) || (option[0] == masterValue.toLowerCase())) {
+          var params = '';
+          _.each(option[3], function(attr) {
+            params += ' ' + attr[0] + '="' + attr[1] + '"';
+          });
+          var selectOption = dependent.append(jQuery('<option value="' + 
+              option[2] + '"' + params + '>' + option[1] + '</option>'));
+          _.each(option[3], function(attr) {
+            selectOption.attr(attr[0], attr[1]);
+          });
+        }
+      });
+
+      // При открытии карточки - выберем значение, которое уже установлено
+      if (!self.fieldData(dependentId, 'inited')) {
+        dependent.find('[value=' + dependentValue + ']')
+            .attr('selected', 'selected');
+        self.fieldData(dependentId, 'inited', true);
+      }
+      else {
+        dependent.find('option:first').attr('selected', 'selected');
+      }
+    });
+
+    return;
+  },
+
+  /**
+   * Стандартный обработчик для случая, когда обработкой события изменения поля
+   * занимается сервер.
+   *
+   * Этот обработчик отправляет запрос для вызова серверного
+   * onBeforePost<Код поля>(), который должен быть расположен в файле 
+   * с префиксом s\_ для раздела или ds\_ для вкладки.
+   * Обработчик целесообразно использовать для редактируемой таблицы.
+   *
+   * @param {Object} event Событие
+   * @param {array} [params] Параметры. Возможные ключи:
+   * * rewriteValues = true - Требуется перезаписывать ранее установленные значения
+   * * letClearValues = true - Если новое значение null, очищать ли старое значение
+   * * disableEvents = false - Отменить обработчики при присвоении новых знаений
+   * * onApply - Обработчик, который должен вызываться после присвоения
+   *
+   * @example <caption>Назначение обработчика изменения поля</caption>
+   * events: {
+   *   'change #Price, #Count, #UnitID, #Discount': 'onChangeEvent',
+   *   'lookup:changed #ProductID': 'onChangeEvent'
+   * }
+   *
+   * @example <caption>Пример обработчика на PHP</caption>
+   * public function onBeforePostPrice($parameters) {
+   *     list ($count, $price, $discount) = 
+   *             $this->getActualValue($parameters['old_data'], 
+   *             $parameters['new_data'], array('count', 'price', 'discount'));
+   *
+   *     $parameters['new_data'] = FieldValueFormat('Amount', 
+   *             ((100 - $discount) * $count * $price) / 100, null, 
+   *             $parameters['new_data']);
+   *
+   *     return $parameters['new_data'];
+   * }
+   */
+  onChangeEvent: function(event, params) {
+    if (params == undefined) {
+      params = {};
+    }
+    var _params = _.clone(params);
+    if (_params) {
+      if (_params.rewriteValues == undefined) {
+        _params.rewriteValues = true;
+      }
+      if (_params.letClearValues == undefined) {
+        _params.letClearValues = true;
+      }
+    }
+    this.serverEvent('onBeforePost', event.target.id, _params);
+  },
+
+  /**
+   * Вызвать событие на сервере (в файле с s\_ для раздела или ds\_ 
+   * для вкладки).
+   *
+   * Будет выполнена попытка вызова серверного обработчика, 
+   * название которого образовано формулой eventName + fieldName
+   *
+   * @param {string} eventName вызываемое событие
+   *
+   * @param {string} [fieldName] Изменяемое поле
+   */
+  serverEvent: function(eventName, fieldName, params) {
+    // На данный момент поддерживается только onBeforePost
+    var self = this;
+
+    var className = this.baseClassName;
+    if (className == undefined) {
+      className = this.getField('_code').val();
+    }
+    if (className.substring(0, 1) == 'c' || className.substring(0, 1) == 'g') {
+      className = 's' + className.substring(1);
+    }
+    else
+    if (className.substring(0, 2) == 'dc' || className.substring(0, 1) == 'dg') {
+      className = className.substring(0, 1) + 's' + className.substring(2);
+    }
+
+    var sectionName = this.sectionName;
+    if (sectionName == undefined) {
+      sectionName = this.parameter('source_name');
+    }
+    // Для вкладок отбросим последнюю часть названия (ds_Project_Product -> ds_Project)
+    if (className && className.substring(0, 1) == 'd') {
+      if (sectionName && sectionName.lastIndexOf('_')) {
+        sectionName = sectionName.substring(0, sectionName.lastIndexOf('_'));
+      }
+    }
+
+    this.lock();
+    var result = this.request({
+      section: sectionName,
+      'class': className, 
+      method: eventName + fieldName, 
+      parameters: {
+        //id: self.getField('_id').val(), //TODO: deprecated
+        //value: value, //TODO: deprecated
+        old_data: this._getFieldValues(),
+        new_data: this._getFieldValues([fieldName])
+      }, 
+      onSuccess: function(transport) {
+        var res = transport.responseText.evalJSON();
+        if (res == null) {
+          return false;
+        }
+
+        self.setFields(res.data, params);
+        self.unlock();
+      }
+    });
+    if (!result) {
+      this.unlock();
+    }
+  },
+
+  /**
+   * Присвоение значений/свойств полям.
+   *
+   * @param {array} data Значения полей и атрибутов в формате набора полей
+   *
+   * @param {array} [params] Параметры. Возможные ключи:
+   * * rewriteValues - Требуется перезаписывать ранее установленные значения
+   * * letClearValues - Если новое значение null, очищать ли старое значение
+   * * disableEvents - Отменить обработчики при присвоении новых знаений
+   * * onApply - Обработчик, который должен вызываться после присвоения
+   * новых значений
+   */
+  setFields: function(data, params, event) {
+    var self = this;
+    var _params = _.clone(params);
+    if (_params == undefined) {
+      _params = {};
+    }
+    if (_params.rewriteValues == undefined) {
+      _params.rewriteValues = false;
+    }
+    if (_params.letClearValues == undefined) {
+      _params.letClearValues = false;
+    }
+    if (_params.disableEvents == undefined) {
+      _params.disableEvents = false;
+    }
+
+    var enableStatus = this.autoEditEventsEnabled;
+    if (_params.disableEvents) {
+      this.autoEditEventsEnabled = false;
+    }
+
+    // Присвоение значений
+    if (data && data.FieldValues) {
+      _.each(data.FieldValues, function(fieldValue) {
+        var currentValue = self.fieldValue(fieldValue.Name, event);
+        var currentType = self.fieldType(fieldValue.Name, event);
+        if (currentType == 'lookup') {
+          if (currentValue == ''
+              || (_params.rewriteValues && fieldValue.Value != '')
+              || (_params.letClearValues && currentValue == '')) {
+            self.fieldValue(fieldValue.Name, fieldValue, event);
+          }
+        }
+        else {
+          if ((currentValue == '') || (currentValue == undefined)
+              || (_params.rewriteValues && fieldValue.Value != '')
+              || (_params.letClearValues && fieldValue.Value == '')
+              || (currentType == 'checkbox' && currentValue == 0)
+              || (currentType == 'select' && currentValue == 'null')) {
+            self.fieldValue(fieldValue.Name, fieldValue.Value, event);
+          }
+        }
+      });
+    }
+
+    // Присвоение свойств
+    if (data && data.Attributes) {
+      _.each(data.Attributes, function(fieldAttribute) {
+        self.fieldProperty(fieldAttribute.FieldName, 
+            fieldAttribute.AttributeName, fieldAttribute.AttributeValue, event);
+      });
+    }
+
+    if (_params.onApply) {
+      _params.onApply(data);
+    }
+
+    if (_params.disableEvents) {
+      self.autoEditEventsEnabled = enableStatus;
+    }
+  },
+
+  // Получить значения полей из карточки
+  // @param [fieldNames] Array Список названий полей, которые требуется вернуть.
+  // Если не передан, то возвращает все значения.
+  _getFieldValues: function(fieldNames) {
+    if (fieldNames == undefined) {
+      fieldNames = [];
+    }
+    var fieldValuesArray = GetFieldValues($(this.el.id).down('form'));
+    var fieldValues = {
+      FieldValues: []
+    };
+    for (var i = 0; i < fieldValuesArray.length; i++) {
+      if (fieldNames.length == 0 || 
+          (fieldNames.length > 0 && fieldValuesArray[i][0] in fieldNames)) {
+        fieldValues.FieldValues.push({
+          Name: fieldValuesArray[i][0],
+          Value: fieldValuesArray[i][1]
+        });
+      }
+    }
+    return fieldValues;
+  },
+
+  /**
+   * Показать/скрыть поле
+   *
+   * @param {string} id Код поля
+   *
+   * @param {bool} [show=true] Показать или скрыть поле
+   */
+  showField: function(id, show, event) {
+    var field = this.getField(id, event);
+    var method = g_vars.template == 'bootstrap' ?
+      '_showFieldBootstrap' : '_showFieldLegacy'
+
+    if (show == undefined) {
+      show = true;
+    }
+
+    this[method](field, show);
+  },
+
+  _showFieldLegacy: function(field, isShow) {
+    var td = field.parents('td.form_table');
+    var tr = td.parent();
+    if (isShow) {
+      td.show();
+      td.prev().show();
+      tr.show();
+    }
+    else {
+      td.hide();
+      td.prev().hide();
+      if (tr.find('td:visible').length == 0) {
+        tr.hide();
+      }
+    }
+  },
+
+  _showFieldBootstrap: function(field, isShow) {
+    var method = isShow ? 'show' : 'hide';
+
+    field[method]();
+    field.parents('div.form-group').find('label')[method]();
+  },
+
+  /**
+   * Скрыть поле
+   *
+   * @param {string} id Код поля
+   */
+  hideField: function(id, event) {
+    this.showField(id, false, event);
+  },
+
+  /**
+   * Показать/скрыть закладку на карточке
+   */
+  showTab: function (p_tabnumber, p_visible) {
+    if (typeof(p_visible) == 'undefined') {
+      p_visible = true;
+    }
+    if (p_visible) {
+      this.$el.find(card_tab_selector + ':eq(' + p_tabnumber + ')').show();
+    }
+    else {
+      this.$el.find(card_tab_selector + ':eq(' + p_tabnumber + ')').hide();
+    }
+  },
+  /**
+   * Скрыть закладку
+   */
+  hideTab: function (p_tabnumber) {
+    this.showTab(p_tabnumber, false);
+  },
+
+
+  /**
+   * Вызвать событие изменения поля, если это разрешено
+   *
+   * @param {jQuery} field Поле, которое изменилось программно
+   */
+  triggerAutoEditEvents: function(field) {
+    if (this.autoEditEventsEnabled) {
+      field.trigger('field:edited');
+    }
+  },
+
+  /**
+   * Запретить сохранять карточку (нажимать на ОК)
+   *
+   * @param {bool} [on] true - заблокировать. false - разблокировать.
+   * По умолчанию true.
+   */
+  lock: function(on) {
+    if (on == true || on == undefined) {
+      var form = this.$el.find('form');
+      var lockLevel = form.data('lock');
+      if (isNaN(lockLevel)) {
+        lockLevel = 0;
+      }
+      lockLevel++;
+      form.data('lock', lockLevel);
+    }
+    else {
+      unlock();
+    }
+  },
+
+  /**
+   * Разрешить сохранять карточку (нажимать на ОК)
+   */
+  unlock: function() {
+    var form = this.$el.find('form');
+    var lockLevel = form.data('lock');
+    if (isNaN(lockLevel)) {
+      lockLevel = 0;
+    }
+    lockLevel--;
+    form.data('lock', lockLevel);
+  },
+
+  /**
+   * Добавить кнопку к полю
+   *
+   * @param {string} data Параметры, возможные ключи
+   * * fieldId Идентификатор поля, к которому добавляется кнопка
+   * * Другие ключи для пердставления
+   */
+  addButtonForField: function(data) {
+    var field = this.getField(data.fieldId);
+    if (g_vars.template == 'bootstrap') {
+      data.field = field.parent().html();
+      var view = _.template(jQuery('#field-ext-button').html(), {data: data});
+      field.parent().html(view);
+      field = this.getField(data.fieldId);
+      // Если 2 кнопки, то извлечем содержимое второй и вставим перед первой
+      if (field.parent().children('span').length > 1) {
+        field.next().children().before(
+            field.parent().children().last('span').children());
+        field.parent().children().last('span').remove();
+        field.parent().unwrap();
+      }
+    }
+    else {
+      var view = _.template(jQuery('#field-ext-button').html(), {data: data});
+      field.parent().after(view);
+    }
+  },
+
+  /**
+   * Убрать из карточки строку matrix
+   *
+   * При сохранении карточки не будет выполнена операция удаления этой строки
+   *
+   * @param {string} id Идентификатор удаляемой записи
+   *
+   * @example <caption>Удаление одной строчки</caption>
+   * this.removeMatrixRow(id);
+   */
+  removeMatrixRow: function(id) {
+    this.$el.find('[rec_id="' + id + '"]').remove();
+  },
+
+  /**
+   * Удалить из карточки строку matrix
+   *
+   * При сохранении карточки будет выполнена операция удаления этой строки
+   *
+   * @param {string} id Идентификатор удаляемой записи
+   *
+   * @example <caption>Удаление одной строчки</caption>
+   * this.removeMatrixRow(id);
+   */
+  deleteMatrixRow: function(id) {
+    var item = this.$el.find('[rec_id="' + id + '"]')
+        .find('.button_matrix_delete')[0];
+    deleteCardRow(item);
+  },
+
+  /**
+   * Добавить в карточке строку matrix
+   *
+   * При сохранении карточки не будет выполнена операция удаления этой строки
+   *
+   * @param {string} params Параметры, возможные ключи
+   * * id - Идентификатор добавляемой записи
+   * * code - Код вкладки
+   * * values - Не обязательный параметр. Значения полей по умолчанию в формате
+   *   набора полей
+   *
+   * @example <caption>Добавление одной строчки</caption>
+   * this.appendMatrixRow({
+   *   code: 'd_Contact_Date_Matrix',
+   *   values: {
+   *     FieldValues: [{
+   *       Name: 'ContactDateTypeID',
+   *       Value: 'e6512060-b644-43b0-a743-65fc479697e2'
+   *     }]
+   *   }
+   * });
+   */
+  appendMatrixRow: function(params) {
+    if (params == undefined || params.code == undefined) {
+      return false;
+    }
+    if (params.id == undefined) {
+      params.id = this.guid();
+    }
+
+    var detail = this.$el.find('[detail_code="' + params.code + '"]');
+    if (detail.length == 0) {
+      return false;
+    }
+
+    addCardRow(detail.first().find('.button_matrix_append')[0], params.id);
+
+    var event = {
+      target: {
+        id: '_f__' + params.id + '__' + params.code
+      }
+    };
+
+    if (params.values != undefined) {
+      this.setFields(params.values, {
+        rewriteValues: true,
+        letClearValues: true,
+        disableEvents: true
+      }, event);
+    }
+
+    if (params.onAppend) {
+      params.onAppend(event);
+    }
+    return true;
+  }
+
+});

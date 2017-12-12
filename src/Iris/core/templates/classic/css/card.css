@@ -412,7 +412,8 @@ div.url_img {
 	background	: url(../images/fileselect_button_active.png) no-repeat left top;
 }
 
-.fileinput_fakeButton_empty {
+/*fileinput_fakeButton_empty {*/
+div.edtText_empty {
 	background	: url(../images/fileselect_button_empty.png) no-repeat left top;
 }
 

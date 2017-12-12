@@ -39,14 +39,14 @@ div[conttype="inner"] > table.grid > tbody > tr:first-child th {
 	padding: 0;
 	margin: 0;
 }
-table.grid tr.active td, tr.active:hover {
+table.grid tr.active>td/*, tr.active:hover*/ {
 	background-color: #428bca;
 	color: #fff;
 }
-table.grid tr.active-multiple td, tr.active-multiple:hover {
+table.grid tr.active-multiple>td/*, tr.active-multiple:hover*/ {
 	background-color: #ddd;
 }
-table.grid tr.grid_void td.grid_row {
+table.grid tr.grid_void>td.grid_row {
 	background-color: #fff;
 }
 .grid_void {
@@ -72,20 +72,28 @@ td.grid_row_datetime {
 	text-align		: center;
 }
 
-td.grid_row span, td.grid_row_string span, td.grid_row_int span, td.grid_row_decimal span, td.grid_row_date span, td.grid_row_datetime span {
+td.grid_row span.grid-value,
+td.grid_row_string span.grid-value,
+td.grid_row_int span.grid-value,
+td.grid_row_decimal span.grid-value,
+td.grid_row_date span.grid-value,
+td.grid_row_datetime span.grid-value {
 	cursor			: default;
 
-    /* многоточие для длинного текста в ячейке */
-    display         : block;
-    overflow        : hidden;
-    white-space     : nowrap;
-    width           : 100%;
-    -o-text-overflow: ellipsis;
-    text-overflow   : ellipsis;
+  /* многоточие для длинного текста в ячейке */
+  display         : block;
+  overflow        : hidden;
+  white-space     : nowrap;
+  width           : 100%;
+  -o-text-overflow: ellipsis;
+  text-overflow   : ellipsis;
 }
 
 
 
+.grid_footer_left {
+	padding-right   : 10px;
+}
 table.grid_footer_buttons {
 	width			: 100%;
 	background-color: #eaeaea;
@@ -98,53 +106,6 @@ table.grid_footer_buttons td {
 	width			: 100%;
 	text-align		: right;
 }
-
-
-
-
-
-
-
-/* Поиск в гриде */
-.grid_search {
-}
-.grid_search .row {
-	margin-left: 0;
-	margin-right: 0;
-}
-.grid_search .row div {
-	padding-left: 0;
-	padding-right: 10px;
-}
-.panel.grid_search {
-	margin-bottom: 0;
-}
-.grid_search .panel-body {
-	padding: 0;
-}
-.grid_search .col-sm-2, .grid_search .col-sm-6 {
-	padding-right: 2px;
-	padding-left: 2px;
-}
-.grid_search .col-sm-2.text-right {
-	white-space: nowrap;
-}
-
-
-/* Панель с кнопками в гриде */
-.panel.grid_footer {
-	margin-bottom: 0;
-}
-.grid_footer .panel-body {
-	padding: 0;
-}
-.grid_footer_left {
-	padding-right: 10px;
-}
-.grid_footer_spacer input {
-	margin-right: 4px;
-}
-
 
 
 /* стиль для элемента input поиска в гридах. элементу присваивается стиль edtText и этот(меняется фон)*/
@@ -247,4 +208,8 @@ table.grid table td:first-child {
 
 #sql_section {
 	width: 100%;
+}
+
+.table-hover>tbody>tr.active:hover>td {
+	background-color: #428bca;
 }

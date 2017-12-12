@@ -98,8 +98,9 @@
   </div>
 </div>
 <?php /* Футер */ ?>
-<div class="panel panel-default grid_footer">
-  <div class="panel-body">
+<?php if (empty($data['hide_footer']) || !$data['hide_footer']) : ?>
+<div class="panel panel-default grid_footer no-bottom-margin">
+  <div class="panel-body no-padding">
   <form role="form">
       <div class="pull-left grid_footer_left">
       <?php if (!$data['hide_buttons']) : ?>
@@ -154,13 +155,26 @@
   </form>
   </div>
 </div>
-<?php if ($data['is_child']) : ?>
+<?php endif; ?>
+<?php if (!empty($data['is_child'])) : ?>
   <table class="grid_footer_buttons">
   <tbody>
     <tr>
       <td>
         <input type="button" class="btn btn-primary btn-sm button_ok" onclick="refresh_lookup_and_close(this, '<?php 
           echo $data['grid_id']; ?>')" value="<?php echo $T->t('ОК'); ?>">
+        <input type="button" class="btn btn-default btn-sm button_cancel" onclick="Windows.close(get_window_id(this))" value="<?php 
+          echo $T->t('Отмена'); ?>">
+      </td>
+    </tr>
+  </tbody>
+  </table>
+<?php elseif (!empty($data['is_custom'])) : ?>
+  <table class="grid_footer_buttons">
+  <tbody>
+    <tr>
+      <td>
+        <input type="button" class="btn btn-primary btn-sm button_ok" value="<?php echo $T->t('ОК'); ?>">
         <input type="button" class="btn btn-default btn-sm button_cancel" onclick="Windows.close(get_window_id(this))" value="<?php 
           echo $T->t('Отмена'); ?>">
       </td>

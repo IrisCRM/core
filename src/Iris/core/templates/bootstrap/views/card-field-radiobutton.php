@@ -3,15 +3,15 @@
  * Поле-radio
  */
 ?>
-<div class="form-group<?php echo $data['mandatory'] ? ' required' : ''; ?>">
+<div class="form-group<?php echo $data['mandatory'] ? ' required' : ''; ?> col-sm-<?php echo $data['fieldwidth']; ?> no-horizontal-padding">
   <?php if (empty($data['hide_label'])) : ?>
     <label for="<?php echo $data['code']; 
-      ?>" class="col-sm-2 control-label<?php 
+      ?>" class="col-sm-<?php echo $data['labelwidth']; ?> no-<?php echo $data['controlindex'] > 0 ? "horizontal" : "right"; ?>-padding control-label<?php 
       echo $data['title'] ? ' card_elem_title"' : '';
       ?>"<?php echo $data['title'] ? ' title="' . $data['title'] . '"' : '';
       ?>><?php echo $data['caption']; ?></label>
   <?php endif; ?>
-  <div class="col-sm-<?php echo $data['colwidth']; ?>">
+  <div class="col-sm-<?php echo $data['controlwidth']; ?> no-left-padding flexbox-container flexbox-justify-center">
 
     <?php 
       // Get previous value
@@ -25,12 +25,12 @@
     ?>
     <div class="btn-group radiobtn-values" <?php 
       echo $data['attributes_radio'];
-      ?> onclick="selectRadioButton(event)" data-toggle="buttons">
+      ?> data-toggle="buttons">
 
       <?php foreach ($data['items'] as &$item) : ?>
         <label class="btn btn-default btn-sm<?php 
             echo $item['selected'] ? ' active' : '';
-          ?>">
+          ?>" onclick="selectRadioButton(this)">
           <input type="checkbox" name="options" data-value="<?php 
             echo $item['value']; ?>"<?php 
             echo $item['selected'] ? ' checked' : '';

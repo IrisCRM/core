@@ -1,5 +1,5 @@
 /* ------ стили элемента автозавершения -----*/
-table.AutoComplete {
+table.autocomplete {
 	background-color: white;
 	margin			: 0px 0px 0px 0px;
 	padding			: 0;
@@ -10,27 +10,25 @@ table.AutoComplete {
 	-moz-box-shadow	: 2px 2px 4px 0px #B0B0B0;
 	-webkit-box-shadow : 2px 2px 4px 0px #B0B0B0;
 }
-tr.AutoComplete {
+table.autocomplete tr {
 	text-align      : left;
 	vertical-align	: middle;
 	height          : 22px;
 	cursor			    : pointer;	
 }
 
-td.AutoComplete {
+table.autocomplete tr > td {
 	vertical-align	: middle;
 	background-color: white;
 	color			      : black;
   padding         : 0 3px;
 }
 
-td.AutoComplete_hover {
-	vertical-align	: middle;
-	background-color: #b1b6e9;/*#3366CC;*/
-  padding         : 0 3px;
+table.autocomplete tr.active > td {
+	background-color: #b1b6e9;
 }
 
-/*стиль для буковок, которые совпали при поиске для списка автозавершения*/
-font.AutoComplete_entry {
+/*стиль для символов, которые совпали при поиске для списка автозавершения*/
+span.autocomplete-entry {
   background-color: #D0D0FF;
 }

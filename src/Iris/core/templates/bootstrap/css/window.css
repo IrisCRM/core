@@ -1,59 +1,101 @@
-/* Стиль: переделанный mac_os_x */
+.dialog {
+  border-radius: 6px;
+	/*border: 1px solid #ccc;*/
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 6px 3px,
+              rgba(0, 0, 0, 0.2) -1px -1px 1px 1px;
+}
+
+.wnd_title {
+	display: block;
+}
+
+.table_window {
+	display: flex;
+}
 
 /* Focused windows */
 .overlay_iris_win {
-	background-color: #FFFFFF; /*#85BBEF; - это цвет затемнения при модальных диалогах */
-	filter: alpha(opacity=60);
-	-moz-opacity: 0.6;
+	background-color: #FFFFFF;
 	opacity: 0.6;
 }
 
-.iris_win_nw {
-	background: transparent url(../images/window/TL.png) no-repeat 0 0;
- 	width: 13px;
- 	height: 23px;
+.iris_win_nw,
+.iris_win_n,
+.iris_win_ne {
+  background-color: #e7e7e7;
+  height: 34px;
+  user-select: none;
 }
 
-.iris_win_n {
-	background: transparent url(../images/window/T.png) repeat-x 0 0;
-	height: 23px;
+.iris_win_nw {
+  border-radius: 6px 0 0 0;
+  width: 1em;
+}
+
+.iris_win_n,
+.iris_win_content,
+.iris_win_s {
+	flex: 1 1 0;
 }
 
 .iris_win_ne {
-	background: transparent url(../images/window/TR.png) no-repeat 0 0;
-	width: 20px;
-	height: 23px;
+  border-radius: 0 6px 0 0;
+  width: 1em;
+}
+
+.iris_win_w,
+.iris_win_e {
+  background-color: #fff;
 }
 
 .iris_win_w {
-	background: transparent url(../images/window/L.png) repeat-y top left;
-	width: 5px;
+	width: 0;
 }
 
 .iris_win_e {
-	background: transparent url(../images/window/R.png) repeat-y top right;
-	width: 5px;
+	width: 0;
+}
+
+.iris_win_sw,
+.iris_win_s,
+.iris_win_se {
+  background-color: #fff;
+  height: 1em;
+  user-select: none;
 }
 
 .iris_win_sw {
-	background: transparent url(../images/window/BL.png) no-repeat 0 0;
+  border-radius: 0 0 0 6px;
 	width: 20px;
-	height: 22px;
 }
 
 .iris_win_s {
-	background: transparent url(../images/window/B.png) repeat-x 0 0;
-	height: 22px;
+  width: 1em;
 }
 
 .iris_win_se, .iris_win_sizer {
-	background: transparent url(../images/window/BR.png) no-repeat 0 0;
-	width: 20px;
-	height: 22px;
+	width: 1em;
+	height: 1em;
+  background-color: #fff;
+  border-radius: 0 0 6px 0;
+  width: 1em;
 }
 
 .iris_win_sizer {
 	cursor: se-resize;
+  background: linear-gradient(-45deg,
+    #828282,
+    #828282 5%,
+    white 10%,
+    white 18%,
+    #828282 20%,
+    #828282 25%,
+    white 30%,
+    white 38%,
+    #828282 40%,
+    #828282 45%,
+    white 50%
+  );
 }
 
 .iris_win_close {
@@ -61,8 +103,8 @@
 	height: 19px;
 	background: transparent url(../images/window/close.gif) no-repeat 0 0;
 	position: absolute;
-	top: 6px;
-	right: 10px;
+	top: 12px;
+	right: 4px;
 	cursor: pointer;
 	z-index: 1000;
 }
@@ -72,8 +114,8 @@
 	height: 19px;
 	background: transparent url(../images/window/maximize.gif) no-repeat 0 0;
 	position: absolute;
-	top: 6px;
-	right: 30px;
+	top: 12px;
+	right: 24px;
 	cursor: pointer;
 	z-index: 1000;
 }
@@ -83,22 +125,18 @@
 	height: 19px;
 	background: transparent url(../images/window/minimize.gif) no-repeat 0 0;
 	position: absolute;
-	top: 6px;
-	right: 50px;
+	top: 12px;
+	right: 44px;
 	cursor: pointer;
 	z-index: 1000;
 }
 
 .iris_win_title {
-	float: left;
-	height: 15px;
-	font-family: sans-serif, Tahoma, Arial;
-	font-size: 9pt;
-	text-align: center;
-	margin-top: 2px;
-	width: 100%;
-	color: #000;
-	padding-top: 4px;
+	font-weight: bold;
+	height: 100%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .iris_win_content {
@@ -109,16 +147,13 @@
 	background: #FFF;
 }
 .iris_win_s .status_bar {
-	padding-bottom: 22px;
+	/*padding-bottom: 22px;*/
 }
 
-/*добавил по аналогии*/
 .iris_win_message {
-  	font-size: 11px;
 	text-align: center;
 	width: 100%;
-	padding-top: 5px; /* miv */
-	padding-bottom: 10px;
+	padding: 1em;
 }
 
 .iris_win_buttons {
@@ -133,59 +168,4 @@
 	width:100%;
 	height:15px;
 	background: #FFF url('../images/window/window-info-loading.gif') no-repeat center center;
-}
-
-/* FOR IE */
-* html .iris_win_nw {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/TL.png", sizingMethod="crop");
-}
-
-* html .iris_win_n {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/T.png", sizingMethod="scale");
-}
-
-* html .iris_win_ne {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/TR.png", sizingMethod="crop");
-}
-
-* html .iris_win_w {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/L.png", sizingMethod="scale");
-}
-
-* html .iris_win_e {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/R.png", sizingMethod="scale");
-}
-
-* html .iris_win_sw {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/BL.png", sizingMethod="crop");
-}
-
-* html .iris_win_s {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/B.png", sizingMethod="scale");
-}
-
-* html .iris_win_se {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/BR.png", sizingMethod="crop");
-}
-
-* html .iris_win_sizer {
-	background-color: transparent;
-	background-image: none;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="build/themes/bootstrap/images/window/BR.png", sizingMethod="crop");
 }

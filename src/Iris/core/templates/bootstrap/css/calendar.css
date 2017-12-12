@@ -29,7 +29,7 @@ iframe.ie6_blocker {
 .calendar_date_select .cds_footer {
   background-color: black;
   padding:3px;
-  font-size:12px;
+  font-size:1em;
   text-align:center;
 }
 
@@ -51,7 +51,10 @@ iframe.ie6_blocker {
   font-weight: bold;
 }
 
-.calendar_date_select select { font-size:11px;}
+.calendar_date_select select {
+  font-size: 1em;
+  color: #222;
+}
 
 .calendar_date_select .cds_header a:hover {
   color: white;
@@ -81,17 +84,17 @@ iframe.ie6_blocker {
 }
 
 .calendar_date_select .cds_header select.year {
-  width:61px;
+  width:55px;
 }
 .calendar_date_select .cds_buttons a {
   color: white;
-  font-size: 9px;
+  font-size: 1em;
 }
 
 .calendar_date_select td {
-  font-size:12px;
-  width: 24px;
-  height: 21px;
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
   text-align:center;
   vertical-align: middle;
   background-color: #fff;

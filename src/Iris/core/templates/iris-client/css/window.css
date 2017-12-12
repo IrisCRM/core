@@ -1,5 +1,19 @@
 /* Стиль: переделанный mac_os_x */
 
+.wnd_title {
+	display: block;
+}
+
+.table_window {
+	display: flex;
+}
+
+.iris_win_n,
+.iris_win_content,
+.iris_win_s {
+	flex: 1 1 0;
+}
+
 /* Focused windows */
 .overlay_iris_win {
 	background-color: #FFFFFF; /*#85BBEF; - это цвет затемнения при модальных диалогах */

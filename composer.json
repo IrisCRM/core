@@ -23,7 +23,9 @@
         "symfony/console": "^3.2",
         "doctrine/migrations": "^1.5",
         "bernard/bernard": "^1.0@alpha",
-        "symfony/http-foundation": "^3.2"
+        "phpmailer/phpmailer": "^5.2",
+        "symfony/http-foundation": "^3.2",
+        "twbs/bootstrap": "^3.3"
     },
     "require-dev": {
         "codeception/codeception": "^2.2"

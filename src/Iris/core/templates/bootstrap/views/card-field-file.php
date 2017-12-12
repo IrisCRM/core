@@ -3,15 +3,15 @@
  * Поле-файл
  */
 ?>
-<div class="form-group<?php echo $data['mandatory'] ? ' required' : ''; ?>">
+<div class="form-group<?php echo $data['mandatory'] ? ' required' : ''; ?> col-sm-<?php echo $data['fieldwidth']; ?> no-horizontal-padding">
   <?php if (empty($data['hide_label'])) : ?>
     <label for="<?php echo $data['code']; 
-      ?>" class="col-sm-2 control-label<?php 
+      ?>" class="col-sm-<?php echo $data['labelwidth']; ?> no-<?php echo $data['controlindex'] > 0 ? "horizontal" : "right"; ?>-padding control-label<?php 
       echo $data['title'] ? ' card_elem_title"' : '';
       ?>"<?php echo $data['title'] ? ' title="' . $data['title'] . '"' : '';
       ?>><?php echo $data['caption']; ?></label>
   <?php endif; ?>
-  <div class="col-sm-<?php echo $data['colwidth']; ?>">
+  <div class="col-sm-<?php echo $data['controlwidth']; ?> no-left-padding">
     <div id="<?php echo $data['item_id']; ?>_fc">
       <input id="<?php echo ($data['value'] ? '' : '') . $data['code']; 
         ?>" name="<?php echo ($data['value'] ? '' : '') . $data['code']; 
@@ -50,19 +50,19 @@
           $pos = '176';
         }
       ?>
-      <div id="<?php echo $data['item_id']; 
-        ?>_caption" class="fileinput_caption" style="background: url('<?php 
+      <div id="<?php echo $data['item_id']; ?>_caption">
+        <div class="fileinput_caption pull-left" style="background: url('<?php 
         echo url($data['template_path']);
-        ?>images/fileselect_icons.png') no-repeat 0 -<?php echo $pos; ?>px">
+        ?>images/fileselect_icons.png') no-repeat 0 -<?php echo $pos; ?>px"></div>
         <a target="_blank" class="fileinput_link" href="<?php 
           echo $data['link']; ?>"><?php 
           echo $data['value']; ?></a>
-        <span class="glyphicon glyphicon-remove poll-left" id="<?php echo $data['item_id']; 
+        <span class="glyphicon glyphicon-remove pull-left fileinput_glyphicon" id="<?php echo $data['item_id']; 
           ?>_clearbtn" onclick="clearFileInput(this)"></span>
       </div>
     <?php else : ?>
-      <div class="fileinput_caption" style="display: none" id="<?php 
-        echo $data['item_id']; ?>_caption"></div>
+      <div id="<?php echo $data['item_id']; ?>_caption">
+      </div>
     <?php endif; ?>
     <?php echo $data['hidden']; ?>
   </div>

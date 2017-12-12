@@ -32,7 +32,7 @@
 <body onkeyup="ActivateHotKeys(event)">
 
   <?php /* Контейнер */ ?>
-  <div id="maintable" class="container">
+  <div id="maintable" class="container-fluid no-horizontal-padding no-horizontal-margin">
 
     <?php /* Панель для сворачивания окон */ ?>
     <div id="dock"> 
@@ -56,10 +56,10 @@
     <div class="row">
 
       <?php /* Фильтры */  ?>
-      <div id="filters_area" class="col-sm-2"></div>
+      <div id="filters_area" class="col-sm-2 no-horizontal-padding"></div>
 
       <?php /* Таблица записей */ ?>
-      <div id="grid_area" class="col-sm-10"></div>
+      <div id="grid_area" class="col-sm-10 no-right-padding static-position"></div>
     </div>
   </div>
 

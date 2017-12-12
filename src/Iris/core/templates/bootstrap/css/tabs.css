@@ -158,4 +158,5 @@ td.tab_hl {
 }
 .tabs_cont .list-group .list-group-item {
 	border-radius: 0;
+	cursor: pointer;
 }

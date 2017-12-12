@@ -1,160 +1,55 @@
-body {
-	background-color : #ffffff;
-	margin           : 0;
-	font-family     : sans-serif, Tahoma, Arial;
-	font-size       : 11px;
+body, html {
+  height: 100%;
+  /* Background pattern from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns/) */ 
+  background-image: url(../images/login/gplaypattern.png);
 }
 
-table.open0 {
-	text-align       : center;
-	vertical-align   : middle;
-	height           : 30%;
-	background-color : #ffffff;
-	margin           : 0;
-	padding          : 0;
-	border           : 0;
+.login-container {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-table.open {
-	text-align       : center;
-	vertical-align   : middle;
-	height           : 40%;
-	background-color : #ffffff;
-	margin           : 0;
-	padding          : 0;
-	border           : 0;
-}
-td.open {
-	text-align    : center;
-	vertical-align: middle;
-	width         : 200px;
+div.logo {
+	/* center logo by "iris" caption */
+  background: url(../images/login/iriscrm.png) no-repeat scroll 73%;
+  height: 80px;
 }
 
-table.login {
-	width            : 200px;
-	margin           : 5px 5px 5px 5px;
-	background-color : #ffffff;
-	color            : #454545;
-}
-td.login {
-	font-size   : 13px;
-	padding     : 5px 5px 0px 5px;
+.card {
+	width: 350px;
+  padding: 25px;
 }
 
-input.edtText_login {
-	color        : #202020;
-	background   : White;
-	border       : 1px solid #a0a0d0;
-	margin       : 0px;
-	padding-left : 3px;
-	padding-right: 3px;
+.hidden {
+	display: none;
 }
 
-select.edtText_login {
-	color        : #202020;
-	background   : white;
-	border       : 1px solid #a0a0d0;
-	margin       : 0px;
+.form-control:focus {
+  border-color: #8D9BD1; /* iris logo lighter color */
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(141,155,209,.6);
 }
 
-input.button_login {
-	font-weight        : bold;
-	font-style         : normal;
-	font-size          : 11px;
-
-	background-color   : #e8e8e8;
-	
-	background-image   : url(../images/login/button.gif);
-	background-position: bottom;
-	
-	background-repeat  : repeat-x;
-
-	border-left        : solid 1px #f0f0f0;
-	border-top         : solid 1px #f0f0f0;
-	border-right       : solid 1px #808080;
-	border-bottom      : solid 1px #808080;
-
-	padding-top        : 0px;
-	padding            : 0px;
-	margin	           : 2px;
-
-	color              : #202020;
-
-	height	           : 18px;
-	text-align         : center;
-	vertical-align     : middle;
+.btn-primary {
+	background-color: #5E6EA9; /* iris logo color */
+}
+.btn-primary:hover {
+  background-color: #566084; /* iris logo darker color */
 }
 
-input.button_login:hover {
-	color           : #ed3694;
-	cursor          : pointer;
+.messages {
+	height: 100px;
+	min-width: 350px;
+	margin-top: 3em;
+  text-align: center;
 }
 
-
-table.footer {
-	text-align         : center;
-	vertical-align     : middle;
-	background-image   : url(../images/login/bg.jpg);
-	background-position: center;
-	height             : 30%;
-	width              : 100%;
-	background-color   : #e0e0e0;
-	margin             : 0;
-	padding            : 0;
-	border             : 0;
-}
-
-td.right {
-	text-align         : right;
-	padding-right      : 30px;
-	color              : #4040a0;
-	font-weight        : bold;
-	background         : url(../images/login/line.jpg) no-repeat;
-	background-position: right;
-}
-
-a {
-	font-size       : 14px;
-	color           : #2c3394;
-}
-
-table.result {
-	position		: absolute;
-	top				: 100px;
-	width			: 100%;
-}
-table.result td {
-	text-align		: center;
-}
-table.result font {
-	padding			: 2px; 
-	font-size		: 14pt; 
-	font-weight		: bold; 
-	color			: white; 
-	background-color: red;
-}
-
-div.login_logo {
-	background		: url(../images/login/iriscrm.png) no-repeat scroll 0%;
-	width			: 176px;	
-	height			: 80px;
-	padding-right   : 50px;
-}
-
-div.login_version {
-	color			: #3E569C;
-	font-size		: 10px;
-	font-weight		: bold;
-
-	padding-right	: 10px;
-	//padding-right	: 0px;
-	//margin-left	: 120px;
-	padding-top		: 35px;
-}
-
-font.error {
-	background-color: red;
-}
-font.warning {
-	background-color: #e98808;
+.vesion-container {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	text-align: center;
+	color: gray;
 }

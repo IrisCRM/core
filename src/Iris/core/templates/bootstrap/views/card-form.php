@@ -25,11 +25,16 @@
 <?php if (count($data['tabs']) > 1) : ?>
 <ul class="nav nav-tabs" role="tablist">
   <?php foreach ($data['tabs'] as $key => $tab) : ?>
-    <li<?php echo $key == 0 ? ' class="active"' : ''; 
-      ?>><a href="#<?php echo $tab['rel']; 
-        ?>" role="tab" data-toggle="tab"><?php 
-        echo $T->t($tab['caption'], $tab['source'], 'Card'); 
-        ?></a></li>
+    <li<?php echo $key == 0 ? ' class="active"' : ''; ?>>
+      <a
+        href="#<?php echo $tab['rel'];?>"
+        rel="<?php echo $tab['rel'];?>"
+        role="tab"
+        data-toggle="tab"
+      >
+        <?php echo $T->t($tab['caption'], $tab['source'], 'Card');?>
+      </a>
+    </li>
   <?php endforeach; ?>
 </ul>
 <?php endif; ?>
@@ -48,15 +53,24 @@
     <?php endif; ?>
     <?php /* Строки карточки */ ?>
     <?php foreach ($tab['rows'] as $row) : ?>
+      <div class="row form_row">
       <?php /* Поля карточки */ ?>
         <?php $colwidth = 12 / count($row['fields']) - 2; ?>
-        <?php foreach ($row['fields'] as $field) : ?>
+        <?php $fieldwidth = 12 / count($row['fields']); ?>
+        <?php $labelwidth = $fieldwidth == 12 ? 3 : 6; ?>
+        <?php $controlwidth = $fieldwidth == 12 ? 9 : 6; ?>
+        <?php foreach ($row['fields'] as $index => $field) : ?>
           <?php $field['colwidth'] = $colwidth; ?>
+          <?php $field['fieldwidth'] = $fieldwidth; ?>
+          <?php $field['labelwidth'] = $labelwidth; ?>
+          <?php $field['controlwidth'] = $controlwidth; ?>
+          <?php $field['controlindex'] = $index; ?>
             <?php
               /* Поле карточки */
               getView('card-field-' . $field['type'], $field);
             ?>
         <?php endforeach; ?>
+      </div>
     <?php endforeach; ?>
     <?php if (count($data['tabs']) > 1) : ?>
       </div>
@@ -73,7 +87,7 @@
       <td style="vertical-align: middle;"></td>
       <td align=right>
         <?php if ($data['on_save_and_insert']) : ?>
-          <input id="btn_save_and_cont" type="btn btn-default btn-sm button" class="button" value="<?php 
+          <input id="btn_save_and_cont" type="button" class="btn btn-default btn-sm button" value="<?php 
             echo $T->t('Сохранить и добавить'); ?>" onclick="<?php 
             echo $data['on_save_and_insert']; ?>" title="<?php 
             echo $T->t('Сохранить текущую запись и сразу добавить новую в этом же окне (Shift + Enter)'); ?>">

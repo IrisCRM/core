@@ -14,7 +14,7 @@
     getView('grid-search', $data['search']); 
   } 
 ?>
-<div conttype="outer" class="source_name_<?php echo $data['source_name']; ?>">
+<div conttype="outer" class="source_name_<?php echo (isset($data['source_name']) ? $data['source_name'] : ""); ?>">
   <?php /* Заголовок */ ?>
   <table class="grid-header" style="width: 100%;">
   <tbody>
@@ -71,11 +71,11 @@
           $unselected = $rowstyle;
           if ($rownum+1 == $data['selected_row_number']) {
             // если указали show_rec_id, то выберем эту запись
-            $rowstyle = $rowstyle . ' grid_selected';
+            $rowstyle = $rowstyle . ' grid_selected active';
           }
         ?>
         <tr class="<?php echo $rowstyle; 
-        ?>" selectedclass="grid_selected" unselectedclass="<?php echo $unselected; 
+        ?>" selectedclass="grid_selected active" unselectedclass="<?php echo $unselected;
         ?>" <?php echo $data['lines'] == 1 ? 'style="table-layout: fixed;" ' : ''; 
         ?> <?php echo $row['attributes']; ?>>
           <?php foreach ($row['columns'] as $column) : ?>
@@ -97,7 +97,7 @@
       ?>
         <tr class="<?php echo $rowstyle; ?>" is_new="yes" <?php 
           echo $data['lines'] == 1 ? 'style="table-layout: fixed;" ' : ''; 
-        ?> selectedclass="grid_selected" unselectedclass="<?php 
+        ?> selectedclass="grid_selected active" unselectedclass="<?php
           echo $rowstyle; 
         ?>" onclick="editgridselectrow(this)" ondblclick="callAddGridRecordFunc(this)">
           <?php foreach ($data['fields'] as $field) : ?>

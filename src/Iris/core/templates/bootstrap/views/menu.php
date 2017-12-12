@@ -29,7 +29,7 @@
       </li>
     <?php endforeach; ?>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right no-right-margin">
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $T->t('Создать', null, 'Create'); ?> <b class="caret"></b></a>
         <ul class="dropdown-menu">
