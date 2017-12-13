@@ -1,1 +1,133 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('w t(d,s){4(\'q\'==A.z){2 u=5(d).l().E(\'6\');2 e=5(d).N(\'.h-y\');2 7=e.l(\'.7\');2 3=5(d).N(\'.h-y\').14(\'3\');4(s==1){4(7.W){7.F(\'7\')}5(d).Y(\'7\')b}e.l(\'a\').X(w(15,o){2 a=5(o);2 j=a.l();4(j.E(\'6\')==u){4(!a.Z(\'7\')){3.C(u);5(3).p("v:S")}I{a.F(\'7\')}}I{a.F(\'7\');j.12(\'13\')}});b}2 8=$(d);2 f=8.r(\'e.h-y\');f.r(\'e.h-P\').17(\'16\');4((f.g(\'18\')==\'L\')&&(8.g(\'9\')=="n")){b}2 c=f.R(\'D[9="n"]\');4(c!=19){c.J(\'M-9-\'+c.g(\'K\'));c.H(\'9\',\'L\')}2 k=\'T\';4(8!=c){8.J(\'M-9-\'+8.g(\'K\'));8.H(\'9\',\'n\');k=8.g(\'6\')}4(s==1){b}2 3=f.r(\'e.h-P\').R(\'3\');1f(2 i=0;i<3.V.W;i++){4(3.V[i].6==k){5(3).C(k);$(3).1e("O:Q");5(3).p("O:Q");5(3).p("v:1d");5(3).p("v:S");1c}}}w 1b(B){2 m=B.1a();2 6=B.C();2 U=A.z===\'q\'?\'a.7\':\'D[9="n"]\';4(6==\'T\'){t(m.G(U).x(0),1);b 11}2 o=A.z===\'q\'?m.G("j[E-6=\'"+6+"\']").10().x(0):m.G("D[6=\'"+6+"\']").x(0);t(o,1);b 1g}',62,79,'||var|select|if|jQuery|value|active|rb_elem|selected|label|return|selected_elem|element|div|rb_values_cont|getAttribute|radiobtn||input|rb_new_value|children|rb_cont|yes|item|trigger|bootstrap|up|p_nochange_select|selectRadioButton|elemValue|field|function|get|values|template|g_vars|select_field|val|span|data|removeClass|find|setAttribute|else|toggleClassName|pos|no|rb|parents|radiobutton|cont|changed|down|edited|null|selectedItemSelector|options|length|each|addClass|hasClass|parent|true|removeAttr|checked|next|idx|rb_empty|removeClassName|have_null|undefined|prev|refreshRadioButtonValue|break|edit|fire|for|false'.split('|'),0,{}))
+// ----------------------------------------------------------
+// функции для элемента radiobutton
+// создан: miv, 03.01.2010
+// ----------------------------------------------------------
+
+// функция выбора значения в radiobutton (только для ядра)
+function selectRadioButton(element, p_nochange_select) {
+  if ('bootstrap' == g_vars.template) {
+    var elemValue = jQuery(element).children().data('value');
+    var div = jQuery(element).parents('.radiobtn-values');
+    var active = div.children('.active');
+    var select = jQuery(element).parents('.radiobtn-values').next('select');
+
+    if (p_nochange_select == 1) {
+      if (active.length) {
+        active.removeClass('active');
+      }
+      jQuery(element).addClass('active')
+      return;
+    }
+
+    div.children('label').each(function(idx, item) {
+      var label = jQuery(item);
+      var input = label.children();
+      if (input.data('value') == elemValue) {
+        /*
+        if (elemValue == select.val()) {
+          label.removeClass('active');
+          input.removeAttr('checked');
+          select.val('');
+        }
+        else {
+          label.addClass('active');
+          input.attr('checked', 'checked');
+          select.val(elemValue);
+        }
+        */
+        if (!label.hasClass('active')) {
+          select.val(elemValue);
+          jQuery(select).trigger("field:edited");
+        }
+        else {
+          // TODO: давать возможност снимать значение для списков, имеющих null (have_null)
+          label.removeClass('active');
+          // select.val('null');
+        }
+      }
+      else {
+        label.removeClass('active');
+        input.removeAttr('checked');
+      }
+    });
+    return;
+  }
+
+  // старая логика (не bootstrap)
+  var rb_elem = $(element);
+
+  // if (rb_elem.hasClassName('radiobtn-values') == true) {
+  //   return;
+  // }
+
+  // if (rb_elem.hasClassName('rb-caption') == true) {
+  //   rb_elem = rb_elem.up();
+  // }
+  // контейнер, хранящий элементы radiobutton
+  var rb_values_cont = rb_elem.up('div.radiobtn-values');
+  rb_values_cont.up('div.radiobtn-cont').removeClassName('rb_empty');
+
+  // если у элемента нет пустого значения в списке и нажали 
+  // на выбранный элемент, то выйдем
+  if ((rb_values_cont.getAttribute('have_null') == 'no') && 
+      (rb_elem.getAttribute('selected') == "yes")) {
+    return;
+  }
+
+  // снимем текущее значение
+  var selected_elem = rb_values_cont.down('span[selected="yes"]');
+  if (selected_elem != undefined) {
+    selected_elem.toggleClassName('rb-selected-' + 
+        selected_elem.getAttribute('pos'));
+    selected_elem.setAttribute('selected', 'no');
+  }
+
+  var rb_new_value = 'null';
+  if (rb_elem != selected_elem) {
+    // выберем нажатое значение
+    rb_elem.toggleClassName('rb-selected-' + rb_elem.getAttribute('pos'));
+    rb_elem.setAttribute('selected', 'yes');
+    rb_new_value = rb_elem.getAttribute('value');
+  }
+
+  if (p_nochange_select == 1) {
+    return; // если запустили в режиме
+  }
+  
+  // установим select
+  var select = rb_values_cont.up('div.radiobtn-cont').down('select');
+  for (var i = 0; i < select.options.length; i++) {
+    if (select.options[i].value == rb_new_value) {
+      //select.selectedIndex = i;
+      //select.options[i].selected = true;
+      jQuery(select).val(rb_new_value);
+      // вызовем фиктивное событие смены radiobutton
+      $(select).fire("radiobutton:changed");
+      jQuery(select).trigger("radiobutton:changed");
+      jQuery(select).trigger("field:edit");
+      jQuery(select).trigger("field:edited");
+      break;
+    }
+  }
+}
+// Синхронизирует информацию между скрытым select и мультичекбоксом.
+// После вызова функции, значение select не меняется, а мультичекбокс начинает показывать то, что указано в select
+// функция вернет true, если удалось синхронизировать значение radiobutton или false, если синхронизация не удалась
+function refreshRadioButtonValue(select_field) {
+    var rb_cont = select_field.prev();
+    var value = select_field.val();
+    var selectedItemSelector = g_vars.template === 'bootstrap' ?
+      'label.active' : 'span[selected="yes"]';
+    // если в select указали пустое значение, то снимем текущее значение у radiobutton
+    if (value == 'null') {
+        selectRadioButton(rb_cont.find(selectedItemSelector).get(0), 1);
+        return true;
+    }
+    // "нажмем" на тот элемент radiobutton, значение которого совпадает с select
+    var item = g_vars.template === 'bootstrap' ?
+      rb_cont.find("input[data-value='" + value + "']").parent().get(0) :
+      rb_cont.find("span[value='" + value + "']").get(0);
+    selectRadioButton(item, 1);
+
+    return false; // еслине удалось синхронизировать radiobutton то вернем false
+}
