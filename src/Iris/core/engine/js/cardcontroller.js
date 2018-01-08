@@ -429,11 +429,7 @@ var IrisCardController = IrisController.extend({
   _getFieldLabelBootstrap: function(id, event) {
     var field = this.getField(id, event);
 
-    if (this.fieldType(id, event) == 'checkbox') {
-      return field.prev('label');
-    } else {
-      return field.parents('.form-group').children('label');
-    }
+    return field.parents('.form-group').children('label');
   },
 
   _getFieldLabelLegacy: function(id, event) {
@@ -984,9 +980,13 @@ var IrisCardController = IrisController.extend({
 
   _showFieldBootstrap: function(field, isShow) {
     var method = isShow ? 'show' : 'hide';
+    var fieldContainer = field.closest(".form-group");
 
-    field[method]();
-    field.parents('div.form-group').find('label')[method]();
+    // Сам контейнер не скрывается, чтобы оставить видимое место под элементом
+    // если скрыть контейнер поля, расположенного слева, то правое поле
+    // переместиться на место левого (так сейчас в classic)
+    // Поэтому, чтобы поля не прыгали скрываются все элементы внутри контейнера
+    fieldContainer.children()[method]();
   },
 
   /**

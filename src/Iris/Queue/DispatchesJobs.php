@@ -2,7 +2,8 @@
 
 namespace Iris\Queue;
 
-use Bernard\Message\DefaultMessage;
+// use Bernard\Message\DefaultMessage; // deprecated and was removed
+use Bernard\Message\PlainMessage;
 use Bernard\Producer;
 use Iris\Iris;
 
@@ -18,6 +19,6 @@ trait DispatchesJobs
         $container = Iris::$app->getContainer();
         /** @var Producer $producer */
         $producer = $container->get('queue.producer');
-        $producer->produce(new DefaultMessage($queueName, $message), $queueName);
+        $producer->produce(new PlainMessage($queueName, $message), $queueName);
     }
 }

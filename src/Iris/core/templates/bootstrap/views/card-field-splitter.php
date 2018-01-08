@@ -3,8 +3,8 @@
  * Поле-разделитель
  */
 ?>
-<div class="form-group">
-  <div class="col-sm-<?php echo $data['fieldwidth']; ?> flexbox-container flexbox-align-center">
+<div class="form-group horizontal-gutter">
+  <div class="col-sm-<?php echo $data['fieldwidth']; ?> flexbox-container flexbox-align-center no-horizontal-padding">
     <div class="splitter-start-container"><hr class="splitter"></div>
     <div>
       <span <?php 

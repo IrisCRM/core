@@ -4,12 +4,42 @@ body, html {
   background-image: url(../images/login/gplaypattern.png);
 }
 
+form {
+  margin-bottom: 0;
+}
+
 .login-container {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.extra-options-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.extra-option-group {
+  flex: 1 1 0;
+}
+.extra-option-group-spacer {
+  width: 15px;
+}
+
+.btn-flex {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+}
+.btn-flex .btn:first-child {
+  flex-grow: 1;
+}
+.btn-flex .dropdown-menu {
+  right: 0;
+  top: 100%;
 }
 
 div.logo {
@@ -34,6 +64,7 @@ div.logo {
 
 .btn-primary {
 	background-color: #5E6EA9; /* iris logo color */
+  border-color: #505f95;
 }
 .btn-primary:hover {
   background-color: #566084; /* iris logo darker color */

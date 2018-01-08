@@ -288,6 +288,9 @@ nav.navbar {
 .flexbox-item-gap {
 	width: 0.5em;
 }
+.flexbox-direction-column {
+	flex-direction: column;
+}
 .flexbox-justify-center {
   justify-content: center;
 }

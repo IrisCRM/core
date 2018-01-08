@@ -60,7 +60,10 @@ select.edtText:disabled, select.edtText_disabled {
 }
 
 /* выбранные элементы формы */
-input.edtText_selected, textarea.edtText_selected  {
+/* edtText_selected now is deprecated */
+/* no use onfocus and onblur events for toggle this class */
+input.edtText_selected, textarea.edtText_selected,
+input.edtText:focus, textarea.edtText:focus {
 	color            : Black;
 	background-color : #e7e8f8;
 	border           : solid 1px #b1b6e9;
@@ -68,7 +71,8 @@ input.edtText_selected, textarea.edtText_selected  {
 	padding-left     : 3px;
 	padding-right    : 3px;
 }
-select.edtText_selected {
+select.edtText_selected,
+select.edtText:focus {
 	color            : Black;
 	background-color : #e7e8f8;
 	border           : solid 1px #b1b6e9;

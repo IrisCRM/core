@@ -60,6 +60,7 @@ $LAYOUT_PARAMS['show_empty_remind'] = 1;
 // максимальная высота карточки определяется как высота окна документа - card_maxheigth_adjustment.
 // в card_maxheigth_adjustment считается высота заголовка и футера карточки и панели задач, куда сворачиваются окна системы
 $LAYOUT_PARAMS['card_maxheigth_adjustment'] = 80;
+$LAYOUT_PARAMS['card_maxwidth_adjustment'] = 30;
 
 // параметры ckeditor
 $LAYOUT_PARAMS['ckeditor_uicolor'] = '#D5D5D5';

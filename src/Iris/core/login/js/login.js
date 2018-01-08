@@ -5,3 +5,13 @@ function submit_form() {
 		loginform.location.value = location;
 	}
 }
+
+jQuery(document).ready(function() {
+  jQuery("#toggle-extra-options").on("click", function() {
+    var container = jQuery('#collapse');
+    var method = container.is(":visible") ? "hide" : "show";
+    var timeoutMs = 100;
+
+    container[method](timeoutMs);
+  });
+});

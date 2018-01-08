@@ -5,7 +5,8 @@
 ?>
 <div class="panel panel-default grid_search no-bottom-margin">
   <div class="panel-body no-padding">
-    <form role="form">
+    <!-- disable submit by enter with onsubmit attr -->
+    <form role="form" onsubmit="return false;">
       <?php /* Список полей грида */ ?>
 
       <div class="flexbox-container">

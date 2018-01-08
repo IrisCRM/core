@@ -25,7 +25,7 @@
       $item['field']['fieldwidth'] = 0;
       $item['field']['labelwidth'] = 0;
       $item['field']['controlwidth'] = 0;
-      $item['field']['controlindex'] = 0;
+      $item['field']['controlindex'] = 0; /* не используется */
       $item['field']['hide_label'] = 1;
       if ($item['field']['type']) {
         $item['field']['hide_button'] = 1;

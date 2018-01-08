@@ -1,4 +1,5 @@
-<HTML>
+<!DOCTYPE html>
+<html>
 <?php
 /**
  * Шаблон отчёта
@@ -12,10 +13,18 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
   <?php echo $data['javascript']; ?>
-  
+  <script type="text/javascript" src="<?php echo url('build/bootstrap/js/bootstrap.min.js'); ?>"></script>
+<?php 
+/* HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries */ 
+/* Для выравнивания в IE8 это решение пока что не помогло */
+?>
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="<?php echo url('build/js/ie9.min.js'); ?>"></script>
+<![endif]-->  
+  <link href="<?php echo url('build/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
   <?php echo $data['css']; ?>
 
-  <link rel="SHORTCUT ICON" href="<?php echo url($data['template_path'] . 'images/favicon.png'); ?>" type="image/png">
+  <link rel="SHORTCUT ICON" href="<?php echo url('build/templates/bootstrap/images/favicon.png'); ?>" type="image/png">
 </head>
 <body class="report" onkeyup="ActivateHotKeys(event)">
 
@@ -59,4 +68,4 @@
     g_vars.do_exit = true;
   </script>
 </body>
-</HTML>
+</html>

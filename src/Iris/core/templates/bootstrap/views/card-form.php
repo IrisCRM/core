@@ -20,6 +20,9 @@
     ?>" name="<?php echo $item['name']; 
     ?>" value="<?php echo $item['value']; ?>">
 <?php endforeach; ?>
+<!-- fake button for disable first button click event on enter in input -->
+<!-- https://jsfiddle.net/mivxxx/j15z5zdy/1/ -->
+<button style="display: none"></button>
 
 <?php /* Закладки карточек. Их рисуем, если закладок больше 1 */ ?>
 <?php if (count($data['tabs']) > 1) : ?>
@@ -64,7 +67,7 @@
           <?php $field['fieldwidth'] = $fieldwidth; ?>
           <?php $field['labelwidth'] = $labelwidth; ?>
           <?php $field['controlwidth'] = $controlwidth; ?>
-          <?php $field['controlindex'] = $index; ?>
+          <?php $field['controlindex'] = $index; /* не используется */ ?>
             <?php
               /* Поле карточки */
               getView('card-field-' . $field['type'], $field);

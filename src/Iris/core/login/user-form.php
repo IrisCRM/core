@@ -11,6 +11,9 @@ use Iris\Iris;
 
     <link href="<?php echo url('build/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
     <link href="<?php echo asset_path('build/css/login.min.css') ?>" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="<?php echo asset_path('build/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo url('build/bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo asset_path('build/js/login.min.js'); ?>"></script>
 </head>
 
@@ -51,53 +54,72 @@ use Iris\Iris;
                 </div>
 
                 <div class="form-group">
-                    <input
-                      class="btn btn-primary btn-block"
-                      type="submit"
-                      name="btnLogin"
-                      value="Вход"
-                    />
+                    <div class="btn-group btn-flex">
+                        <button
+                          class="btn btn-primary"
+                          type="submit"
+                          name="btnLogin"
+                        >
+                            Вход
+                        </button>
+                        <button
+                          class="btn btn-primary dropdown-toggle"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                            <span class="caret"></span>
+                            <span class="sr-only">Дополнительно</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a id="toggle-extra-options" href="#">Дополнительные параметры</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="form-group hidden">
-                    <label class="control-label" for="stylename">Тема</label>
-                    <select name="stylename" class="form-control">
-                        <?php
-                        $l_options_list = '';
-                        foreach (new DirectoryIterator(Iris::$app->getRootDir() . 'public/build/themes/') as $dir) {
-                            if (!$dir->isDot() && $dir->isDir()) {
-                                if ($dir->getFilename() == $p_default_style) {
-                                    $l_selected = ' selected = "" ';
+                <div id="collapse" class="extra-options-container" style="display: none">
+                    <div class="extra-option-group">
+                        <label class="control-label" for="stylename">Тема</label>
+                        <select name="stylename" class="form-control">
+                            <?php
+                            $l_options_list = '';
+                            foreach (new DirectoryIterator(Iris::$app->getRootDir() . 'public/build/themes/') as $dir) {
+                                if (!$dir->isDot() && $dir->isDir()) {
+                                    if ($dir->getFilename() == $p_default_style) {
+                                        $l_selected = ' selected = "" ';
+                                    }
+                                    else {
+                                        $l_selected = '';
+                                    }
+                                    echo '<option value="' . $dir->getFilename() . '"' . $l_selected . '>' . $dir->getFilename() . '</option>'."\n";
                                 }
-                                else {
-                                    $l_selected = '';
-                                }
-                                echo '<option value="' . $dir->getFilename() . '"' . $l_selected . '>' . $dir->getFilename() . '</option>'."\n";
                             }
-                        }
-                        ?>
-                    </select>
-                </div>
+                            ?>
+                        </select>
+                    </div>
 
-                <div class="form-group hidden">
-                    <label class="control-label" for="stylename">Язык</label>
-                    <select name="language" class="form-control">
-                        <?php
-                        $l_languages_list = '';
-                        foreach (new DirectoryIterator(Iris::$app->getRootDir() . 'public/build/js/language/') as $dir) {
-                            if (!$dir->isDot() && $dir->isDir()) {
-                                if ($dir->getFilename() == $p_default_language) {
-                                    $l_selected = ' selected = "" ';
+                    <div class="extra-option-group-spacer"></div>
+
+                    <div class="extra-option-group">
+                        <label class="control-label" for="stylename">Язык</label>
+                        <select name="language" class="form-control">
+                            <?php
+                            $l_languages_list = '';
+                            foreach (new DirectoryIterator(Iris::$app->getRootDir() . 'public/build/js/language/') as $dir) {
+                                if (!$dir->isDot() && $dir->isDir()) {
+                                    if ($dir->getFilename() == $p_default_language) {
+                                        $l_selected = ' selected = "" ';
+                                    }
+                                    else {
+                                        $l_selected = '';
+                                    }
+                                    $lang = require Loader::getLoader()->getFileName('language/' . $dir . '/' . $dir . '.php');
+                                    echo '<option value="' . $dir->getFilename() . '"' . $l_selected.'>' . $lang['name'] . '</option>' . "\n";
                                 }
-                                else {
-                                    $l_selected = '';
-                                }
-                                $lang = require Loader::getLoader()->getFileName('language/' . $dir . '/' . $dir . '.php');
-                                echo '<option value="' . $dir->getFilename() . '"' . $l_selected.'>' . $lang['name'] . '</option>' . "\n";
                             }
-                        }
-                        ?>
-                    </select>
+                            ?>
+                        </select>
+                    </div>
                 </div>
 
                 <input type="hidden" name="location">

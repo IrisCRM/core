@@ -36,7 +36,8 @@ ul.droplist li:hover.dropdown-header {
 	background: #fff;
 }
 ul.droplist li:hover {
-	background: #e5e5ff;
+	/*background: #e5e5ff;*/
+	background-color: #f5f5f5;
 }
 ul.droplist li a {
 	color: #444;

@@ -69,7 +69,7 @@
               $field['fieldwidth'] = 12;
               $field['labelwidth'] = $multiline ? 6 : 0;
               $field['controlwidth'] = $multiline ? 6 : 12;
-              $field['controlindex'] = $index;
+              $field['controlindex'] = $index; /* не используется */
               getView('card-field-' . $field['type'], $field);
               $k++;
             ?></div>
