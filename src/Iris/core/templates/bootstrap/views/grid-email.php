@@ -7,9 +7,9 @@
     <div class="mail_header">
         <div class="mail_header_title mail_header_title_js">
             <h2><%- subject || 'Без темы' %> <small><%- contactName %> | <%- accountName %>
-                <input type="button" class="button" value="Ответить" onclick="<%= instanceName %>.replyMessage();">
-                <input type="button" class="button" value="Ответить всем" onclick="<%= instanceName %>.replyToAll();">
-                <input type="button" class="button" value="Переслать" onclick="<%= instanceName %>.forwardMessage();">
+                <input type="button" class="btn btn-default" value="Ответить" onclick="<%= instanceName %>.replyMessage();">
+                <input type="button" class="btn btn-default" value="Ответить всем" onclick="<%= instanceName %>.replyToAll();">
+                <input type="button" class="btn btn-default" value="Переслать" onclick="<%= instanceName %>.forwardMessage();">
             </small></h2>
         </div>
         <hr>
