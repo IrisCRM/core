@@ -14,6 +14,11 @@
     getView('grid-search', $data['search']); 
   } 
 ?>
+<?php
+  if (!empty($data['customSearch'])) {
+    getView('grid-customsearch', $data['customSearch']);
+  } 
+?>
 <div conttype="outer" class="source_name_<?php echo (isset($data['source_name']) ? $data['source_name'] : ""); ?>">
   <?php /* Заголовок */ ?>
   <table class="grid-header" style="width: 100%;">
@@ -158,28 +163,49 @@
       </td>
       <td class="grid_footer grid_footer_spacer_after"></td>
       <td class="grid_footer grid_footer_right">
-        <input type="button" class="button button_refresh" value="" title="<?php echo $T->t('Обновить'); 
-        ?>" onclick="refresh_grid('<?php echo $data['grid_id']; ?>')">
+        <input
+          type="button"
+          class="button button_refresh"
+          value=""
+          title="<?php echo $T->t('Обновить'); ?>"
+          data-role="refresh"
+          <?php if (empty($data['is_custom'])) : ?>
+            onclick="refresh_grid('<?php echo $data['grid_id']; ?>')"
+          <?php endif; ?>
+        >
         <?php if ($data['have_pages']) : ?>
-          <input <?php echo $data['page_number'] <= 1 ? 'disabled="disabled"' : ''; 
-          ?> type="button" class="button button_prev<?php 
-            echo $data['page_number'] <= 1 ? ' button_prev_disabled' : ''; 
-          ?>" title="<?php echo $T->t('Предыдущая страница'); 
-          ?>" onclick="document.getElementById('<?php echo $data['grid_id']; 
-          ?>').setAttribute('page_number', eval(document.getElementById('<?php 
-            echo $data['grid_id']; ?>').getAttribute('page_number')) - 1); redraw_grid('<?php 
-            echo $data['grid_id']; ?>')">
-          <span class="grid_page_title"><?php echo $T->t('Страница'); 
-          ?>&nbsp;</span><span class="grid_page_number"><?php echo $data['page_number']; 
-          ?>&nbsp;<?php echo $T->t('из'); ?>&nbsp;<?php echo $data['page_count']; ?></span>
-          <input <?php echo $data['page_number'] >= $data['page_count'] ? 'disabled="disabled"' : ''; 
-          ?> type="button" class="button button_next<?php 
-            echo $data['page_number'] >= $data['page_count'] ? ' button_next_disabled' : ''; 
-          ?>" title="<?php echo $T->t('Следующая страница'); 
-          ?>" onclick="document.getElementById('<?php echo $data['grid_id']; 
-          ?>').setAttribute('page_number', eval(document.getElementById('<?php 
-            echo $data['grid_id']; ?>').getAttribute('page_number')) + 1); redraw_grid('<?php 
-            echo $data['grid_id']; ?>')">
+          <input
+            type="button"
+            class="button button_prev<?php echo $data['page_number'] <= 1 ? ' button_prev_disabled' : '';?>"
+            <?php if ($data['page_number'] <= 1) : ?>
+              disabled="disabled"
+            <?php endif; ?>
+            title="<?php echo $T->t('Предыдущая страница');?>"
+            data-role="prev"
+            <?php if (empty($data['is_custom'])) : ?>
+            onclick="document.getElementById('<?php echo $data['grid_id'];?>').setAttribute('page_number', eval(document.getElementById('<?php echo $data['grid_id']; ?>').getAttribute('page_number')) - 1); redraw_grid('<?php echo $data['grid_id']; ?>')"
+            <?php endif; ?>
+          >
+          <span class="grid_page_title">
+            <?php echo $T->t('Страница') . "&nbsp;" . $data['page_number'];?>
+          </span>
+          <?php if (empty($data['is_custom'])) : ?>
+            <span class="grid_page_number">
+              <?php echo $T->t('из'); ?>&nbsp;<?php echo $data['page_count']; ?>
+            </span>
+          <?php endif; ?>
+          <input
+            type="button"
+            class="button button_next<?php echo $data['page_number'] >= $data['page_count'] ? ' button_next_disabled' : '';?>"
+            <?php if ($data['page_number'] >= $data['page_count']) : ?>
+              disabled="disabled"
+            <?php endif; ?>
+            title="<?php echo $T->t('Следующая страница');?>"
+            data-role="next"
+            <?php if (empty($data['is_custom'])) : ?>
+            onclick="document.getElementById('<?php echo $data['grid_id'];?>').setAttribute('page_number', eval(document.getElementById('<?php echo $data['grid_id']; ?>').getAttribute('page_number')) + 1); redraw_grid('<?php echo $data['grid_id']; ?>')"
+            <?php endif; ?>
+          >
         <?php endif; ?>
       </td>
     </tr>

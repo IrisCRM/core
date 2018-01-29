@@ -36,7 +36,7 @@
       <?php /* Кнопки "Поиск" и "Сброс" */ ?>
       <div class="flexbox-container">
         <div>
-          <input type="button" class="btn btn-block btn-default btn-sm" onclick="ApplySearch(this, '<?php echo $data['grid_id']; ?>');" value="<?php echo $T->t('Поиск'); ?>"/>
+          <input type="button" class="btn btn-block btn-default btn-primary btn-sm" onclick="ApplySearch(this, '<?php echo $data['grid_id']; ?>');" value="<?php echo $T->t('Поиск'); ?>"/>
         </div>
         <div class="flexbox-item-gap"></div>
         <div>

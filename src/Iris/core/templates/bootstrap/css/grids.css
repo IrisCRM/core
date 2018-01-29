@@ -120,6 +120,10 @@ input.search_value_error {
 
 
 
+.search-title {
+	text-decoration: underline dotted;
+	cursor: pointer;
+}
 
 
 

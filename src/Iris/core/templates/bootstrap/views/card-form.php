@@ -90,13 +90,13 @@
       <td style="vertical-align: middle;"></td>
       <td align=right>
         <?php if ($data['on_save_and_insert']) : ?>
-          <input id="btn_save_and_cont" type="button" class="btn btn-default btn-sm button" value="<?php 
+          <input id="btn_save_and_cont" type="button" class="btn btn-default btn-primary btn-sm button" value="<?php 
             echo $T->t('Сохранить и добавить'); ?>" onclick="<?php 
             echo $data['on_save_and_insert']; ?>" title="<?php 
             echo $T->t('Сохранить текущую запись и сразу добавить новую в этом же окне (Shift + Enter)'); ?>">
         <?php endif; ?>
         <?php if ($data['on_ok']) : ?>
-          <input id="btn_ok" type="button" class="btn btn-default btn-sm button" style="width: 70px;" value="<?php 
+          <input id="btn_ok" type="button" class="btn btn-default btn-primary btn-sm button" style="width: 70px;" value="<?php 
             echo $T->t('ОК'); ?>" onclick="<?php 
             echo $data['on_ok']; ?>" title="<?php 
             echo $T->t('Сохранить запись и закрыть окно (Enter). '

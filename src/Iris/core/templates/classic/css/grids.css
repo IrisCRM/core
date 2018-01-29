@@ -198,6 +198,10 @@ input.search_value_error {
 	background-color	: #ffd799;
 }
 
+.search-title {
+	text-decoration: underline dotted;
+	cursor: pointer;
+}
 
 
 

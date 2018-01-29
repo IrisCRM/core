@@ -14,6 +14,11 @@
     getView('grid-search', $data['search']); 
   } 
 ?>
+<?php
+  if (!empty($data['customSearch'])) {
+    getView('grid-customsearch', $data['customSearch']);
+  } 
+?>
 <div conttype="outer">
   <?php /* Заголовок */ ?>
   <table class="grid-header">
@@ -106,11 +111,11 @@
       <?php if (!$data['hide_buttons']) : ?>
         <input type="button" <?php 
           echo $data['access_c'] ? '' : 'disabled="disabled"'; 
-        ?> class="btn btn-default btn-sm button_add" onclick="openGridCard('<?php 
+        ?> class="btn btn-default btn-success btn-sm button_add" onclick="openGridCard('<?php 
           echo $data['grid_id']; ?>', '<?php echo $data['grid_type']; ?>', 'insert')" value="<?php 
           echo $T->t('Добавить'); ?>" title="<?php echo $T->t('Добавить новую запись'); ?>">
         <input type="button" <?php echo $data['access_u'] ? '' : 'disabled="disabled"'; 
-        ?> class="btn btn-default btn-sm button_edit" onclick="modifyGridCard_click(event, '<?php 
+        ?> class="btn btn-default btn-warning btn-sm button_edit" onclick="modifyGridCard_click(event, '<?php 
           echo $data['grid_id']; ?>', '<?php 
           echo $data['grid_type']; ?>', 'update')" value="<?php 
           echo $T->t($data['can_update'] ? 'Изменить' : 'Просмотр'); ?>" title="<?php 
@@ -118,7 +123,7 @@
               . ' выбранную запись. Удерживайте Ctrl, чтобы изменить доступ у выбранных записей.'); 
         ?>">
         <input type="button" <?php echo $data['access_d'] ? '' : 'disabled="disabled"'; 
-        ?> class="btn btn-default btn-sm button_delete" onclick="AskForDeleteGridRecord('<?php echo $data['grid_id']; 
+        ?> class="btn btn-default btn-danger btn-sm button_delete" onclick="AskForDeleteGridRecord('<?php echo $data['grid_id']; 
         ?>')" value="<?php echo $T->t('Удалить'); 
         ?>" title="<?php echo $T->t('Удалить выбранную запись'); ?>">
       <?php endif; ?>
@@ -127,27 +132,58 @@
       </div>
       <div class="pull-right grid_footer_right">
         <ul class="pager">
-          <li><button type="button" class="btn btn-default btn-sm" title="<?php echo $T->t('Обновить'); 
-          ?>" onclick="refresh_grid('<?php echo $data['grid_id']; 
-          ?>')"><span class="glyphicon glyphicon-refresh"></span></button></li>
+          <li>
+            <button
+              type="button"
+              class="btn btn-default btn-sm"
+              title="<?php echo $T->t('Обновить');?>"
+              data-role="refresh"
+              <?php if (empty($data['is_custom'])) : ?>
+                onclick="refresh_grid('<?php echo $data['grid_id'];?>')"
+              <?php endif; ?>
+            >
+              <span class="glyphicon glyphicon-refresh"></span>
+            </button>
+          </li>
           <?php if ($data['have_pages']) : ?>
-          <li><button type="button" class="btn btn-default btn-sm<?php 
-            echo $data['page_number'] <= 1 ? ' disabled' : ''; 
-          ?>" title="<?php echo $T->t('Предыдущая страница'); 
-          ?>" onclick="document.getElementById('<?php echo $data['grid_id']; 
-          ?>').setAttribute('page_number', eval(document.getElementById('<?php 
-            echo $data['grid_id']; ?>').getAttribute('page_number')) - 1); redraw_grid('<?php 
-            echo $data['grid_id']; ?>')"><span class="glyphicon glyphicon-chevron-left"></span></button></li>
-          <li><?php echo $T->t('Страница'); 
-                  ?>&nbsp;<?php echo $data['page_number']; 
-                  ?>&nbsp;<?php echo $T->t('из'); ?>&nbsp;<?php echo $data['page_count']; ?></li>
-          <li><button type="button" class="btn btn-default btn-sm<?php 
-            echo $data['page_number'] >= $data['page_count'] ? ' disabled' : ''; 
-          ?>" title="<?php echo $T->t('Следующая страница'); 
-          ?>" onclick="document.getElementById('<?php echo $data['grid_id']; 
-          ?>').setAttribute('page_number', eval(document.getElementById('<?php 
-            echo $data['grid_id']; ?>').getAttribute('page_number')) + 1); redraw_grid('<?php 
-            echo $data['grid_id']; ?>')"><span class="glyphicon glyphicon-chevron-right"></span></button></li>
+          <li>
+            <button
+              type="button"
+              class="btn btn-default btn-sm<?php echo $data['page_number'] <= 1 ? ' disabled' : '';?>"
+              <?php if ($data['page_number'] <= 1) : ?>
+                disabled="disabled"
+              <?php endif; ?>
+              title="<?php echo $T->t('Предыдущая страница');?>"
+              data-role="prev"
+              <?php if (empty($data['is_custom'])) : ?>
+                onclick="document.getElementById('<?php echo $data['grid_id'];?>').setAttribute('page_number', eval(document.getElementById('<?php echo $data['grid_id']; ?>').getAttribute('page_number')) - 1); redraw_grid('<?php echo $data['grid_id']; ?>')"
+              <?php endif; ?>
+            >
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+          </li>
+          <li>
+            <?php echo $T->t('Страница'). "&nbsp;" . $data['page_number'];?>
+            <?php if (empty($data['is_custom'])) : ?>
+              <?php echo"&nbsp;" . $T->t('из') . "&nbsp;" . $data['page_count'];?>
+            <?php endif; ?>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="btn btn-default btn-sm<?php echo $data['page_number'] >= $data['page_count'] ? ' disabled' : '';?>"
+              <?php if ($data['page_number'] >= $data['page_count']) : ?>
+                disabled="disabled"
+              <?php endif; ?>
+              title="<?php echo $T->t('Следующая страница');?>"
+              data-role="next"
+              <?php if (empty($data['is_custom'])) : ?>
+                onclick="document.getElementById('<?php echo $data['grid_id'];?>').setAttribute('page_number', eval(document.getElementById('<?php echo $data['grid_id']; ?>').getAttribute('page_number')) + 1); redraw_grid('<?php echo $data['grid_id']; ?>')"
+              <?php endif; ?>
+            >
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+          </li>
           <?php endif; ?>
         </ul>
       </div>

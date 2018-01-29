@@ -56,10 +56,10 @@
     <div class="row">
 
       <?php /* Фильтры */  ?>
-      <div id="filters_area" class="col-sm-2 no-horizontal-padding"></div>
+      <div id="filters_area" class="hidden-xs col-sm-2 no-horizontal-padding"></div>
 
       <?php /* Таблица записей */ ?>
-      <div id="grid_area" class="col-sm-10 no-right-padding static-position"></div>
+      <div id="grid_area" class="col-xs-12 col-sm-10 no-right-padding static-position"></div>
     </div>
   </div>
 

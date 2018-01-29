@@ -349,6 +349,16 @@ span.splitter-caption {
   font-size: 10pt;
 }
 
+/* 
+  fix textarea height in firefox
+  https://stackoverflow.com/questions/7695945/height-of-textarea-does-not-match-the-rows-in-firefox/22700700#22700700
+*/
+@-moz-document url-prefix() {
+	textarea.form-control {
+		overflow-x: hidden;
+	}
+}
+
 .input-sm, .input-group-sm>.form-control {
 	font-size: 10pt;
 }
