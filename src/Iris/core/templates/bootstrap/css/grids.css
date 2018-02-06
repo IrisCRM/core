@@ -96,7 +96,7 @@ td.grid_row_datetime span.grid-value {
 }
 table.grid_footer_buttons {
 	width			: 100%;
-	background-color: #eaeaea;
+	background-color: #eee;
 	border-collapse : separate;
 	border-spacing  : 0px;
 	padding         : 5px 5px;

@@ -74,7 +74,7 @@ td.form_table {
 
 /******* Панель кнопок на форме *******/
 table.form_table_buttons_panel {
-	background-color: #ced1f0; 
+	background-color: #eee;
 	padding         : 5px;
 	border-collapse : separate;
 	border-spacing  : 0px;
@@ -109,19 +109,18 @@ div[type="card_tabs_div"] a {
 /* контейнер, который содержит верхнюю панель карточки */
 div.card_header_div {
 	height				: 80px;
-	background			: url(../images/card_header.png) repeat-x;
-	background-color	: #92a4d0;
-	border-bottom		: 7px solid #92a4d0;
+  background-image: url("../images/gplaypattern.png");
+  border-bottom		: 1px solid #eee;
 	margin-bottom		: 0px;
 }
 div.card_header_div table {
 	height				: 80px;
-	background			: url(../images/logo-small.png) no-repeat 15px;
 	table-layout		: fixed;
 }
 td.card_icon_td {
 	width				: 158px;
 	cursor				: default;
+  background: url(../images/logo-small.png) no-repeat center center;
 }
 td.card_right_spacer {
 	width				: 15px;

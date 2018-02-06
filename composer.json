@@ -24,6 +24,7 @@
         "doctrine/migrations": "^1.5",
         "bernard/bernard": "^1.0@alpha",
         "phpmailer/phpmailer": "^5.2",
+        "longman/telegram-bot": "^0.52.0",
         "symfony/http-foundation": "^3.2",
         "twbs/bootstrap": "^3.3"
     },

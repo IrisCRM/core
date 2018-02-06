@@ -21,9 +21,9 @@ abbr {
  
 /**************** Заголовок ****************/
 .header {
-	background: url(../images/bg.jpg) no-repeat left top;
+  background-image: url("../images/gplaypattern.png");
 	height: 90px;
-	color: #fff;
+	color: #777;
 	padding-top: 10px;
 }
 .logo {
@@ -54,17 +54,23 @@ abbr {
 #remind_area li.alert-danger:hover {
 	background-color: #eaa0a0;
 }
-#remind_area li .label {
-	margin-bottom: 15px;
+#remind_area .label,
+#remind_area .badge {
+  color: #777;
 }
 #remind_area li p {
 	padding-top: 5px;
 }
-#remind_area li .badge {
-	font-size: 1.3em;
+#remind_area li .label {
+	font-size: 0.85em;
 }
-#remind_area li.zero .badge {
+
+#remind_area li .badge {
+	font-size: 1.5em;
 	background: none;
+}
+#remind_area .label-default {
+	background-color: transparent;
 }
 li.blinking {
 /*
@@ -93,7 +99,7 @@ li.blinking {
 	display: none;
 }
 #user_welcome_area a {
-    color               : #f0f0f0;
+    color               : #337ab7;
     text-decoration     : underline;
     cursor              : pointer;
     padding-left        : 5px;
