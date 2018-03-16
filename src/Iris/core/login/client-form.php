@@ -3,8 +3,8 @@
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=#charset#">
 <link rel="SHORTCUT ICON" href="<?php echo url('build/images/login/favicon.png'); ?>" type="image/png">
 
-<script type="text/javascript" src="<?php echo asset_path('build/js/login.min.js'); ?>"></script>
 <script src="<?php echo asset_path('build/js/jquery.min.js'); ?>" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo asset_path('build/js/login.min.js'); ?>"></script>
 
 <style>
 body {
@@ -125,21 +125,4 @@ table.result {
     </table>
 <?php endif; ?>
 
-<script>
-    jQuery(document).ready(function() {
-        var form = jQuery("#login_form");
-        if (form.attr('post_vars') != '') {
-            var autologin = {};
-            try {
-                autologin = form.attr('post_vars').evalJSON();
-            } catch (e) {}
-            form.find('#login').val(autologin.login);
-            form.find('#password').val(autologin.password);
-            form.find('#authtype').val(autologin.authtype);
-            submit_form();
-            form.submit();
-        }
-    });
-</script>
-	
 </html>
