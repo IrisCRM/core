@@ -181,10 +181,13 @@ var IrisCardController = IrisController.extend({
       else if (type == 'checkbox') {
         if (value !== undefined) {
           if (value == true || value == '1' || value == 1) {
-            field.attr('checked', value);
+            // field.attr('checked', value);
+            // attr checked work incorrect (1 -> 0 -> 1 not working)
+            field.prop('checked', true);
           }
           else {
-            field.removeAttr('checked');
+            // field.removeAttr('checked');
+            field.prop('checked', false);
           }
           this.triggerAutoEditEvents(field);
           return this;

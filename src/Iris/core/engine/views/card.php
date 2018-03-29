@@ -3,7 +3,7 @@
  * Карточка
  */
 ?>
-<div onclick="Windows.focus(get_window_id(this))">
+<div data-code="<?php echo $data['code']; ?>" onclick="Windows.focus(get_window_id(this))">
   <?php getView('card-header', $data); ?>
 
   <div class="card_body_div"><?php

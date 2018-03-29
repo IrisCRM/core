@@ -21,7 +21,8 @@
     echo $item['caption']; ?></font>
     <?php if (!empty($item['field'])) : 
       echo '<br>'; 
-      $item['field']['is_filter'] = true; 
+      // now we use lookup button in filters again (because grid_wnd opening is fixed)
+      // $item['field']['is_filter'] = true; 
       getView('card-field-' . $item['field']['type'], $item['field']); 
     endif; ?>
   </li>

@@ -28,7 +28,8 @@
       $item['field']['controlindex'] = 0; /* не используется */
       $item['field']['hide_label'] = 1;
       if ($item['field']['type']) {
-        $item['field']['hide_button'] = 1;
+        // now we use lookup button in filters again (because grid_wnd opening is fixed)
+        // $item['field']['hide_button'] = 1;
       }
       echo '<br>'; 
       getView('card-field-' . $item['field']['type'], $item['field']); 
