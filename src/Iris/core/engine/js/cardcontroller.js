@@ -196,7 +196,7 @@ var IrisCardController = IrisController.extend({
           var domain_json = JSON.parse(field.attr('domain_json'));
           var on_index = parseInt(field.attr('checked_index'), 10);
           var value_index = 0;
-          if ((!field.attr('checked') && on_index == 0) || (field.attr('checked') && on_index == 1)) {
+          if ((!field.prop('checked') && on_index == 0) || (field.prop('checked') && on_index == 1)) {
             value_index = 1;
           }
           return domain_json.domain_values[value_index];
@@ -506,7 +506,8 @@ var IrisCardController = IrisController.extend({
         var type = field.attr('elem_type');
         if (type == 'lookup') {
           if (value == true) {
-            this.getField(id + '_btn').attr('disabled', true);
+            // allow "..." button clickable
+            // this.getField(id + '_btn').attr('disabled', true);
           }
           else {
             this.getField(id + '_btn').removeAttr('disabled');
