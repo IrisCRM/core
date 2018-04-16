@@ -9,11 +9,12 @@ use Bernard\QueueFactory\InMemoryFactory;
 use Bernard\QueueFactory\PersistentFactory;
 use Bernard\Serializer;
 use DB;
+use Iris\Api\Router as ApiRouter;
 use Iris\Credentials\Permissions;
 use Iris\Queue\ConsumingProducer;
 use Iris\Queue\EventDispatcherFactory;
 use Iris\Model\Service\LoggerFactory;
-use Iris\Queue\Router;
+use Iris\Queue\Router as QueueRouter;
 use Predis\Client;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpFoundation\Request;
@@ -51,7 +52,7 @@ class ServiceProvider
          * Universal router for queues
          */
         $this->container
-            ->register('queue.router', Router::class)
+            ->register('queue.router', QueueRouter::class)
             ->addArgument(new Reference('loader'));
 
         /**
@@ -137,5 +138,12 @@ class ServiceProvider
             ->register('credentails.permissions', Permissions::class)
             ->addArgument(new Reference('db_access'));
 
+        /**
+         * Universal router for API
+         */
+        $this->container
+            ->register('api.router', ApiRouter::class)
+            ->addArgument(new Reference('http.request'))
+            ->addArgument(new Reference('loader'));
     }
 }

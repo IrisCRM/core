@@ -135,6 +135,29 @@ var IrisGridController = IrisController.extend({
     });
   },
 
+  getFooter: function() {
+    if (this.$el.parent().attr('conttype') == 'inner') {
+      return this.$el.closest('div[conttype="outer"]').
+        parent().find('.grid_footer');
+    }
+  
+    return this.$el.parent().find('.grid_footer');
+  },
+
+  getFooterButtons: function(type) {
+    var footer = this.getFooter();
+
+    if (type === 'add' || type === 'edit' || type === 'delete') {
+      return footer.find('.button_' + type);
+    }
+
+    if (type === 'refresh' || type === 'prev' || type === 'next') {
+      return footer.find('[data-role="' + type + '"]');
+    }
+
+    return footer.find('.btn');
+  },
+
   /**
    * Получить Id выбранной записи
    */

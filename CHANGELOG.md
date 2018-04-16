@@ -1,3 +1,10 @@
+<a name="5.4.0"></a>
+# 5.4.0 (2018-04-16)
+
+### Основные изменения
+*  Добавлен механизм предоставления сервисов в виде [API](https://github.com/IrisCRM/iriscrm-project/blob/master/docs/guides/ru/api.md)
+
+
 <a name="5.3.4"></a>
 # 5.3.4 (2018-04-04)
 
