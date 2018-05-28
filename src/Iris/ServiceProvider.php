@@ -9,7 +9,6 @@ use Bernard\QueueFactory\InMemoryFactory;
 use Bernard\QueueFactory\PersistentFactory;
 use Bernard\Serializer;
 use DB;
-use Iris\Api\Router as ApiRouter;
 use Iris\Credentials\Permissions;
 use Iris\Queue\ConsumingProducer;
 use Iris\Queue\EventDispatcherFactory;
@@ -142,7 +141,15 @@ class ServiceProvider
          * Universal router for API
          */
         $this->container
-            ->register('api.router', ApiRouter::class)
+            ->register('api.router', Api\Router::class)
+            ->addArgument(new Reference('http.request'))
+            ->addArgument(new Reference('loader'));
+
+        /**
+         * Universal router for custom pages
+         */
+        $this->container
+            ->register('page.router', Page\Router::class)
             ->addArgument(new Reference('http.request'))
             ->addArgument(new Reference('loader'));
     }

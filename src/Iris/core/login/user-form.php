@@ -84,7 +84,7 @@ use Iris\Iris;
                             <?php
                             $l_options_list = '';
                             foreach (new DirectoryIterator(Iris::$app->getRootDir() . 'public/build/themes/') as $dir) {
-                                if (!$dir->isDot() && $dir->isDir()) {
+                                if (!$dir->isDot() && $dir->isDir() && $dir->getFilename() !== 'common') {
                                     if ($dir->getFilename() == $p_default_style) {
                                         $l_selected = ' selected = "" ';
                                     }
@@ -143,7 +143,7 @@ use Iris\Iris;
                     <br><a target="_blank" href="http://iris-crm.ru/cloud-access-prolongation">Инструкция по продлению доступа</a>
                 <?php endif; ?>
                 <?php if (!empty($errorInfo['request_license'])): ?>
-                    <br><a target="_blank" href="license/request.html">Запросить лицензии</a>
+                    <br><a target="_blank" href="<?php echo url('page/License/request') ?>">Запросить лицензии</a>
                 <?php endif; ?>
 
             </div>

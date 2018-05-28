@@ -72,7 +72,7 @@ function showLoginForm($p_default_style, $p_default_language, $encrypt_method) {
 	//$l_options_list = '';
 	//echo realpath('./core/templates/');
 	foreach(new DirectoryIterator(Loader::getLoader()->basePath() . 'public/build/themes/') as $dir) {
-		if (((string)$dir !='.') and ((string)$dir !='..')) {
+		if (((string)$dir !='.') and ((string)$dir !='..') and $dir->getFilename() !== 'common') {
 			if ((string)$dir == $p_default_style) {
 				$l_selected = ' selected = "" ';
 			} else {
