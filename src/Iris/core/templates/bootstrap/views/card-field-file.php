@@ -3,6 +3,7 @@
  * Поле-файл
  */
 
+if (!function_exists('getGlyphIcon')) {
 function getGlyphIcon($extension) {
   $glyphShortName = "file";
   $glyphs = [
@@ -26,6 +27,7 @@ function getGlyphIcon($extension) {
   }
 
   return "glyphicon-$glyphShortName";
+}
 }
 
 ?>
