@@ -24,11 +24,16 @@ class GenerateGulpConfigCommand extends Command
             $directories[] = $item['directory'];
         }
 
-        $data = "module.exports = { 
-    configDirectories: ['" . Iris::$app->getRootDir() . implode("', '", $directories) . "'],
-    coreDirectory: '" . Iris::$app->getCoreDir() . "'
-};
-";
+        $data = "module.exports =" . json_encode(array(
+          "configDirectories" => array_map(
+            function ($item) {
+              return Iris::$app->getRootDir() . $item;
+            },
+            $directories
+          ),
+          "coreDirectory" => Iris::$app->getCoreDir(),
+        ), JSON_PRETTY_PRINT) .";";
+
 
         file_put_contents(Iris::$app->getBuildDir() . 'gulp-config.js', $data);
     }
