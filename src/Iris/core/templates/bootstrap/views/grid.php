@@ -106,7 +106,7 @@
 <?php if (empty($data['hide_footer']) || !$data['hide_footer']) : ?>
 <div class="panel panel-default grid_footer no-bottom-margin">
   <div class="panel-body no-padding">
-    <form role="form">
+    <!-- <form role="form"> -->
       <div class="pull-left grid_footer_left">
       <?php if (!$data['hide_buttons']) : ?>
         <input type="button" <?php 
@@ -187,7 +187,7 @@
           <?php endif; ?>
         </ul>
       </div>
-    </form>
+    <!-- </form> -->
   </div>
 </div>
 <?php endif; ?>
