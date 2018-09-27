@@ -52,12 +52,12 @@
   </table>
 <?php /* Данные */ ?>
   <div conttype="inner" class="table-responsive inner<?php 
-    echo $data['height'] ? ' fixedheight' : ''; ?>">
+    echo $data['height'] ? ' fixedheight' : ''; ?>" style="height: <?php echo 
+    $data['height'] ? $data['height'] : '190px'; 
+    ?>;">
   <table class="grid table table-striped table-hover<?php
     echo $data['lines'] == 1 ? ' one-row-value' : '';
-    ?>" width="100%" style="height: <?php echo 
-    $data['height'] ? $data['height'] : '190px'; 
-    ?>;"<?php echo $data['attributes']; ?>>
+    ?>" width="100%" <?php echo $data['attributes']; ?>>
     <tbody>
       <?php /* Пустая служебная строка */ ?>
       <tr>

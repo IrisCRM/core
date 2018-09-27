@@ -177,7 +177,7 @@ table.one-row-value tr td span {
 }
 .inner {
 	overflow-y: scroll;
-	height: 190px;
+	/*height: 190px;*/
 }
 
 .grid_header {
