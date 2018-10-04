@@ -14,6 +14,7 @@ use Iris\Queue\ConsumingProducer;
 use Iris\Queue\EventDispatcherFactory;
 use Iris\Model\Service\LoggerFactory;
 use Iris\Queue\Router as QueueRouter;
+use Iris\Storage\LocalSubdirectoryAdapter;
 use Predis\Client;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpFoundation\Request;
@@ -152,5 +153,19 @@ class ServiceProvider
             ->register('page.router', Page\Router::class)
             ->addArgument(new Reference('http.request'))
             ->addArgument(new Reference('loader'));
+
+        /**
+         * File storage adapter
+         */
+        $this->container
+            ->register('storage.adapter', LocalSubdirectoryAdapter::class)
+            ->addArgument(Iris::$app->getRootDir() . 'files/');
+
+        /**
+         * File storage
+         */
+        $this->container
+            ->register('storage.service', Storage\Storage::class)
+            ->addArgument(new Reference('storage.adapter'));
     }
 }

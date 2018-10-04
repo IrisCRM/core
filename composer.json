@@ -5,7 +5,7 @@
         "iris"
     ],
     "require": {
-        "php": ">=5.6.0",
+        "php": "^7.0.0",
 
         "ext-curl": "*",
         "ext-gd": "*",
@@ -16,6 +16,7 @@
         "ext-PDO": "*",
         "ext-pdo_pgsql": "*",
         "ext-session": "*",
+        "ext-xml": "*",
 
         "monolog/monolog": "^1.22",
         "sentry/sentry": "^1.6",
@@ -28,7 +29,8 @@
         "symfony/http-foundation": "^3.2",
         "twbs/bootstrap": "^3.3",
         "twig/twig": "^2.4",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "league/flysystem": "^1.0"
     },
     "require-dev": {
         "codeception/codeception": "^2.2"
