@@ -35,12 +35,23 @@ class LocalSubdirectoryAdapter extends Local
      */
     public function applyPathPrefix($path)
     {
+        // Support legacy storage in single folder
+        $location = $this->getPathPrefix() . ltrim($path, '\\/');
+        if (file_exists($location)) {
+            return $location;
+        }
+
         $pathDigits = str_replace('-', '', $path);
         $subdirectories = '';
         for ($i = 0; $i < $this->subLevels; $i++) {
             $subdirectories .= substr($pathDigits, $i * $this->subLevelDigits, $this->subLevelDigits) . '/';
+            $location = $this->getPathPrefix() . $subdirectories . ltrim($path, '\\/');
+            if (file_exists($location)) {
+                return $location;
+            }
         }
-        return $this->getPathPrefix() . $subdirectories . ltrim($path, '\\/');
+
+        return $location;
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Iris\Storage;
 
-use Iris\Iris;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Config;
 
@@ -38,11 +37,7 @@ class Storage implements StorageInterface
         $file = $this->storageAdapter->readStream($sysName);
         $realFilePath = $this->storageAdapter->applyPathPrefix($file['path']);
         if (!file_exists($realFilePath)) {
-            // Support for legacy storage in single folder
-            $realFilePath = Iris::$app->getRootDir() . 'files/' . $file['path'];
-            if (!file_exists($realFilePath)) {
-                throw new StorageException(_('Запрашиваемый файл был удален'));
-            }
+            throw new StorageException(_('Запрашиваемый файл был удален'));
         }
 
         header("Content-Type: application/download");
@@ -76,4 +71,13 @@ class Storage implements StorageInterface
 
         return $res;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function deleteFile($sysName)
+    {
+        return $this->storageAdapter->delete($sysName);
+    }
+
 }
