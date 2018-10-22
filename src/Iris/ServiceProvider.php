@@ -70,6 +70,10 @@ class ServiceProvider
             ->addArgument(null)
             ->addArgument([
                 'prefix' => Iris::$app->config('queue.prefix'),
+                'host' => Iris::$app->config('queue.host') ?: '127.0.0.1',
+                'port' => Iris::$app->config('queue.port') ?: 6379,
+                'password' => Iris::$app->config('queue.password') ?: null,
+                'database' => Iris::$app->config('queue.database') ?: 0,
             ]);
 
         /**
