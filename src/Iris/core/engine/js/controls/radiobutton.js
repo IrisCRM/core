@@ -37,6 +37,7 @@ function selectRadioButton(element, p_nochange_select) {
         */
         if (!label.hasClass('active')) {
           select.val(elemValue);
+          jQuery(select).trigger("field:edit");
           jQuery(select).trigger("field:edited");
         }
         else {

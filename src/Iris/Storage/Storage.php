@@ -25,6 +25,19 @@ class Storage implements StorageInterface
     /**
      * @inheritdoc
      */
+    public function getFileStream($sysName)
+    {
+        $file = $this->storageAdapter->readStream($sysName);
+        if ($file['stream'] === false) {
+            throw new StorageException(_('Запрашиваемый файл был удален'));
+        }
+
+        return $file['stream'];
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function sendFile($sysName, $fileName)
     {
         // Get file extension
@@ -34,20 +47,26 @@ class Storage implements StorageInterface
             $fileExt = $fileNameParts[count($fileNameParts) - 1];
         }
 
-        $file = $this->storageAdapter->readStream($sysName);
-        $realFilePath = $this->storageAdapter->applyPathPrefix($file['path']);
-        if (!file_exists($realFilePath)) {
-            throw new StorageException(_('Запрашиваемый файл был удален'));
-        }
+        $stream = $this->getFileStream($sysName);
 
         header("Content-Type: application/download");
         if ($fileExt) {
             header('Content-Type: application/' . $fileExt);
         }
         header('content-disposition: attachment; filename="' . $fileName . '"');
-        header('Content-Length: ' . filesize($realFilePath));
+        header('Content-Length: ' . fstat($stream)['size']);
 
-        fpassthru($file['stream']);
+        fpassthru($stream);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function storeFile($sysName, $fileName)
+    {
+        $config = new Config();
+        $stream = fopen($fileName, 'r+');
+        $this->storageAdapter->writeStream($sysName, $stream, $config);
     }
 
     /**
@@ -56,12 +75,10 @@ class Storage implements StorageInterface
     public function storeUploadedFiles($files)
     {
         $res = null;
-        $config = new Config();
 
-        foreach ($_FILES as $key => $file) {
+        foreach ($files as $key => $file) {
             $sysName = create_guid();
-            $stream = fopen($file['tmp_name'], 'r+');
-            $this->storageAdapter->writeStream($sysName, $stream, $config);
+            $this->storeFile($sysName, $file['tmp_name']);
 
             $res[UtfEncode($key)] = [
                 'sysname' => $sysName,
