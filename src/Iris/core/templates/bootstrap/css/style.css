@@ -21,15 +21,25 @@ abbr {
  
 /**************** Заголовок ****************/
 .header {
+	display: flex;
   background-image: url("../images/gplaypattern.png");
 	height: 90px;
 	color: #777;
 	padding-top: 10px;
 }
+.header-right {
+	display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 .logo {
 	width: 201px;
 	height: 80px;
 	background: url(../images/logo.png) no-repeat 20px 0;
+}
+.user_area_and_time {
+	display: flex;
+  flex-direction: row-reverse;
 }
 
 
@@ -40,6 +50,8 @@ abbr {
 /************ Напоминания ************/
 
 #remind_area {
+	display: flex;
+  flex-wrap: wrap;
 	text-align: center;
 }
 #remind_area li {
@@ -59,7 +71,8 @@ abbr {
   color: #777;
 }
 #remind_area li p {
-	padding-top: 5px;
+	padding-top: 0;
+	margin-top: 0;
 }
 #remind_area li .label {
 	font-size: 0.85em;
@@ -78,6 +91,19 @@ li.blinking {
 	cursor			: pointer;
 	color           : #404040;
 */
+}
+@media (max-width: 800px) {
+  #remind_area li {
+  	width: auto;
+  	padding: 0;
+  }
+
+  #remind_area li p {
+	  display: inline;
+  }
+  #remind_area li .badge {
+  	font-size: 1.25em;
+  }
 }
 /************ Приветствие ************/
 

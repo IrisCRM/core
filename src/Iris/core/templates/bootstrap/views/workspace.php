@@ -40,9 +40,9 @@
 
     <?php /* Заголовок */ ?>
     <div class="header">
-      <div class="logo pull-left"></div>
-      <div>
-        <div class="pull-right">
+      <div class="logo"></div>
+      <div class="header-right">
+        <div class="user_area_and_time">
           <div id="user_welcome_area"></div>
           <div id="current_time_area"></div>
         </div>
