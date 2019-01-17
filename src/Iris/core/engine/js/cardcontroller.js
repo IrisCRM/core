@@ -935,8 +935,10 @@ var IrisCardController = IrisController.extend({
       FieldValues: []
     };
     for (var i = 0; i < fieldValuesArray.length; i++) {
-      if (fieldNames.length == 0 || 
-          (fieldNames.length > 0 && fieldValuesArray[i][0] in fieldNames)) {
+      if (
+          fieldNames.length == 0 ||
+          fieldNames.indexOf(fieldValuesArray[i][0]) >= 0
+      ) {
         fieldValues.FieldValues.push({
           Name: fieldValuesArray[i][0],
           Value: fieldValuesArray[i][1]
