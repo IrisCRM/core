@@ -890,8 +890,12 @@ var IrisCardController = IrisController.extend({
         if (currentType == 'lookup') {
           if (currentValue == ''
               || (_params.rewriteValues && fieldValue.Value != '')
-              || (_params.letClearValues && currentValue == '')) {
-            self.fieldValue(fieldValue.Name, fieldValue, event);
+              || (_params.letClearValues && currentValue == '')
+          ) {
+            // обработчики onBeforePost могут возвращать значения lookup без Caption
+            if (fieldValue.Value !== currentValue) {
+              self.fieldValue(fieldValue.Name, fieldValue, event);
+            }
           }
         }
         else {
